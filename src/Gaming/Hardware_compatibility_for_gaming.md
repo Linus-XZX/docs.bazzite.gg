@@ -53,7 +53,7 @@ The [**Handheld Wiki**](../Handheld_and_HTPC_edition/Handheld_Wiki/index.md) lis
 
 ### Viewing Your GPU's Vulkan Version
 
-If you're using a device with an older or weaker GPU that does not support **Vulkan 1.3 or later**, then you need to use older Proton and Wine builds like **Proton/WINE 6** or earlier.  Check which Vulkan version your GPU uses, enter this in the **terminal**:
+If you're using a device with an older or weaker GPU that supports **Vulkan 1.1 or 1.2**, but not **Vulkan 1.3 or later**, use Proton-CachyOS with DXVK-Sarek as described below.  Check which Vulkan version your GPU uses, enter this in the **terminal**:
 
 ```command
 vulkaninfo | grep 'Instance Version'
@@ -64,7 +64,7 @@ vulkaninfo | grep 'Instance Version'
 
 ![Vulkan Command](https://github.com/user-attachments/assets/ccca14ca-3001-4aa6-bf47-e0dcbdb73936)
 
->Try using [**Proton-Sarek**](https://github.com/pythonlover02/Proton-Sarek) if your have hardware that can utilize Vulkan 1.1, but not newer Vulkan versions. It can be installed using ProtonPlus.
+>Install [**Proton-CachyOS**](https://github.com/CachyOS/proton-cachyos) using ProtonPlus, select it as the compatibility tool for the game, then add `PROTON_DXVK_SAREK=1 %command%` to the game's Steam launch options. This enables DXVK-Sarek for GPUs that support Vulkan 1.1 or 1.2, but not Vulkan 1.3. Do not use this option with anti-cheat or multiplayer games.
 
 ### GPUs Without Vulkan Support
 
