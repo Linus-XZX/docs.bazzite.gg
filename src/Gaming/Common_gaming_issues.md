@@ -8,9 +8,9 @@ title: Common Gaming Issues
 
 Some Linux ports may have missing functionality or worse performance than on the Windows version running through Proton. However, there are scenarios where using the native port exclusively is your only option, and may even be desirable.
 
-If a Linux native game does not launch, then force the **Legacy Runtime** compatibility layer by going into the **game's properties** and selecting "**Compatibility**" then checking "**Force the use of a specific Steam Play compatibility tool**" and selecting it.
+If a Linux native game does not launch, then try forcing the **Legacy Runtime** compatibility layer by enabling "**Force the use of a specific Steam Play compatibility tool**" under **Steam** → game's **properties** → **Compatibility** and selecting it under the drop-down menu.
 
-!!! warning "**Only** use the Linux native version of Counter Strike 2. You may get VAC-banned for running CS2 through Proton."
+!!! warning "**Only** use the Linux native version of Counter Strike 2 (i.e. DISABLE **Force the use of a specific Steam Play compatibility tool**). You may get VAC-banned for running CS2 through Proton."
 
 ## Denuvo Anti-Tamper DRM Locking Games
 

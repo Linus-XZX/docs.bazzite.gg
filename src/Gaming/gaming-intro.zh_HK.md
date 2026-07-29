@@ -10,7 +10,9 @@ title: Bazzite 遊戲入門
 
 ### Steam 遊戲
 
-在大部分情況下，由於其包含內建的 [Proton 轉譯層](/General/terms/#bazzite_1)， Steam 都是在 Bazzite 上運行電腦游戲的推薦辦法。 絕大部分單機遊戲都可以透過 Proton 轉譯層完美運行，但有的 DRM 、反作弊系統及遊戲公司極力阻撓在 Linux 上運行牠們的軟件，這是無解的。對於這種情況，若你仍想遊玩這些遊戲，那目前可見的唯一解決辦法是進入 Windows 和／或 設置 Windows／Bazzite 雙啟動。
+在大部分情況下，由於其包含內建的 [Proton 轉譯層](/General/terms/#bazzite_1)， Steam 都是在 Bazzite 上運行電腦游戲的推薦辦法。 雖然在某些情況下，在 Linux 上運行遊戲的體驗略顯粗糙，但絕大部分單機遊戲都能透過 Proton 轉譯層完美運行。
+
+可惜，有的 DRM 、反作弊系統及遊戲公司極力阻撓在 Linux 上運行牠們的軟件，這是無解的。對於這種情況，若你仍想遊玩這些遊戲，那目前可見的唯一解決辦法是進入 Windows 和／或 設置 Windows／Bazzite 雙啟動。
 
 ### 非 Steam 遊戲
 

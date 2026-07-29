@@ -10,7 +10,7 @@ title: 遊戲常見問題
 
 若 Linux 原生版本無法正常運行，你可以在 **Steam → 內容... → 相容性**中打開**強制使用特定 Steam Play 相容性工具**。
 
-!!! warning "請**務必**使用 Counter Strike 2（絕對武力 2） 的原生 Linux 版本。 使用 Proton 運行 CS2 有機會導致 VAC 封禁！"
+!!! warning "請**務必**使用 Counter Strike 2（絕對武力 2） 的原生 Linux 版本（即關閉**強制使用特定 Steam Play 相容性工具**）。 使用 Proton 運行 CS2 有機會導致 VAC 封禁！"
 
 ## 被 Denuvo Anti-Tamper DRM 鎖定遊戲
 
