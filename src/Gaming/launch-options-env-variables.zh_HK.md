@@ -114,7 +114,9 @@ Bazzite 提供數個常用環境函數的快捷設置。
     
     顯示延遲是一個複雜的議題，且因不同配置而異。目前，世上並不存在適用於所有情況的「最佳」幀率限制器，若想為自身配置尋求最低的延遲，進行多次測試是不可避免的。
 
-    此外，自 3.0 版本起，上游的 DXVK 和 VKD3D 已移除透過 `DXVK_FRAME_RATE` 環境變數設定幀率限制。此環境變數設定的支援功能已轉移至下游專案，例如 Proton-CachyOS 及其他 Proton 變體（Valve 官方的 Proton 則使用上游的 DXVK/VKD3D）。若你需要或希望使用 DXVK/VKD3D 運行環境的幀率限制功能，請使用 [Proton 分支](#proton-launch-options) 或 [DXVK-GPLALL](https://github.com/Digger1955/dxvk-ll) 搭配 WINE 使用。
+    此外，自 3.0 版本起，上游的 DXVK 和 VKD3D 已移除透過 `DXVK_FRAME_RATE` 環境變數設定幀率限制。此環境變數設定的支援功能已轉移至下游專案，例如 Proton-CachyOS 及其他 Proton 變體（Valve 官方的 Proton 則使用上游的 DXVK/VKD3D）。若你需要或希望使用 DXVK/VKD3D 運行環境的幀率限制功能，請使用 [Proton 分支](#proton-launch-options) 或 [DXVK Low-Latency](https://github.com/netborg-afps/dxvk-low-latency) 搭配 WINE 使用。
+    
+    你可以先嘗試使用包含 DXVK-LL 的 Proton-CachyOS ，然後啟用 `PROTON_DXVK_LOWLATENCY=1`。
 
 ## 基於 ScopeBuddy 進行進階啟動選項管理
 

@@ -117,7 +117,9 @@ If your framerate limiter isn't working, the following steps can often help:
 
     Latency is a complex topic and is different for each configuration. There is no "best" frame limiter for every situation, and extensive testing is unavoidable should one seek the lowest latency for their own configuration.
     
-    Additionally, upstream DXVK and VKD3D has removed setting frame limit via the `DXVK_FRAME_RATE` environmental variable since version 3.0. The support for these environmental variable has since moved to downstream such as Proton-CachyOS and other Proton Variants (Valve's official Proton uses upstream DXVK/VKD3D). If you need/want to use the DXVK/VKD3D runtime frame limiter, use [custom Proton versions](#proton-launch-options) or [DXVK-LL](https://github.com/Digger1955/dxvk-gplall) for use with WINE.
+    Additionally, upstream DXVK and VKD3D has removed setting frame limit via the `DXVK_FRAME_RATE` environmental variable since version 3.0. The support for these environmental variable has since moved to downstream such as Proton-CachyOS and other Proton Variants (Valve's official Proton uses upstream DXVK/VKD3D). If you need/want to use the DXVK/VKD3D runtime frame limiter, use [custom Proton versions](#proton-launch-options) or [DXVK Low-Latency](https://github.com/netborg-afps/dxvk-low-latency) for use with WINE.
+    
+    A good starting point would be Proton-CachyOS, which includes DXVK-LL that can be activated with `PROTON_DXVK_LOWLATENCY=1`.
 
 ## Advanced Launch Options Management using ScopeBuddy
 
