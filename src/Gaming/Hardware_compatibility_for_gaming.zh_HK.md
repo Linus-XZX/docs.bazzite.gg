@@ -68,7 +68,7 @@ vulkaninfo | grep 'Instance Version'
 
 - 十分老舊的顯示卡或需使用 OpenGL 傳譯層。這會導致各式各樣不同的問題，如性能損失、畫面顯示問題、渲染異常等。
 
-> 如你的顯示卡僅支持 Vulkan 1.1/1.2，你可以嘗試使用 [**DXVK-Sarek**](https://github.com/pythonlover02/DXVK-Sarek) 。你可以透過設定 `PROTON_DXVK_SAREK=1` 環境函數在 [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) 中使用它。 
+> 如你的顯示卡僅支持 Vulkan 1.1/1.2，你可以嘗試使用 [**DXVK-Sarek**](https://github.com/pythonlover02/DXVK-Sarek) 。你可以透過設定 `PROTON_DXVK_SAREK=1` [環境函數](/Gaming/launch-options-env-variables)在 [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) 中使用它。 
 
 !!! 溫馨提示 "使用 ProtonPlus 或 ProtonUp-Qt 以下載並安裝 [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) 。"
 

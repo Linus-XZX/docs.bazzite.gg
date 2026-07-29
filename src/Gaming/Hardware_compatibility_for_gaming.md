@@ -66,7 +66,7 @@ vulkaninfo | grep 'Instance Version'
 
 - Really old devices may need to resort to OpenGL translation which performs worse, has graphical issues, etc.
 
-> Try using [**DXVK-Sarek**](https://github.com/pythonlover02/DXVK-Sarek) if your have hardware that can only utilize Vulkan 1.1/1.2. It is officially supported in [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) and enabled using the Environment Variable `PROTON_DXVK_SAREK=1`. However, do not use this option with anti-cheat or multiplayer games.
+> Try using [**DXVK-Sarek**](https://github.com/pythonlover02/DXVK-Sarek) if your have hardware that can only utilize Vulkan 1.1/1.2. It is officially supported in [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) and enabled using the [Environment Variable](/Gaming/launch-options-env-variables) `PROTON_DXVK_SAREK=1`. However, do not use this option with anti-cheat or multiplayer games.
 
 !!! info "You may install [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos) with ProtonPlus or ProtonUp-Qt."
 
