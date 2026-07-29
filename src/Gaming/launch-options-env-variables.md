@@ -41,6 +41,7 @@ scb %command%                             # Use ScopeBuddy (a Gamescope helper) 
 ```
 
 ### Proton Launch Options
+<small>_Looks familiar? This section is copied from the [Proton-CachyOS Wiki](https://wiki.cachyos.org/configuration/gaming/#environment-variables)_</small>
 
 Custom Proton versions have unstable configuration options by default. For the latest information on their respective configuration options, refer to their documentation.
 

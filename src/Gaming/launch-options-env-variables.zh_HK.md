@@ -41,6 +41,7 @@ scb %command%                             # 使用 ScopeBuddy（gamescope 輔助
 ```
 
 ### Proton 的啟動選項
+<small>_咁熟口面！？ 冇錯，呢部份係抄[Proton-CachyOS Wiki](https://wiki.cachyos.org/configuration/gaming/#environment-variables)㗎！_</small>
 
 大部分的 Proton 分支皆設有它們自己的 Unstable 設置，詳情請查閱各分支的文檔：
 
