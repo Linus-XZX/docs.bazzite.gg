@@ -4,15 +4,19 @@ title: Common Gaming Issues
 
 # Common Gaming Issues
 
-### Native Linux Port Versus Windows Version
+## Native Linux Port Versus Windows Version
 
-Some Linux ports may have missing functionality or worse performance than on the Windows version running through Proton. However, there are scenarios where using the native port exclusively is your only option, and may even be desirable.  
+Some Linux ports may have missing functionality or worse performance than on the Windows version running through Proton. However, there are scenarios where using the native port exclusively is your only option, and may even be desirable.
 
-If a Linux native game does not launch, then force the **Legacy Runtime** compatibility layer by going into the **game's properties** and selecting "**Compatibility**" then checking "**Force the use of a specific Steam Play compatibility tool**" and selecting it.
+If a Linux native game does not launch, then try forcing the **Legacy Runtime** compatibility layer by enabling "**Force the use of a specific Steam Play compatibility tool**" under **Steam** → game's **properties** → **Compatibility** and selecting it under the drop-down menu.
 
-### Denuvo Anti-Tamper DRM Locking Games
+!!! warning "**Only** use the Linux native version of Counter Strike 2 (i.e. DISABLE **Force the use of a specific Steam Play compatibility tool**). You may get VAC-banned for running CS2 through Proton."
 
-Games that use Denuvo Anti-Tamper DRM consider changing Proton versions as activating the game on different hardware. This may cause you to get locked out of the game temporarily if you change the Proton version more than 5 times within a 24-hour period. In this case, you need to wait 24 hours before you can launch the game again.
+## Denuvo Anti-Tamper DRM Locking Games
+
+Games that use Denuvo Anti-Tamper DRM consider changing Proton versions as activating the game on different hardware. This may cause you to get locked out of the game temporarily if you change the Proton version more than 5 times within a 24-hour period. In this case, you will need to wait 24 hours before you can launch the game again.
+
+---
 
 ## Source 1 Engine Audio and Custom Content Bugs
 
@@ -32,59 +36,56 @@ This has also been confirmed to cause issues joining and hosting custom maps in 
 
 !!! warning
 
-    Configuring SELinux is intended for advanced users and if used irresponsibly can break other components in your system and weaken the security of your device.
+    Configuring SELinux is intended for advanced users and if used irresponsibly, it can break other components in your system and weaken the security of your device.
 
-Open a host terminal and **enter these 4 commands at your own risk**:
+To fix the aforementioned audio/custom content issues, you may create and install a module to allow Source games to pass through SELinux based on previous security logs caused by `hl2_linux`.
 
-```command
-sudo su
-```
+You may proceed **at your own risk**!
 
-```command
-cd /tmp
-```
+=== "Create and install the policy module"
 
-```command
-ausearch -c 'hl2_linux' --raw | audit2allow -M my-hl2linux
-```
+    ```bash
+    sudo -i
+    cd /tmp
+    ausearch -c 'hl2_linux' --raw | audit2allow -M my-hl2linux
+    semodule -X 300 -i my-hl2linux.pp
+    ```
+    Reboot your device and test if you still encounter the aforementioned issues.
 
-```command
-semodule -X 300 -i my-hl2linux.pp
-```
+=== "Disable the policy module"
 
-Reboot your device and test to see if the Source game still has issues.
+    ```bash
+    semodule -X 300 -d my-hl2linux
+    ```
 
-### Undoing this change:
+=== "Remove the policy module"
 
-**Disable or remove the module.**
+    ```bash
+    semodule -X 300 -r my-hl2linux
+    ```
+    You may remove the `.pp` file in `/root/` should you want to do that.
 
-#### Disable the change:
-
-```command
-semodule -X 300 -d my-hl2linux
-```
-
-##### Remove and delete the change:
-
-```command
-semodule -X 300 -r my-hl2linux
-```
-
-The `.pp` file should be in `/root` if you want to remove that.
+---
 
 ## Steam Games Not Launching
 
-Steam games might not launch for a variety of reasons.
+Steam games might not launch for a variety of reasons. The following lists common reasons for games to appear to close immediately (i.e. going from **Running** to **Play** immediately or after a short time).
 
-### gamemoderun
+### `gamemoderun`
 
 !!! note
-      Not to be confused with <b>Gaming Mode</b> on the Deck images. (Feral) GameMode is a library that allows games to request optimizations from the OS.
 
-Games will not launch if you add `gamemoderun %command%` to your launch options (commonly found on ProtonDB). GameMode is not installed or supported in Bazzite and generally doesn't do anything useful on modern hardware, or in some cases can even hurt performance. Please remove it from your launch options. 
+      Not to be confused with **Gaming Mode** on Deck images. (Feral) GameMode is a library that allows games to request optimizations from the OS.
 
-It might work if you layer the `gamemode` package, but this is <b>NOT</b> supported.
+Games will not launch if you add `gamemoderun %command%` to your launch options, which is commonly found on ProtonDB.
 
+Please remove it from your launch options, due to the following three reasons:  <small>_of five people, three must pay a price..._</small>
+
+-   GameMode is neither installed nor supported in Bazzite
+-   It generally doesn't do anything useful on modern hardware
+-   ... and in some cases can even hurt performance
+
+It might work if you layer the `gamemode` package, but this is **NOT** supported.
 
 ### NTFS formatted drive permission issues:
 
@@ -96,7 +97,7 @@ Make sure your games are **not** on an NTFS (Windows) partition. More informatio
 
     Bazzite-Deck does not support multiple Linux user accounts, this information only applies to the Desktop edition of Bazzite.
 
-Sometimes Steam games will completely refuse to launch on a secondary user account. This can be due to the ownership of the WINE prefix files. You might see an error like this in ` ~/.local/share/Steam/logs/console-linux.txt ` on the secondary user account:
+Sometimes Steam games will completely refuse to launch on a secondary user account. This may be due to the ownership of the WINE prefix files. You might see an error like this in ` ~/.local/share/Steam/logs/console-linux.txt` on the secondary user account:
 
 ```
 wineserver: /SteamLibrary/steamapps/compatdata/377160/pfx is not owned by you
@@ -104,7 +105,7 @@ wineserver: /SteamLibrary/steamapps/compatdata/377160/pfx is not owned by you
 
 You can fix this by creating a separate Steam library folder to hold the prefix data for Proton and creating a symbolic link (_symlink_) for the other folders (like common game data).
 
-```
+```console
 USER2@bazzite: /mnt/ExtraStuff/USER2SteamLibrary/steamapps$ ls -la
 total 32
 drwxrwxr-x. 3 USER2 steamplayers 4096 Jan 29 15:19 .
@@ -119,13 +120,14 @@ lrwxrwxrwx. 1 USER2 USER2           53 Jan 29 15:12 workshop
 
 Similarly, copy or symlink the appmanifest files from each library for games to show up properly in each Steam library. 
 
-### Gathering Steam log files:
+---
 
-If you encounter issues with a game launching on Steam:
+## Gathering Proton Log Files
 
-1. Open the game's properties and **enter this launch option**:
-   `PROTON_LOG=1 %command%`
+If you encounter issues with launching a game through Proton, you may follow the steps below to obtain Proton log files
 
-2. Launch the game
+1.  Add the `PROTON_LOG=1 %command%` [environment variable](/Gaming/launch-options-env-variables) in Steam **launch options** or the corresponding entry in other launchers:
+2.  Launch the game
+3.  A log file should appear in your Home directory named after the game's application ID number. Look for `~/steam-{App ID}.log`, with `{App ID}` being a bunch of numbers
 
-A log file should appear in your Home directory named after the game's application ID number. You can use this for requesting support or to submit a bug report to Valve.
+You can use this log file for requesting support or to submit a bug report to Valve.
