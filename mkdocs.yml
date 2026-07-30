@@ -115,8 +115,13 @@ plugins:
                 - "新聞資料包": https://github.com/ublue-os/bazzite/tree/main/press_kit
                 - "卸載Bazzite": General/uninstalling-bazzite.md
             - 遊戲指南:
-                - "遊戲簡介": Gaming/index.md
+                - "遊戲指南簡介": Gaming/index.md
+                - "Bazzite 遊戲入門": Gaming/gaming-intro.md
                 - "硬體相容性": Gaming/Hardware_compatibility_for_gaming.md
+                - "遊戲啟動器": Gaming/Game_Launchers.md
+                - "管理及安裝遊戲模組": Gaming/Managing_and_modding_games.md
+                - "啟動選項與環境函數": Gaming/launch-options-env-variables.md
+                - "遊戲常見問題": Gaming/Common_gaming_issues.md
             - Bazzite掌機版(Bazzite-Deck):
                 - "Bazzite掌機版教學": Handheld_and_HTPC_edition/index.md
                 - "Bazzite掌機版概覽": Handheld_and_HTPC_edition/Steam_Gaming_Mode.md
