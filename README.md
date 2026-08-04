@@ -96,7 +96,7 @@ You will need other tools as well, like:
 
 You can add more explicit page titles (used by the browser tab names) by using YAML metadata.
 
-Adding this at the start of the markdown file would change the tab name to "Hello world":
+Adding this at the start of the markdown file will change the tab name to "Hello world":
 
 ```yaml
 ---
