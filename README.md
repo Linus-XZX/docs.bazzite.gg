@@ -106,7 +106,7 @@ title: "Hello world"
 
 ## Translate Documentation
 
-Translating documentation is as straightforward as can be.
+Translating documentation is as straightforward as it can be.
 Let's say we want to translate `index.md` to Spanish. All you would have to do is make a copy of the file with the name `index.es.md` and start translating.
 
 Perhaps you can't see your translation with `just mkdocs serve`.
