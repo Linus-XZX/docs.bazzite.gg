@@ -244,6 +244,7 @@ Some handy variables available to you are
 - `$SCB_GAMEMODE` will be set to 1 if ScopeBuddy is ran from within steam Steam Gaming Mode (this also implies `SCB_NOSCOPE=1`)
 - `$SCB_CONFIGDIR` will be `$HOME/.config/scopebuddy` this means you can source other configs within your config (please do not make an infinite loop!)
 - `$command` will contain the expanded %command% variable from Steam and any launch options you added after it.
+- `GAMEDIR=$(SCB_GetGameDir "$command")` will add the games directory (that contains the binary/exe) into `$GAMEDIR` for use in your scripts.
 
 Let your creativity go wild!
 But please be responsible!
