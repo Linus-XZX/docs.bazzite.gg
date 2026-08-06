@@ -147,7 +147,7 @@ We also encourage you to donate to the projects that are used in Bazzite which h
 - [**Extensions Manager**](https://github.com/sponsors/mjakeman)
 - [**eza**](https://github.com/sponsors/cafkafk)
 - [**fastfetch**](https://github.com/sponsors/LinusDierheimer)
-- **fd** ([David Peter](https://github.com/sponsors/sharkdp) and [Tavian Barnes](https://github.com/sponsors/tavianator))
+- **fd** ([**David Peter**](https://github.com/sponsors/sharkdp) and [**Tavian Barnes**](https://github.com/sponsors/tavianator))
 - [**fzf**](https://github.com/sponsors/junegunn)
 - [**freedesktop.org**](https://www.freedesktop.org/wiki/#donations)
 - [**Gear Lever**](https://ko-fi.com/mijorus)
