@@ -172,12 +172,12 @@ We also encourage you to donate to the projects that are used in Bazzite which h
 
 Bazzite is a community effort and wouldn't exist without everyone's support. Below are some of the people who've helped us along the way:
 
-- [amelia.svg](https://bsky.app/profile/ameliasvg.bsky.social) - For creating our logo and overall branding.
-- [SuperRiderTH](https://github.com/SuperRiderTH) - For creating our Steam game mode startup video.
-- [evlaV](https://gitlab.com/evlaV) - For making Valve's code available and for being [this person](https://xkcd.com/2347/).
-- [ChimeraOS](https://chimeraos.org/) - For gamescope-session and for valuable support along the way.
-- [Jovian-NixOS](https://github.com/Jovian-Experiments) - For supporting us with technical issues and for creating a similar project. Seriously, go check it out. It's our Nix-based cousin.
-- [sentry](https://copr.fedorainfracloud.org/coprs/sentry/) - For assistance with needed kernel patches and for creating the [kernel-fsync repo](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/) we now use.
-- [nicknamenamenick](https://github.com/nicknamenamenick) - For being the MVP nearly single-handedly upkeeping our documentation and support literature, and countless cases of helping users.
-- [Steam Deck Homebrew](https://deckbrew.xyz) - For choosing to support distributions other than SteamOS despite the extra work, and a special thanks to [PartyWumpus](https://github.com/PartyWumpus) for getting Decky Loader working with SELinux for us.
-- [cyrv6737](https://github.com/cyrv6737) - For the initial inspiration and the base that became bazzite-arch.
+- [**amelia.svg**](https://bsky.app/profile/ameliasvg.bsky.social) - For creating our logo and overall branding.
+- [**SuperRiderTH**](https://github.com/SuperRiderTH) - For creating our Steam game mode startup video.
+- [**evlaV**](https://gitlab.com/evlaV) - For making Valve's code available and for being [**this person**](https://xkcd.com/2347/).
+- [**ChimeraOS**](https://chimeraos.org/) - For gamescope-session and for valuable support along the way.
+- [**Jovian-NixOS**](https://github.com/Jovian-Experiments) - For supporting us with technical issues and for creating a similar project. Seriously, go check it out. It's our Nix-based cousin.
+- [**sentry**](https://copr.fedorainfracloud.org/coprs/sentry/) - For assistance with needed kernel patches and for creating the [**kernel-fsync repo**](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/) we now use.
+- [**nicknamenamenick**](https://github.com/nicknamenamenick) - For being the MVP nearly single-handedly upkeeping our documentation and support literature, and countless cases of helping users.
+- [**Steam Deck Homebrew**](https://deckbrew.xyz) - For choosing to support distributions other than SteamOS despite the extra work, and a special thanks to [**PartyWumpus**](https://github.com/PartyWumpus) for getting Decky Loader working with SELinux for us.
+- [**cyrv6737**](https://github.com/cyrv6737) - For the initial inspiration and the base that became bazzite-arch.
