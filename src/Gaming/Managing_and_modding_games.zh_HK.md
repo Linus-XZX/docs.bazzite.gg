@@ -41,6 +41,11 @@ Proton／WINE 設有一個虛擬 Windows 目錄，這一般被稱為 Prefix 或 
 
 在 Steam 中安裝的遊戲的 Prefix 位於 `~/.steam/root/steamapps/compatdata/<APPID>`（APPID為對應遊戲的一串數字）
 
+!!! tip "小貼士"
+
+    你可以透過 ProtonPlus → **Games** 頁面，並在遊戲下方點選 **Open Prefix Directory** 來開啟此文件夾。
+    ![Open Prefix through ProtonPlus|1777x853, 25%](../img/protonplus_open_prefix.png)
+
 - 你可於**內容 → 更新 → App ID** 查看 App ID
 - 繼續前往 `.../pfx/drive_c/` 以修改、備份、或安裝你的遊戲模組
 
