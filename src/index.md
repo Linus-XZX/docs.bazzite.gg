@@ -50,7 +50,7 @@ hide:
   5. [Appimage][appimage] for portable apps found on the web.
      {style="list-style-type: decimal;"}
 
-  There is also [package layering with `rpm-ostree`][rpm-ostree], but it is [advised to avoid using it if possible][rpm-ostree_caveats] since layered packages can break future upgrades until packages are removed.
+  There is also [package layering with rpm-ostree][rpm-ostree], but it is [advised to avoid using it if possible][rpm-ostree_caveats] since layered packages can break future upgrades until packages are removed.
 
 - [:fontawesome-solid-circle-arrow-down: **Updates & Rollbacks**][updateindex]{ style="font-size: 1.1rem" }
 
@@ -59,7 +59,7 @@ hide:
   - [Updating Guide][updates]
   - [Rollback System Updates][rollbacks]
   - [Rebasing to Other Images][rebasing]
-  - [`bazzite-rollback-helper`][rollback-helper]
+  - [bazzite-rollback-helper][rollback-helper]
 
 - [:fontawesome-brands-android: **Android Applications**][waydroid]{ style="font-size: 1.1rem" }
 
