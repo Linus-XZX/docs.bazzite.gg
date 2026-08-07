@@ -43,6 +43,11 @@ Many PC games drop files in Windows folders like "My Documents" or "AppData" and
 
 For games on Steam, they are located in your `~/.steam/root/steamapps/compatdata/` folder, and then the **AppID number of the game**:
 
+!!! tip
+    
+    You can open this folder by using ProtonPlus → **Games** tab and selecting **Open prefix directory** under each respective game.
+    ![Open Prefix through ProtonPlus|1777x853, 25%](../img/protonplus_open_prefix.png)
+
 - This ID by going into the game's properties on Steam in the games **Properties** → **Updates** → **App ID**
 - Continue to `.../pfx/drive_c/` and wherever the game drops the file on Windows.
 
