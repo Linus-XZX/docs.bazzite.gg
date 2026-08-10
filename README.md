@@ -28,7 +28,7 @@ Instead:
 - Use relative paths
   - `./index.md`
   - `../Handheld_and_HTPC_edition/Steam_Gaming_Mode.md`
-- Use absolute paths\*
+- Use absolute paths\
   - `/General/Installation_Guide/Installing_Bazzite_for_Handheld_PCs.md`
 
 <small>\* Absolute paths are relative to the `docs_dir` declared in [mkdocs.yml](./mkdocs.yml). In this case, `src/`.</small>
