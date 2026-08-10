@@ -11,6 +11,7 @@ title: Waydroid Setup Guide
 !!! attention
 
     Waydroid does **not** work on Nvidia hardware.
+    
 
 ![Waydroid](../img/Waydroid.jpeg)
 
@@ -27,7 +28,10 @@ ujust configure-waydroid
 ### Initialize Waydroid
 
 Waydroid requires users to initialize it for the first time which can be done by selecting:
-`Initialize Waydroid`
+
+```bash
+Initialize Waydroid
+```
 
 Make sure this worked by entering this **command**:
 
