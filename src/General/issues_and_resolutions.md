@@ -236,6 +236,17 @@ To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Sof
 
 ---
 
+## HDMI-CEC Does Not Work Consistently
+
+This is because Fedora 43 used a legacy CEC mode that isn't used by default in Fedora 44. 
+
+In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select Troubleshoot → Change CEC mode:
+
+*   dGPU mode enables the “legacy” cec-control services for the `libcec` and `cec-ctl` path known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors to work around dGPUs not having cec pin 13 wired up. 
+*   Native mode masks those services and uses Valve's `linux-cec`/`cecd` path instead (may have inconsistent behavior on some devices).
+
+!!! info "Native mode now builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units plus linuxconsoletools so Pulse-Eight style adapters can be attached to the kernel CEC subsystem."
+
 ## Nvidia Optimus GPU not detected on laptops
 
 If you are running Bazzite on a laptop with an Nvidia Optimus GPU, you might notice that games are running poorly and seem to be running on the integrated GPU.
