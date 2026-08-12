@@ -12,12 +12,16 @@ Use a download manager (like [**Motrix**](https://motrix.app/)) if the direct do
 
 Make sure to only select the appropriate drives to avoid losing data on others, and it is best practice to safely remove any external drives before proceeding.
 
-## "Failed to open \EFI\BOOT\mmx64.efi - Not Found" error
+---
+
+## "Failed to open \EFI\BOOT\mmx64.efi - Not Found" Error
 
 ![Failed to open \EFI\BOOT\mmx64.efi - Not Found](../../img/efi-boot-fail.png)
 
 To work around this issue, boot from file. Go into your UEFI (BIOS), select your EFI partition with Bazzite installed, then select /EFI/fedora/grubx64.efi to boot from.
 After this, your boot manager should boot normally showing "FEDORA" as the option.
+
+---
 
 ## Installer Won't Boot
 
@@ -26,6 +30,8 @@ After this, your boot manager should boot normally showing "FEDORA" as the optio
 The new installer may not boot if your BIOS is in CSM Legacy boot as opposed to UEFI. Read more in the [**Bazzite system requirements**](../../Gaming/Hardware_compatibility_for_gaming.md#minimum-system-requirements).
 
 Use the [legacy ISO](./legacy-install.md) or try the [alternative method](./alternate-install-guide.md) of installing Bazzite.
+
+---
 
 ## Error Code 1
 
@@ -43,12 +49,16 @@ The "code 1" error is a generic error code that appears during installation when
 - **Corrupted ISO Image:** Ensure the ISO image isn't corrupted by calculating the checksums.
 - **Overheating USB Flash Drive:** Use a USB 3.0 or better flash drive and plug it into a USB 3.0 or better port to avoid overheating.
 
+---
+
 ## "No Space left on Device" Error
 ![No Space left on Device](../../img/no_more_space_left.png)
 
 This error can misleadingly appear when the system does not have enough RAM for the installer to operate. [**You need at least 8GB of system memory to install Bazzite.**](/General/Installation_Guide/Installing_Bazzite_for_Desktop_or_Laptop_Hardware.md/#minimum-system-requirements)
 
-## "Bad shim signature, you need to load the kernel first" error
+---
+
+## "Bad shim signature, you need to load the kernel first" Error
 
 ![You need to load the kernel first](../../img/you-need-to-load-the-kernel-first.png)
 
@@ -57,6 +67,21 @@ Disable Secure Boot in BIOS to get past this screen. If you wish to use Secure B
 **Video Guide**:
 
 https://www.youtube.com/watch?v=Z_DsWqTuipU
+
+---
+
+## "grub_memalign:552:out of memory" Error
+
+```console
+error: ../../grub-core/loader/i386/efi/linux.c:kernel_alloc:159:can't allocate kernel.
+error: ../../grub-core/kern/mm.c:grub_memalign:552:out of memory.
+
+Press any key to continue...
+```
+
+This issue should be fixed by turning off TPM in the BIOS/UEFI most of the time.
+
+---
 
 ## "Device is Active" Error
 
@@ -69,14 +94,17 @@ B. **Bazzite Only:** Delete the BitLocker partition using a tool like GParted be
 
 https://www.youtube.com/watch?v=FBGLLkIKp-w
 
+---
+
 ### "Error checking storage configuration"
 
 **Watch this video for a workaround**:
 
 https://www.youtube.com/watch?v=VTnm9EiBdPA
 
+---
 
-## Unable to allocate requested partition scheme error
+## Unable to allocate requested partition scheme Error
 
 This error occurs when installing on drives larger than 2TB where the first 2TB or more is already occupied by one or more partitions. The image below illustrates the error message.
 
@@ -90,7 +118,7 @@ Here are some possible solutions on how you can address it:
 - If you're dual booting with Windows, reduce the size of your Windows partition to under 2TB. If Windows' Disk Management can't do this, consider using a third-party tool like [EaseUS Partition Master](https://www.easeus.com/partition-master/) to resize the partitions while Windows is not running.
 - If the drive contains no important data, you can delete all existing partitions and restart the installation process.
 
-<hr>
+---
 
 ## Alternative Installation Method
 
@@ -101,6 +129,8 @@ Here are some possible solutions on how you can address it:
 If none of the above errors are relevant to your issue, or you still have problems installing Bazzite, then try following our alternative installation method:
 
 [**Try installing Bazzite by rebasing from Fedora Kinoite (KDE Plasma) or Fedora Silverblue (GNOME)**](/General/Installation_Guide/alternate-install-guide.md).
+
+---
 
 ## How to remove an orphaned copy of GRUB
 1. Boot into the Bazzite installer (the Legacy Installer will not work for this) and open the Application Menu
