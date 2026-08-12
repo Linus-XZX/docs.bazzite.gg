@@ -6,6 +6,7 @@ title: Advanced Guides
 
 - [**Auto-Mounting Secondary Drives**](/Advanced/Auto-Mounting_Secondary_Drives.md)
 - [**Managing Gamescope Using ScopeBuddy**](/Advanced/scopebuddy.md)
+- [**Cardwire](/Advanced/cardwire.md)
 - [**Custom Resolutions**](/Advanced/custom_resolution.md)
 - [**Bazzite Command-Line Tools**](/Advanced/bazzite-cli.md)
 - [**Using Looking-Glass**](/Advanced/looking-glass.md)

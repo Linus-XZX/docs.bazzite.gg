@@ -34,7 +34,7 @@ The Bazzite Portal is installed by default. To launch the app:
     3\. Type in "Bazzite".
     4\. In the search results, click **Bazzite Portal**.
 
-## Configuration settings
+## Configuration Settings
 
 The Bazzite Portal's features are organized into categories:
 
