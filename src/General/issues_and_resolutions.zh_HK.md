@@ -25,6 +25,14 @@ title: 疑難排解
 
 ---
 
+## 關閉特殊字母彈窗
+
+KDE Plasma 6.7 新增了「Plasma 鍵盤」功能，當長按特定按鍵一段時間時，會顯示螢幕彈出視窗。
+
+你可以在 **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key** 中關閉此功能。
+
+![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
+
 ## 於桌面模式中無法使用手柄／控制器的搖桿
 
 打開 **Steam 設定→控制器→非遊戲控制器配置→桌面配置**。點選「編輯」，並設置你的手柄／控制器如何在桌面模式下模擬鍵盤和滑鼠操作。
@@ -125,7 +133,7 @@ systemctl restart NetworkManager
 
 這是因為 Fedora 43 採用了舊版 CEC 模式，而 Fedora 44 預設不再使用該模式。
 
-在 [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal.md) 中，選擇 Troubleshoot → Change CEC mode：
+在 [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal.md) 中，選擇 **Troubleshoot → Change CEC mode**：
 
 *   dGPU 模式會啟用經由 `libcec` 和 `cec-ctl` 路徑的舊版CEC 控制服務，已知此模式在配備 pulse8 和 ugreen 轉接器的 HTPC 上運作相當良好，可解決 dGPU 未連接 CEC 第 13 針腳的問題。
 *   Native 模式會遮罩這些服務，並改用 Valve 的新版 `linux-cec`/`cecd` 路徑（在某些裝置上可能出現行為不一致的情況）。

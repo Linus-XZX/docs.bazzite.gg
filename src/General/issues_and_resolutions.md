@@ -25,6 +25,16 @@ Both affect each other's audio volume, so they must be at the same volume level.
 
 ---
 
+## Disable Special Character Pop-Up on KDE Plasma
+
+KDE Plasma 6.7 added the Plasma Keyboard feature, which shows an on-screen pop-up when certain keys are held for a period.
+
+You may disable it in **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key**.
+
+![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
+
+---
+
 ## Gamepads and handheld joysticks don't work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.
@@ -240,7 +250,7 @@ To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Sof
 
 This is because Fedora 43 used a legacy CEC mode that isn't used by default in Fedora 44. 
 
-In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select Troubleshoot → Change CEC mode:
+In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select **Troubleshoot → Change CEC mode**:
 
 *   dGPU mode enables the “legacy” cec-control services for the `libcec` and `cec-ctl` path known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors to work around dGPUs not having cec pin 13 wired up. 
 *   Native mode masks those services and uses Valve's `linux-cec`/`cecd` path instead (may have inconsistent behavior on some devices).
