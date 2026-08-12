@@ -12,7 +12,7 @@ title: 疑難排解
 
 >此解亦適用於 Nvidia 顯卡在 Steam 遊戲模式內的卡頓情況，但亦有機會導致顯示錯誤，如目錄無法正常顯示等。
 
-<hr>
+---
 
 ## 在華碩 ROG Ally 系列產品中，在最大音量下，實際音量仍十分細小
 
@@ -23,7 +23,7 @@ title: 疑難排解
 
 兩者皆影響全域音量，請確保兩者音量設定一致。
 
-<hr>
+---
 
 ## 於桌面模式中無法使用手柄／控制器的搖桿
 
@@ -43,7 +43,7 @@ title: 疑難排解
 
     打開 **Settings application → Users** 並點選右上角的 **Unlock** 按鈕，然後開啟 **Automatic Login** 。
 
-<hr>
+---
 
 ## 在舊GPU上設置類Steam遊戲模式
 
@@ -51,7 +51,7 @@ title: 疑難排解
 
 設置自動登入，然後將 Steam Big Picture 模式加入系統自啟動列表。<small>_就這！？_</small>
 
-<hr>
+---
 
 ## 在Windows與Bazzite雙啟動時，Bazzite無法訪問網路
 
@@ -65,7 +65,7 @@ title: 疑難排解
 -   (可選) 關閉 **Hibernate**
 -   點擊 **Save changes**
 
-<hr>
+---
 
 ![how to disable fast startup in Windows](../img/disable-windows-fast-startup.gif)
 
@@ -111,7 +111,7 @@ sudo rm /etc/NetworkManager/conf.d/wifi-powersave-off.conf
 systemctl restart NetworkManager
 ```
 
-<hr>
+---
 
 ## 更改 Wi-Fi 後端
 
@@ -119,21 +119,19 @@ systemctl restart NetworkManager
 
 開啟 [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal/)，在 **Troubleshooting** 分頁，點選 **Change Wi-Fi system back-end** 。
 
-<hr>
+---
 
 ## 裝置未能偵測 Nvidia Optimus（優馳）
 
 若你正在有 Nvidia Optimus 支持的裝置（如 Intel+Nvidia 筆記本）上運行 Bazzite，而性能未達預期，且遊戲疑似運行於iGPU（核顯）之上，你便需要採取以下措施：
 
-輸入以下指令以開啟 `supergfxctl` ：
+打開 [Cardwire](https://github.com/OpenGamingCollective/cardwire) 應用程式並設置顯卡性能設定。
 
-```bash
-ujust enable-supergfxctl
-```
+> 按[此](/Advanced/cardwire)閱讀有關 Cardwire 的更多資訊！
 
 !!! info "如果你正在尋找**高級Optimus功能**，Bazzite 只能遺憾地告訴你目前除了AMD SmartMUX於內核中的早​​期開發工作之外，**沒有**方法能夠對顯卡進行動態MUX切換。目前你**必須**重新啟動系統以更改MUX設定。"
 
-<hr>
+---
 
 ## 於 Nvidia 裝置上， Flatpak 應用程式失去了硬件加速功能
 
@@ -143,7 +141,7 @@ ujust enable-supergfxctl
 
 !!! info "Bazzite已預先設定了一個Systemd服務以自動更新這些運行環境，但在一些情況下（如在開機時無網絡連接），此服務會失效，而你需進行手動更新。理論上的最佳解決辦法為在上游的 Nvidia/Flatpak 不再使用獨立的版本管理這些運行環境，或是創建一個包含 Flatpak 運行環境的系統包；但俗話「講就容易，做就難」，事到如今 Bazzite 也只能盡量縮小此問題帶來的影響。"
 
-<hr>
+---
 
 ## 技嘉主板無法從睡眠中甦醒
 
@@ -155,7 +153,7 @@ ujust enable-supergfxctl
 ujust _toggle-gigabyte-wake-fix
 ```
 
-<hr>
+---
 
 ## Xbox控制器的Xbox按鈕發出閃光，且無法透過藍牙連線
 
@@ -163,7 +161,7 @@ ujust _toggle-gigabyte-wake-fix
 
 你亦可創建一個Windows虛擬機，並設置Passthrough至該虛擬機，然後更新韌體。
 
-<hr>
+---
 
 ## 我的鼠標在閃爍／消失了
 

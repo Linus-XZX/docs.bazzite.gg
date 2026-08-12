@@ -12,7 +12,7 @@ If you encounter this issue, close Steam completely and start Steam using the **
 
 >**Note**: This fix also fixes the performance issues in Steam Gaming Mode on Nvidia GPUs, however, this comes with a drawback that the Steam menu and side menu sometimes do not render properly.
 
-<hr>
+---
 
 ## Audio is soft on ASUS ROG Ally hardware
 
@@ -23,7 +23,7 @@ There are two audio devices that appear on the Rog Ally:
 
 Both affect each other's audio volume, so they must be at the same volume level.
 
-<hr>
+---
 
 ## Gamepads and handheld joysticks don't work in Desktop Mode
 
@@ -33,7 +33,7 @@ Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop
 
 !!! Notice "A feature to control the desktop using a controller was added in KDE Plasma 6.7. This feature conflicts with Steam's emulation method above, so make sure you disable it, or vice versa should you want to use Plasma's native controller support."
 
-<hr>
+---
 
 ## Setting Bazzite's Desktop Editions to automatically login
 
@@ -45,7 +45,7 @@ Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop
 
     Open the **Settings application → Users**. Click the **Unlock** button in the top right corner. Then switch on **Automatic Login**.
 
-<hr>
+---
 
 ## HTPC legacy hardware setup
 
@@ -148,7 +148,7 @@ There are different steps to resolve this depending on your current Wi-Fi backen
     systemctl restart iwd
     ```
 
-<hr>
+---
 
 ## Error on connecting to Wi-Fi: "Failed to add new connection: 802.1x connections must have IWD provisioning files"
 
@@ -186,7 +186,7 @@ nmcli connection modify eduroam 802-1x.phase1-auth-flags 32
 
 And try to connect again.
 
-<hr>
+---
 
 ## Error on connecting to Wi-Fi: "IP configuration was unavailable" when connecting to 802.1x wireless networks
 
@@ -226,7 +226,7 @@ systemctl restart iwd
 
 You should be able to connect to the enterprise network.
 
-<hr>
+---
 
 ## Switching Wi-Fi Backends
 
@@ -234,21 +234,19 @@ You should be able to connect to the enterprise network.
 
 To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal/), and under the **Troubleshooting** page, select **Change Wi-Fi system back-end**.
 
-<hr>
+---
 
 ## Nvidia Optimus GPU not detected on laptops
 
 If you are running Bazzite on a laptop with an Nvidia Optimus GPU, you might notice that games are running poorly and seem to be running on the integrated GPU.
 
-In this case, you will need to enable supergfxctl which automatically switches to the discrete Nvidia GPU when launching your games. Open a terminal and run:
+In this case, use the preinstalled [Cardwire](https://github.com/OpenGamingCollective/cardwire) app to configure your GPU Power Options. You may simply search **cardwire** to open the app.
 
-```bash
-ujust enable-supergfxctl
-```
+> Learn more about Cardwire [here](/Advanced/cardwire)!
 
 !!! info "If you are looking for **Advanced Optimus** functions, we regret to tell you that there are currently **no** working way to dynamically MUX displays outside of some very early work on AMD SmartMUX. Changing MUX settings currently **requires** a reboot."
 
-<hr>
+---
 
 ## Flatpak Apps have no Hardware Acceleration on Nvidia
 
@@ -258,7 +256,7 @@ In this case, you should update all Flatpaks in **Bazaar**, or select **Update N
 
 !!! info "Bazzite provides a systemd service that automates this, but you may still need to update it manually in some situations (e.g. No Internet connection on startup). The ideal solution is for upstream Flatpak/Nvidia to improve the way these Runtimes are handled, or to create a package that provides a Flatpak Nvidia driver using system libraries, but those require a lot more work to make possible."
 
-<hr>
+---
 
 ## Waking from sleep doesn't work with some Gigabyte motherboard
 
@@ -272,7 +270,7 @@ This can be fixed by disabling GPP0 and GPP8 wakeup. A hidden ujust command is p
 ujust _toggle-gigabyte-wake-fix
 ```
 
-<hr>
+---
 
 ## Xbox controller over Bluetooth is stuck on a connecting loop and the Xbox button keeps flashing
 
@@ -282,7 +280,7 @@ The easiest solution here is to connect the controller to a Windows machine. Dow
 
 A more advanced way is to spin up a Windows VM and passthrough the controller to do the firmware update there.
 
-<hr>
+---
 
 ## My Cursor is Flickering/ has Disappeared
 
@@ -306,7 +304,7 @@ This is typically due to bugs in the GPU drivers. You can temporarily disable Ha
     
 !!! warning "This fix may negatively affect the battery life of your laptop or handheld."
 
-<hr>
+---
 
 ## Dolphin SMB Share does not work
 
