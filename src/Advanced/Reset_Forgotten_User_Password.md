@@ -14,7 +14,7 @@
 2. Press <kbd>Esc</kbd> on the keyboard to reach the GRUB boot menu.
    a. If you press <kbd>Esc</kbd> too many times, you may end up at a `grub>` prompt.
    b. Return to the boot menu by typing `exit` and pressing <kbd>Enter</kbd>
-3. Edit the last deployment by presssing <kbd>E</kbd> on your keyboard.
+3. Edit the last deployment by pressing <kbd>E</kbd> on your keyboard.
 
 ![Boot with init=/bin/bash|689x359](../img/Boot_with_init_bin_bash.jpeg)
 

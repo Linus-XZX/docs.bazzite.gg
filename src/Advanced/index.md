@@ -4,6 +4,7 @@ title: Advanced Guides
 
 # Advanced Guides
 
+- [**Adding User to a Group**](/Advanced/add-user-to-group.md)
 - [**Auto-Mounting Secondary Drives**](/Advanced/Auto-Mounting_Secondary_Drives.md)
 - [**Managing Gamescope Using ScopeBuddy**](/Advanced/scopebuddy.md)
 - [**Cardwire](/Advanced/cardwire.md)
