@@ -339,12 +339,10 @@ This is typically due to bugs in the GPU drivers. You can temporarily disable Ha
 
 ## Dolphin SMB Share does not work
 
-This is because Atomic installations puts Usergroups somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
+This is because Atomic installations handles Groups and Users slightly differently, and puts them somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
 
-Replace `<username>` with your username, and run the following commands.
-```bash
-grep -E '^usershares:' /usr/lib/group | sudo tee -a /etc/group
-sudo usermod -aG usershares <username>
-```
+You will need to manually add your user to the **`usershares`** group.
 
+> Detailed instructions can be found [here](/Advanced/add-user-to-group).
 
+---

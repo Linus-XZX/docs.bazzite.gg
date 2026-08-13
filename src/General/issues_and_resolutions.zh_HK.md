@@ -222,8 +222,8 @@ ujust _toggle-gigabyte-wake-fix
 
 這是因為原子化系統存取 Usergroup 的位置與 Dolphin 預期的位置不同，所以你的用戶無法透過 Dolphin 介面上的按鈕加入 usershares 組別。
 
-將 `<username>` 替換成你的用戶名，然後運行以下指令：
-```bash
-grep -E '^usershares:' /usr/lib/group | sudo tee -a /etc/group
-sudo usermod -aG usershares <username>
-```
+你需要人手將用戶添加至`usershares`組別。
+
+> 詳見[此頁](/Advanced/add-user-to-group.md)。
+
+---

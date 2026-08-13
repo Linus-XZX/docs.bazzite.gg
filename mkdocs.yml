@@ -159,7 +159,7 @@ plugins:
                     - "Bazzite更新助手(bazzite-rollback-helper)": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_rollback_helper.md"
             - 進階指南:
                 - "目錄": Advanced/index.md
-                - "添加用戶至組別": /Advanced/add-user-to-group.md
+                - "添加用戶至組別": Advanced/add-user-to-group.md
                 - "設置硬盤自動掛載": Advanced/Auto-Mounting_Secondary_Drives.md
                 - "使用ScopeBuddy管理Gamescope渲染器": Advanced/scopebuddy.md
                 - "Cardwire": Advanced/cardwire.md
