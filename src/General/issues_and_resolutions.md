@@ -258,14 +258,14 @@ To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Sof
 
 ## HDMI-CEC Does Not Work Consistently
 
-This is because Fedora 43 used a legacy CEC mode that isn't used by default in Fedora 44. 
-
 In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select **Troubleshoot → Change CEC mode**:
 
-*   dGPU mode enables the “legacy” cec-control services for the `libcec` and `cec-ctl` path known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors to work around dGPUs not having cec pin 13 wired up. 
-*   Native mode masks those services and uses Valve's `linux-cec`/`cecd` path instead (may have inconsistent behavior on some devices).
+!!! note "`cecd` is known to interfere with wakeup on HTPC setups that use dongles. Try setting dGPU mode and see if HDMI-CEC behavior is consistent."
 
-!!! info "Native mode now builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units plus linuxconsoletools so Pulse-Eight style adapters can be attached to the kernel CEC subsystem."
+*   dGPU mode (Legacy): Use the “legacy” cec-control services using `libcec` and `cec-ctl`, known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors. These adapters are typically used to work around dGPUs not having cec pin 13 wired up. 
+*   Native mode (New): Use Valve's newer `linux-cec`/`cecd` system instead and mask the legacy services.
+
+!!! info "Native mode builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units and linuxconsoletools, so Pulse-Eight style adapters can be attached to the kernel CEC subsystem. However, Ugreen HDMI Adapters are known to behave inconsistently when using Native mode."
 
 ## Nvidia Optimus GPU not detected on laptops
 
