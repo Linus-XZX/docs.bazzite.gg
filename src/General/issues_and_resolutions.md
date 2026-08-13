@@ -35,6 +35,16 @@ You may disable it in **System Settings → Keyboard → On-Screen Keyboard → 
 
 ---
 
+## Firefox and KeePassXC Does Not Work Together
+
+This is because KeePassXC(or other password managers installed via Flatpak) is sandboxed and can only be accessed by a non-sandboxed application.
+
+You may try installing Firefox and KeePassXC via distrobox, though there may be problems regarding hardware acceleration.
+
+!!! info "Alternatively, you may also try [this guide](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437). Note that Bazzite officially neither maintains nor endorses the aforementioned guide and it is only included for the sake of completeness. Only follow it at **your own risk**. "
+
+---
+
 ## Gamepads and handheld joysticks don't work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.

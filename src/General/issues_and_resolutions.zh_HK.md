@@ -33,6 +33,18 @@ KDE Plasma 6.7 新增了「Plasma 鍵盤」功能，當長按特定按鍵一段�
 
 ![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
 
+---
+
+## Firefox 與 KeePassXC 無法共同運作
+
+這是因為 KeePassXC（或其他透過 Flatpak 安裝的密碼管理工具）處於沙盒環境中，且僅能由非沙盒環境的應用程式存取。
+
+你可嘗試透過 distrobox 安裝 Firefox 和 KeePassXC，但此或會遇到硬體加速相關的問題。
+
+!!! info "此外，你亦可嘗試參考 [這份指南](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437)。 請注意，上述指南並非由 Bazzite 正式維護，僅為求完整性而收錄其中。請**自行承擔跟隨其中指引的風險**。"
+
+---
+
 ## 於桌面模式中無法使用手柄／控制器的搖桿
 
 打開 **Steam 設定→控制器→非遊戲控制器配置→桌面配置**。點選「編輯」，並設置你的手柄／控制器如何在桌面模式下模擬鍵盤和滑鼠操作。
