@@ -159,6 +159,7 @@ plugins:
                     - "Bazzite更新助手(bazzite-rollback-helper)": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_rollback_helper.md"
             - 進階指南:
                 - "目錄": Advanced/index.md
+                - "添加用戶至組別": Advanced/add-user-to-group.md
                 - "設置硬盤自動掛載": Advanced/Auto-Mounting_Secondary_Drives.md
                 - "使用ScopeBuddy管理Gamescope渲染器": Advanced/scopebuddy.md
                 - "Cardwire": Advanced/cardwire.md
@@ -171,6 +172,7 @@ plugins:
                 - "設置系統內存分頁以擴展內存及啟用休眠模式": Advanced/swapfile.md
                 - "系統啟動時顯示日誌輸出": Advanced/plymouth_init.md
                 - "使用Sunshine進行遊戲串流": Advanced/sunshine.md
+                - "Enabling TRIM on LUKS-Encrypted Drives": Advanced/trim-on-luks.md
                 - "如何更改Initramfs和Dracut": Advanced/dracut-and-initramfs.md
                 - "創建自定義Bazzite系統映像檔": Advanced/creating_custom_image.md
             - Bazzite-DX: https://dev.bazzite.gg
@@ -289,6 +291,7 @@ nav:
           - "Rebase Guide": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rebase_guide.md"
           - "Bazzite Rollback Helper": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_rollback_helper.md"
   - Advanced:
+      - "Adding User to a Group": Advanced/add-user-to-group.md
       - "Advanced Guides": Advanced/index.md
       - "Auto-Mounting Secondary Drives": Advanced/Auto-Mounting_Secondary_Drives.md
       - "Managing Gamescope Using ScopeBuddy": Advanced/scopebuddy.md
@@ -302,6 +305,7 @@ nav:
       - "Using Swap for Additional Memory or Hibernation": Advanced/swapfile.md
       - "Show Detailed Init Logs During Boot": Advanced/plymouth_init.md
       - "Setting up Sunshine on Bazzite": Advanced/sunshine.md
+      - "Enabling TRIM on LUKS-Encrypted Drives": Advanced/trim-on-luks.md
       - "How to Modify Initramfs and Dracut": Advanced/dracut-and-initramfs.md
       - "Creating A Custom Bazzite Image": Advanced/creating_custom_image.md
   - Bazzite-DX: https://dev.bazzite.gg

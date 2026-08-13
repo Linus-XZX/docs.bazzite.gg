@@ -25,6 +25,26 @@ title: 疑難排解
 
 ---
 
+## 關閉特殊字母彈窗
+
+KDE Plasma 6.7 新增了「Plasma 鍵盤」功能，當長按特定按鍵一段時間時，會顯示螢幕彈出視窗。
+
+你可以在 **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key** 中關閉此功能。
+
+![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
+
+---
+
+## Firefox 與 KeePassXC 無法共同運作
+
+這是因為 KeePassXC（或其他透過 Flatpak 安裝的密碼管理工具）處於沙盒環境中，且僅能由非沙盒環境的應用程式存取。
+
+你可嘗試透過 distrobox 安裝 Firefox 和 KeePassXC，但此或會遇到硬體加速相關的問題。
+
+!!! info "此外，你亦可嘗試參考 [這份指南](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437)。 請注意，上述指南並非由 Bazzite 正式維護，僅為求完整性而收錄其中。請**自行承擔跟隨其中指引的風險**。"
+
+---
+
 ## 於桌面模式中無法使用手柄／控制器的搖桿
 
 打開 **Steam 設定→控制器→非遊戲控制器配置→桌面配置**。點選「編輯」，並設置你的手柄／控制器如何在桌面模式下模擬鍵盤和滑鼠操作。
@@ -121,6 +141,19 @@ systemctl restart NetworkManager
 
 ---
 
+## HDMI-CEC 無法穩定運作
+
+這是因為 Fedora 43 採用了舊版 CEC 模式，而 Fedora 44 預設不再使用該模式。
+
+在 [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal.md) 中，選擇 **Troubleshoot → Change CEC mode**：
+
+*   dGPU 模式會啟用經由 `libcec` 和 `cec-ctl` 路徑的舊版CEC 控制服務，已知此模式在配備 pulse8 和 ugreen 轉接器的 HTPC 上運作相當良好，可解決 dGPU 未連接 CEC 第 13 針腳的問題。
+*   Native 模式會遮罩這些服務，並改用 Valve 的新版 `linux-cec`/`cecd` 路徑（在某些裝置上可能出現行為不一致的情況）。
+
+!!! info "額外資訊"
+
+    Native 模式現已從 Valve 的上游 GitLab 儲存庫配備 `linux-cec`，並包含 inputattach CEC 模組以及 linuxconsoletools，因此可將 Pulse-Eight 風格的轉接器連接至 Linux 內核的 CEC 子系統。
+
 ## 裝置未能偵測 Nvidia Optimus（優馳）
 
 若你正在有 Nvidia Optimus 支持的裝置（如 Intel+Nvidia 筆記本）上運行 Bazzite，而性能未達預期，且遊戲疑似運行於iGPU（核顯）之上，你便需要採取以下措施：
@@ -189,8 +222,8 @@ ujust _toggle-gigabyte-wake-fix
 
 這是因為原子化系統存取 Usergroup 的位置與 Dolphin 預期的位置不同，所以你的用戶無法透過 Dolphin 介面上的按鈕加入 usershares 組別。
 
-將 `<username>` 替換成你的用戶名，然後運行以下指令：
-```bash
-grep -E '^usershares:' /usr/lib/group | sudo tee -a /etc/group
-sudo usermod -aG usershares <username>
-```
+你需要人手將用戶添加至`usershares`組別。
+
+> 詳見[此頁](/Advanced/add-user-to-group.md)。
+
+---

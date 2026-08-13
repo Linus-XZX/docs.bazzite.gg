@@ -25,6 +25,26 @@ Both affect each other's audio volume, so they must be at the same volume level.
 
 ---
 
+## Disable Special Character Pop-Up on KDE Plasma
+
+KDE Plasma 6.7 added the Plasma Keyboard feature, which shows an on-screen pop-up when certain keys are held for a period.
+
+You may disable it in **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key**.
+
+![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
+
+---
+
+## Firefox and KeePassXC Does Not Work Together
+
+This is because KeePassXC(or other password managers installed via Flatpak) is sandboxed and can only be accessed by a non-sandboxed application.
+
+You may try installing Firefox and KeePassXC via distrobox, though there may be problems regarding hardware acceleration.
+
+!!! info "Alternatively, you may also try [this guide](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437). Note that Bazzite officially neither maintains nor endorses the aforementioned guide and it is only included for the sake of completeness. Only follow it at **your own risk**. "
+
+---
+
 ## Gamepads and handheld joysticks don't work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.
@@ -236,6 +256,17 @@ To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Sof
 
 ---
 
+## HDMI-CEC Does Not Work Consistently
+
+In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select **Troubleshoot → Change CEC mode**:
+
+!!! note "`cecd` is known to interfere with wakeup on HTPC setups that use dongles. Try setting dGPU mode and see if HDMI-CEC behavior is consistent."
+
+*   dGPU mode (Legacy): Use the “legacy” cec-control services using `libcec` and `cec-ctl`, known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors. These adapters are typically used to work around dGPUs not having cec pin 13 wired up. 
+*   Native mode (New): Use Valve's newer `linux-cec`/`cecd` system instead and mask the legacy services.
+
+!!! info "Native mode builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units and linuxconsoletools, so Pulse-Eight style adapters can be attached to the kernel CEC subsystem. However, Ugreen HDMI Adapters are known to behave inconsistently when using Native mode."
+
 ## Nvidia Optimus GPU not detected on laptops
 
 If you are running Bazzite on a laptop with an Nvidia Optimus GPU, you might notice that games are running poorly and seem to be running on the integrated GPU.
@@ -308,12 +339,10 @@ This is typically due to bugs in the GPU drivers. You can temporarily disable Ha
 
 ## Dolphin SMB Share does not work
 
-This is because Atomic installations puts Usergroups somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
+This is because Atomic installations handles Groups and Users slightly differently, and puts them somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
 
-Replace `<username>` with your username, and run the following commands.
-```bash
-grep -E '^usershares:' /usr/lib/group | sudo tee -a /etc/group
-sudo usermod -aG usershares <username>
-```
+You will need to manually add your user to the **`usershares`** group.
 
+> Detailed instructions can be found [here](/Advanced/add-user-to-group).
 
+---
