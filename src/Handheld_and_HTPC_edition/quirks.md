@@ -257,9 +257,11 @@ This is most likely due to a broken Decky Loader plugin you have installed and c
 
 ## Why is VRR not working on my VRR-compatible display?
 
-!!! note "Preliminary support for HDMI 2.1 FRL, VRR, and DSC on AMDGPU is expected to arrive at Linux Kernel version 7.2. This section will be updated accordingly once the updates arrive on Bazzite."
+!!! info "Support for HDMI 2.1 FRL, VRR, and DSC on AMD Graphics cards are added in Linux Kernel version 7.2. [Update to the newest version of Bazzite](/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide) to use this feature!"
 
-Most of the time this is because the device is connected via HDMI which does not yet support VRR on Linux.
+Enable it in **Bazzite Portal → Tweak Systems → Enable VRR on HDMI for AMD Graphics Cards**. 
+
+!!! note "This may cause flickering and instability on some displays."
 
 > You may read more about it [here](https://www.phoronix.com/news/HDMI-2.1-OSS-Rejected).
 

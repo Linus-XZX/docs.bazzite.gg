@@ -242,6 +242,18 @@ steamos-session-select desktop
 
 ---
 
+## 為甚麼我的顯示器無法啟用可變更新率（VRR）？
+
+!!! info "Linux 內核 7.2 版本已新增對 AMD 顯示卡的 HDMI 2.1 FRL、VRR 及 DSC 支援。[請更新至 Bazzite 最新版本](/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide) 以使用此功能！"
+
+請於 **Bazzite Portal → Tweak Systems → Enable VRR on HDMI for AMD Graphics Cards** 啟用此功能。
+
+!!! note "這或會導致某些顯示器出現閃爍和不穩定現象。"
+
+> 你可於[此](https://www.phoronix.com/news/HDMI-2.1-OSS-Rejected)閱讀更多相關資訊。
+
+---
+
 ## Rainbow Display
 
 ![My-Eyes|690x430](../img/hdr-woes.png)
