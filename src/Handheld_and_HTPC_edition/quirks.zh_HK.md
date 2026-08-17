@@ -4,6 +4,24 @@ title: Steam 遊戲模式的常見問題與解決辦法
 
 # Steam 遊戲模式的常見問題與解決辦法 
 
+---
+
+## 我的遊戲手把選單不見了
+
+!!! info "OpenGamepadUI 預設在 Steam Deck 和 HTPC 上預設為停用。"
+
+Bazzite 採用白名單機制，針對已知需要 OpenGamepadUI 啟用搖桿和肩鍵的手持裝置開啟該功能。若在不需要 OpenGamepadUI 的裝置上啟用此功能，或會導致意料之外的問題。
+
+儘管如此，你仍可透過以下指令切換 OpenGamepadUI 的啟用狀態：
+
+```bash
+ujust configure-opengamepadui
+```
+
+> 你可於[此](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/steamos-manager-hardware)查看上述白名單。此外，你亦可於[此](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/powerstation-hardware)查看需要使用 PowerStation 控制系統功耗的掌機（不包括 Valve 掌機）。
+
+---
+
 ## 如何在 Bazzite 中使用於 SteamOS 中格式化的 microSD 卡？
 
 打開系統終端並輸入以下指令：

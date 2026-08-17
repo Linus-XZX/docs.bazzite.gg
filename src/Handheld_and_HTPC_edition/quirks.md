@@ -4,6 +4,24 @@ title: Steam Gaming Mode Quirks and Workarounds
 
 # Steam Gaming Mode Quirks and Workarounds
 
+---
+
+## My Gamepad Menu is Missing
+
+!!! info "OpenGamepadUI is disabled by default for the Steam Deck and HTPCs."
+
+Bazzite uses an allowlist to selectively enable OpenGamepadUI for handhelds that are known to require it to enable built-in joysticks and bumpers. Enabling OpenGamepadUI on devices that don't require them may lead to unexpected issues.
+
+Nevertheless, you can toggle OpenGamepadUI using the following command:
+
+```bash
+ujust configure-opengamepadui
+```
+
+> You can check the allowlist [here](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/steamos-manager-hardware). Additionally, a list of non-Valve handhelds that need PowerStation for TDP control are available [here](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/powerstation-hardware).
+
+---
+
 ## How do I use my microSD card that I used on my Steam Deck running SteamOS?
 
 Open a host terminal and enter this **command**:
