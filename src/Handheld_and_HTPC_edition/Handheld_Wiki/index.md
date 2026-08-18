@@ -33,13 +33,14 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 !!! info "[OpenGamepadUI(OGUI)](https://github.com/ShadowBlip/OpenGamepadUI) is intended and enabled by default for handhelds that are **not** the Steam Deck."
 
-1. Double press the 'side menu button' to access OpenGamepadUI overlay in Steam Gaming Mode
+1. Double press the 'side menu button' or 'Guide + B' to access OpenGamepadUI overlay in Steam Gaming Mode
 
-2. Select the controller emulation and RGB color you want
+2. Select the controller icon to change the change the Emulated controller type.
 
 !!! note
 
-    Gyro functionality **requires** DualSense emulation.
+    Gyro and RGB functionality **requires** DualSense emulation.
+    RGB can be controlled using the Huesync Decky Plugin w/out Dual Sense Emulation
 
 ## TDP Controls
 
@@ -47,10 +48,19 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 There are a few options for TDP Controls that work with Bazzite:
 
+- Steam Client Quick Access Menu (QAM)
+    - If your devices TDP can be controlled via the Steam QAM (Quick Access Menu) the option will be available here, if it does not appear please check OGUI. (OpenGamepadUI)
+    - This can be accessed anytime using the Quick Access Menu button (varies by handheld) or pressing 'Guide + A'
+    - Select the "Lightning Bolt Icon" and enable "Advanced" options
+    - TDP can then be changed by using the dedicated TDP Dropdown
+    - Custom TDP may be set by selecting "Custom", scrolling down and toggling "Custom TDP", then changing the TDP slider that appears
+- OGUI (OpenGamepadUI)
+    - This is the 2nd place you may find TDP controls for your device, if your devices uses the Steam QAM, you may or may not see performance options available here. Use whichever you prefer.
+    - OGUI can be opened with 'Guide + B' double tapping or long pressing 'side menu', how this is mapped depends on your device
 - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, among other settings.
   - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
 - [PowerControl](https://github.com/mengmeet/PowerControl) supports TDP, GPU, and fan control on select devices.
-
+- [Panel de Control](https://github.com/Hooandee/panel-de-control) also allow for custom TDP, Fan Control and smart leanring for profile based on how you use your device.
 ### How do I open the OGUI Overlay?
 
 ![Overlay|690x431, 75%](../../img/HHD_Overlay.jpeg)
@@ -58,11 +68,18 @@ There are a few options for TDP Controls that work with Bazzite:
 
 Press, hold, or double-tap the Quick Access Menu button.
 
+!!!
+
+    OGUI will only appear if your device appears on the "Known Devices".
+    It is not currently intended to be used with HTPC's.
+    If you have a handheld on which OGUI is not appearing and it should be
+    please open an issue on Github!
+
 ## Controller Information
 
 For most handheld hardware, besides the Steam Deck, emulation of a DualSense controller is used for full functionality. Double tap or hold the side menu button to access settings for controller emulation including switching to an Xbox controller with reduced functionality.
 
-If your device has paddles, you will want to use the DualSense Edge controller (**excluding the Ayn Loki**). It’s disabled by default because some games do not map it correctly.
+If your device has paddles, you will want to use the DualSense Edge or Steam Deck controller (**excluding the Ayn Loki**). It’s disabled by default because some games do not map it correctly.
 
 Some games and emulators may need Steam Input **disabled** to work correctly with your controls.
 
