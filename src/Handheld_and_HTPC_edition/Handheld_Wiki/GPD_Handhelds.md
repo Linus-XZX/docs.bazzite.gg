@@ -8,14 +8,14 @@ title: GPD Handhelds
 
     This wiki may contain outdated information.
 
-### General Information & Tweaks
+## General Information & Tweaks
 
 - Adjust RGB with Steam Gaming Mode with Plugins
-- Adjust the scaling of the UI in the Display Settings
+- Adjust the scaling of the UI in Display Settings
 - Set a charge limit in Desktop Mode
 - GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode.
 
-### General Issues
+## General Issues
 
 - Devices using the Ryzen 7 6800U or any of its derivatives requires the fingerprint scanner to be disabled to have working suspend-resume.
 - Devices using the Ryzen 7 7840U, or any of its derivatives (2023-2025) have partially working suspend-resume, where the device is forced into hibernation after a 5% battery drain. This issue is tracked [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154).

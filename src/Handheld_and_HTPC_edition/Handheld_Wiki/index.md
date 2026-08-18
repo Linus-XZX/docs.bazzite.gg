@@ -6,19 +6,19 @@ title: Handheld Compatibility
 
 ## SteamOS-like Functionality
 
->**Notice**: Bazzite uses [Handheld Daemon](https://github.com/hhd-dev/hhd/blob/master/readme.md) for proper handheld support currently. 
+!!! info
 
-Bazzite-Deck images ship with [Steam Gaming Mode](../Steam_Gaming_Mode.md) which is intended to mimic the experience of SteamOS.  The goal is to have earlier support for most x86_64 handheld PCs before SteamOS and with the same benefits of the desktop version of Bazzite.
+    Bazzite uses [OpenGamepadUI](https://github.com/ShadowBlip/OpenGamepadUI) and [InputPlumber](https://github.com/shadowblip/InputPlumber) for proper handheld support. 
+    
+    In the past, this was done using Handheld Daemon. You may learn more about that [here](https://universal-blue.discourse.group/t/a-brighter-future-for-bazzite/11575).
+
+Bazzite-Deck images ship with [Steam Gaming Mode](../Steam_Gaming_Mode.md) which is intended to mimic the experience of SteamOS. The goal is to have earlier support for most x86_64 handheld PCs before SteamOS and with the same benefits of the desktop version of Bazzite.
 
 ## Supported Handhelds
 
-!!! attention
+!!! info "This list is non-exhaustive and does not necessarily indicate that unlisted handhelds do not work with Bazzite."
 
-    This list is incomplete and does not indicate that unlisted handhelds do not work with Bazzite currently, but because we lack specific information regarding their post-installation setup, workarounds, and proper hardware support for Linux, they are unlisted here.
-
-**All handhelds except for the Steam Deck make use of [Handheld Daemon](https://github.com/hhd-dev/hhd/blob/master/readme.md) for controls, TDP, etc.**
-
-_Click the name of each hardware to view post-installation setup and known issues/workarounds._
+_Click the name of each hardware to view post-installation setup, known working features, issues and workarounds._
 
 - [**ASUS Handhelds**](./ASUS_ROG_Ally.md)
 - [**Lenovo Handhelds**](./Lenovo_Legion_Go.md)
@@ -27,25 +27,19 @@ _Click the name of each hardware to view post-installation setup and known issue
 - [**Ayn Handhelds**](./Ayn_Handhelds.md)
 - [**Ayaneo Handhelds**](./Ayaneo_Handhelds.md)
 - [**Steam Deck**](./Steam_Deck.md)
-- [**Other Handhelds**](./Other_Handhelds.md)
+- [**Other Handhelds**](./Other_Handhelds.md) 
 
-If your handheld isn't listed in the entries, then it does **not** necessarily mean that the device is unsupported. 
+## OGUI Setup
 
-## HHD Setup
+!!! info "[OpenGamepadUI(OGUI)](https://github.com/ShadowBlip/OpenGamepadUI) is intended and enabled by default for handhelds that are **not** the Steam Deck."
 
-!!! attention
-
-    HHD is intended and functional for handhelds that are **not** the Steam Deck.
-
->Read the [**HHD README**](https://github.com/hhd-dev/hhd/blob/master/readme.md) for more information.
-
-1. Double press the 'side menu button' to access Handheld Daemon overlay in Steam Gaming Mode
+1. Double press the 'side menu button' to access OpenGamepadUI overlay in Steam Gaming Mode
 
 2. Select the controller emulation and RGB color you want
 
 !!! note
 
-    Gyro functionality **requires** DualSense emulation
+    Gyro functionality **requires** DualSense emulation.
 
 ## TDP Controls
 
@@ -53,13 +47,11 @@ If your handheld isn't listed in the entries, then it does **not** necessarily m
 
 There are a few options for TDP Controls that work with Bazzite:
 
-- The [HHD-overlay](https://github.com/hhd-dev/hhd/blob/master/readme.md) supports TDP controls. (**Primary Supported Method**)
-  - Also has a desktop app that is pre-installed, look for the Handheld Daemon app in Desktop Mode.
-- [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) supports TDP, GPU, Power Governor, and among other settings.
-  - Also has a [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop), but needs to be manually installed.
-  - [PowerControl](https://github.com/mengmeet/PowerControl) supports TDP, GPU, and fan controls on select devices.
+- [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, among other settings.
+  - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
+- [PowerControl](https://github.com/mengmeet/PowerControl) supports TDP, GPU, and fan control on select devices.
 
-### How do I open the HHD Overlay?
+### How do I open the OGUI Overlay?
 
 ![Overlay|690x431, 75%](../../img/HHD_Overlay.jpeg)
 ![RGB|690x431, 75%](../../img/HHD_RGB.jpeg)
@@ -80,7 +72,9 @@ Some games and emulators may need Steam Input **disabled** to work correctly wit
 
 Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
-The virtual keyboard is Steam's on-screen keyboard, but needs to be setup in Steam's settings in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard** (Remap it to <kbd>**X**</kbd> or whatever you prefer).  Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings
+The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it needs to be remapped to <kbd>**X**</kbd> or any key of your preference. 
+
+The desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
 ## Decky Setup
 
@@ -96,7 +90,7 @@ The Quick Access Menu is accessible from the keyboard with Control + 2, or with 
 
 ### Decky Plugins
 
-!!! attention
+!!! info
 
     Decky may break or uninstall after updates especially if there is an update.
 
@@ -108,13 +102,17 @@ Install optional [Decky plugins](https://plugins.deckbrew.xyz/) for your handhel
 
     Certain handhelds have been confirmed to boot Bazzite, but are plagued by missing driver support for Linux including missing audio drivers.
 
-Unsupported handhelds _could work_ with Bazzite, but there may be major issues encountered that are undocumented. If your handheld hardware is not listed, then you can still give Bazzite a try with our Bazzite-Deck image.
+Unsupported handhelds _could work_ with Bazzite, but you may encounter unexpected and undocumented changes. If your handheld hardware is not listed, you may still give Bazzite a try with the Bazzite-Deck image.
 
-Your mileage may vary with untested hardware. Bazzite does **not** have the required setup for unsupported handheld, so setup will be manually done by the end-user for different functionality if it even works properly on the unsupported device.
+Your mileage may vary with untested hardware. Bazzite does **not** have the required setup for unsupported handheld, so you may need to setup different functionality manually. 
+
+!!! note
+
+    You may also submit PRs in getting your device officially supported on Bazzite if you feel like it is in a good state with Linux support.
 
 ## e-GPU Caveats:
 
 - The same [GPU hardware requirements](/Gaming/Hardware_compatibility_for_gaming.md#steam-gaming-mode-requirements) that apply for Steam Gaming Mode also apply for e-GPUs.
-  - Nvidia GPUs are **unsupported** but may work if rebasing to a Nvidia `-deck` image with a potential for outstanding bugs.
+  - Nvidia GPUs are **unsupported**, though Bazzite provides an experimental `-deck-nvidia` image.
 
 >[**General Linux e-GPU Guide + Script**](https://github.com/ewagner12/all-ways-egpu)
