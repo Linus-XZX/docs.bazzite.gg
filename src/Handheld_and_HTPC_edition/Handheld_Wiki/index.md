@@ -47,9 +47,11 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 ## TDP Controls
 
-![TDP|690x431, 75%](../../img/TDP.jpeg)
+![TDP|409x1004, 33%](/img/TDP.png) ![OGUI Power Profiles|1920x1200, 30%](/img/OGUI_Profile.jpg)
 
 There are a few options for TDP Controls that work with Bazzite:
+
+!!! info "If you open OpenGamepadUI and see the message **Waiting for PowerStation service...**, this means your device does not use PowerStation for TDP. This is completely normal and is the expected behavior."
 
 === "Steam Client Quick Access Menu (QAM)"
 
@@ -83,8 +85,7 @@ There are a few options for TDP Controls that work with Bazzite:
 
 ### How do I open the OGUI Overlay?
 
-![Overlay|690x431, 75%](../../img/HHD_Overlay.jpeg)
-![RGB|690x431, 75%](../../img/HHD_RGB.jpeg)
+![Overlay|690x431, 75%](/img/OGUI_Overlay.jpg)
 
 OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped may depend on your device.
 
@@ -104,7 +105,7 @@ Some games and emulators may need Steam Input to be **disabled** to work correct
 
 ### Desktop Controls
 
-![desktop_controls_step_1|588x500, 75%](../../img/handheld_desktop_controls_1.png)
+![desktop_controls_step_1|850x722, 75%](/img/handheld_desktop_control.png)
 
 Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
