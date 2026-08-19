@@ -85,3 +85,5 @@ rpm-ostree status -a
     This is an unsupported configuration since updates are expected to be running daily for both the operating system and applications.
 
 Open the System Settings of your desktop environment and turn on the setting relating to a metered connection (Data caps or incur charges).  This setting will **pause** automatic updates for Bazzite.
+
+---
