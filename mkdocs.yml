@@ -153,6 +153,7 @@ plugins:
                     - "Waydroid 設置教程": Installing_and_Managing_Software/Waydroid_Setup_Guide.md
                 - "系統更新與回溯":
                     - "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/index.md"
+                    - "Bazzite Updater": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_updater.md"
                     - "系統更新教程": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide.md"
                     - "回溯系統更新": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rolling_back_system_updates.md"
                     - "切換更新頻道": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rebase_guide.md"
@@ -286,6 +287,7 @@ nav:
           - "Waydroid Setup Guide": Installing_and_Managing_Software/Waydroid_Setup_Guide.md
       - "Updates, Rollbacks, & Rebasing":
           - "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/index.md"
+          - "Bazzite Updater": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_updater.md"
           - "Updating Guide": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide.md"
           - "Rolling Back System Updates": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rolling_back_system_updates.md"
           - "Rebase Guide": "Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rebase_guide.md"

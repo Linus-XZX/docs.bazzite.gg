@@ -64,7 +64,7 @@ There are a few options for TDP Controls that work with Bazzite:
   
 === "OpenGamepadUI (OGUI)"
 
-    This is the 2nd place where you may find TDP controls for your device. If your device can be configured via the Steam QAM, performance configurations may or may not be available here. You may use any of the two to configure your device.
+    This is the 2nd place where you may find TDP controls for your device. In this menu, TDP controls are provided by [PowerStation](https://github.com/ShadowBlip/PowerStation). If your device can be configured via the Steam QAM, performance configurations may or may not be available here. You may use any of the two to configure your device.
     
     - OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped will depend on your device.
     
