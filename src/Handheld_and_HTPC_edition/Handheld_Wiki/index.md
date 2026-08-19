@@ -14,6 +14,8 @@ title: Handheld Compatibility
 
 Bazzite-Deck images ship with [Steam Gaming Mode](../Steam_Gaming_Mode.md) which is intended to mimic the experience of SteamOS. The goal is to have earlier support for most x86_64 handheld PCs before SteamOS and with the same benefits of the desktop version of Bazzite.
 
+---
+
 ## Supported Handhelds
 
 !!! info "This list is non-exhaustive and does not necessarily indicate that unlisted handhelds do not work with Bazzite."
@@ -29,18 +31,19 @@ _Click the name of each hardware to view post-installation setup, known working 
 - [**Steam Deck**](./Steam_Deck.md)
 - [**Other Handhelds**](./Other_Handhelds.md) 
 
+---
+
 ## OGUI Setup
 
 !!! info "[OpenGamepadUI(OGUI)](https://github.com/ShadowBlip/OpenGamepadUI) is intended and enabled by default for handhelds that are **not** the Steam Deck."
 
-1. Double press the 'side menu button' or 'Guide + B' to access OpenGamepadUI overlay in Steam Gaming Mode
+1. Double tap :material-microsoft-xbox-controller-menu: or press :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: to access OpenGamepadUI overlay in Steam Gaming Mode.
 
 2. Select the controller icon to change the change the Emulated controller type.
 
-!!! note
+!!! note "Gyro functionality **requires** DualSense emulation, though RGB can still be controlled using the Huesync Decky Plugin without DualSense Emulation."
 
-    Gyro and RGB functionality **requires** DualSense emulation.
-    RGB can be controlled using the Huesync Decky Plugin w/out Dual Sense Emulation
+---
 
 ## TDP Controls
 
@@ -48,40 +51,56 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 There are a few options for TDP Controls that work with Bazzite:
 
-- Steam Client Quick Access Menu (QAM)
-    - If your devices TDP can be controlled via the Steam QAM (Quick Access Menu) the option will be available here, if it does not appear please check OGUI. (OpenGamepadUI)
-    - This can be accessed anytime using the Quick Access Menu button (varies by handheld) or pressing 'Guide + A'
-    - Select the "Lightning Bolt Icon" and enable "Advanced" options
-    - TDP can then be changed by using the dedicated TDP Dropdown
-    - Custom TDP may be set by selecting "Custom", scrolling down and toggling "Custom TDP", then changing the TDP slider that appears
-- OGUI (OpenGamepadUI)
-    - This is the 2nd place you may find TDP controls for your device, if your devices uses the Steam QAM, you may or may not see performance options available here. Use whichever you prefer.
-    - OGUI can be opened with 'Guide + B' double tapping or long pressing 'side menu', how this is mapped depends on your device
-- [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, among other settings.
-  - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
-- [PowerControl](https://github.com/mengmeet/PowerControl) supports TDP, GPU, and fan control on select devices.
-- [Panel de Control](https://github.com/Hooandee/panel-de-control) also allow for custom TDP, Fan Control and smart leanring for profile based on how you use your device.
+=== "Steam Client Quick Access Menu (QAM)"
+
+    If your device's TDP can be controlled via SteamOS Manager, the option will be available here. If it does not appear, check OpenGamepadUI or use other means of adjusting the TDP of your device.
+    
+    - This menu can be accessed anytime using the Quick Access Menu button (varies by handheld) or by pressing :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-down:.
+    - Select the **:material-lightning-bolt: Lightning Bolt Icon** and enable **Advanced** options
+    - TDP can then be changed by using the dedicated TDP Dropdown.
+    - Custom TDP may be set by selecting "Custom", scrolling down and toggling "Custom TDP", then changing the TDP slider that appears.
+    
+    > [These devices](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/steamos-manager-hardware) will use this method by default.
+  
+=== "OpenGamepadUI (OGUI)"
+
+    This is the 2nd place where you may find TDP controls for your device. If your device can be configured via the Steam QAM, performance configurations may or may not be available here. You may use any of the two to configure your device.
+    
+    - OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped will depend on your device.
+    
+    > [These devices](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/powerstation-hardware) will use this method by default.
+  
+=== "Decky Plugins"
+
+    You may also use Decky Plugins to configure TDP for your device if both Steam QAM and OGUI do not provide them. However, note that these plugins will interfere and conflict with with other methods of TDP configuration.
+    
+    - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, amongst other settings.
+      - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
+    - [PowerControl](https://github.com/mengmeet/PowerControl) supports TDP, GPU, and fan control on select devices.
+    - [Panel de Control](https://github.com/Hooandee/panel-de-control) also allow for custom TDP, Fan Control and smart leanring for profile based on how you use your device.
+
+---
+
 ### How do I open the OGUI Overlay?
 
 ![Overlay|690x431, 75%](../../img/HHD_Overlay.jpeg)
 ![RGB|690x431, 75%](../../img/HHD_RGB.jpeg)
 
-Press, hold, or double-tap the Quick Access Menu button.
+OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped may depend on your device.
 
-!!!
+!!! note "OGUI is currently selectively enabled for devices in an allowlist and is not currently intended to be used with HTPC setups. If you have a handheld on which OGUI is not appearing, please open an issue on Github!"
 
-    OGUI will only appear if your device appears on the "Known Devices".
-    It is not currently intended to be used with HTPC's.
-    If you have a handheld on which OGUI is not appearing and it should be
-    please open an issue on Github!
+---
 
 ## Controller Information
 
-For most handheld hardware, besides the Steam Deck, emulation of a DualSense controller is used for full functionality. Double tap or hold the side menu button to access settings for controller emulation including switching to an Xbox controller with reduced functionality.
+For most handheld hardware, besides the Steam Deck, emulation of a DualSense controller is used for full functionality. Double tap/hold :material-microsoft-xbox-controller-menu: to open the QAM and access settings for controller emulation.
+
+!!! warning "Emulating an Xbox controller will cause reduced or missing functions."
 
 If your device has paddles, you will want to use the DualSense Edge or Steam Deck controller (**excluding the Ayn Loki**). It’s disabled by default because some games do not map it correctly.
 
-Some games and emulators may need Steam Input **disabled** to work correctly with your controls.
+Some games and emulators may need Steam Input to be **disabled** to work correctly with your controls.
 
 ### Desktop Controls
 
@@ -89,9 +108,11 @@ Some games and emulators may need Steam Input **disabled** to work correctly wit
 
 Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
-The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it needs to be remapped to <kbd>**X**</kbd> or any key of your preference. 
+The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it needs to be remapped to <kbd>X</kbd> or any key of your preference. 
 
 The desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
+
+---
 
 ## Decky Setup
 
@@ -101,17 +122,17 @@ To install [Decky Loader](https://decky.xyz), open a host terminal and enter:
 ujust setup-decky
 ```
 
-You can access Decky Loader by pressing the 'side menu button', also known as the Quick Access Menu (QAM), once from within Steam Gamemode or Steam Big Picture Mode.
+You can access Decky Loader by pressing :material-microsoft-xbox-controller-menu: once to open the QAM from within Steam Gaming Mode or Steam Big Picture Mode.
 
-The Quick Access Menu is accessible from the keyboard with Control + 2, or with an external controller using Xbox/PS button + A/X.
+Alternatively, The Quick Access Menu is accessible from the keyboard with Control + 2, or with an external controller by pressing :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-down:
 
 ### Decky Plugins
 
-!!! info
+!!! info "Decky may break or be uninstalled after an update."
 
-    Decky may break or uninstall after updates especially if there is an update.
+Install optional [Decky plugins](https://plugins.deckbrew.xyz/) for your handheld. If you experience any major issues with Decky, it is recommended to uninstall it before reporting Bazzite bugs.
 
-Install optional [Decky plugins](https://plugins.deckbrew.xyz/) for your handheld. If you experience any major issues then it is recommended to uninstall Decky before reporting Bazzite bugs.
+---
 
 ## Unsupported Handhelds
 
@@ -121,15 +142,19 @@ Install optional [Decky plugins](https://plugins.deckbrew.xyz/) for your handhel
 
 Unsupported handhelds _could work_ with Bazzite, but you may encounter unexpected and undocumented changes. If your handheld hardware is not listed, you may still give Bazzite a try with the Bazzite-Deck image.
 
-Your mileage may vary with untested hardware. Bazzite does **not** have the required setup for unsupported handheld, so you may need to setup different functionality manually. 
+Your mileage may vary with untested hardware. Bazzite does **not** automatically apply fixes, tweaks and setup on unsupported handhelds, so you may need to setup different functionalities manually. 
 
 !!! note
 
-    You may also submit PRs in getting your device officially supported on Bazzite if you feel like it is in a good state with Linux support.
+    You may also submit PRs to get your device officially supported on Bazzite if you feel like it is in a good state with Linux support.
+
+---
 
 ## e-GPU Caveats:
 
-- The same [GPU hardware requirements](/Gaming/Hardware_compatibility_for_gaming.md#steam-gaming-mode-requirements) that apply for Steam Gaming Mode also apply for e-GPUs.
+- The same [GPU hardware requirements](/Gaming/Hardware_compatibility_for_gaming.md#steam-gaming-mode-requirements) that apply for Steam Gaming Mode will also apply for e-GPUs.
   - Nvidia GPUs are **unsupported**, though Bazzite provides an experimental `-deck-nvidia` image.
 
->[**General Linux e-GPU Guide + Script**](https://github.com/ewagner12/all-ways-egpu)
+> You may read and follow this [**General Linux e-GPU Guide + Script**](https://github.com/ewagner12/all-ways-egpu) at your own risk.
+
+---
