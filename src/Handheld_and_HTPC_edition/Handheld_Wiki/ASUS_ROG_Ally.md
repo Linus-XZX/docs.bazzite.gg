@@ -19,18 +19,9 @@ title: ASUS Handhelds
 ### Optional Tweaks
 
 - Adjust RGB with Steam Gaming Mode with Plugins
-- Adjust the scaling of the UI in Display Settings
-- Set a charge limit in Desktop Mode
+  - Controller emulation may need to be set to DualShock for RGB adjustment to work.
 
 ### Known Issues
-
-#### Bazzite-Deck 44 Known Issues
-
-- Using the PS5 controller profile on OpenGamepadUI is needed to make controllers work.
-- No RGB Control.
-- TDP Control may not be available on some devices.
-
-#### Other Known Issues
 
 - Changing A/C power sometimes leads to a stuck TDP.
   - This happens when removing the charger while in standby.
@@ -43,8 +34,8 @@ title: ASUS Handhelds
 - LED indicator is on max brightness by default and cannot be changed on any other operating system outside of Windows.
   - This is tied to the firmware unfortunately.
   - This issue may also be present during charging and sleeping.
-- The Ally does **not support** button holding for the Steam or QAM buttons.
-  - Steam Input's chords do not work by default.
+- The Ally does **not** support button holding for the Steam or QAM buttons.
+  - Steam Input's chords may not work by default.
     - Swapping the Start/Select button(s) can be used as a workaround.
 - Suspend may be broken if SMT is disabled
 - Fingerprint sensor driver may not work.

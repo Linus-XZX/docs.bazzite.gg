@@ -6,6 +6,12 @@ title: Steam Gaming Mode Quirks and Workarounds
 
 ---
 
+## Fan Control Functionality is Missing
+
+[Bazzite Deck 44](https://universal-blue.discourse.group/t/bazzites-biggest-update-deck-44-has-launched-happy-birthday-to-universal-blue/12373) brings along a major change in our handheld stack. With this new stack, some devices may no longer allow fan control, but a plugin for OGUI is in development to restore them. If you are affected, let us know on our GitHub and we will update you as this lands.
+
+---
+
 ## My Gamepad Menu is Missing
 
 !!! info "OpenGamepadUI is disabled by default for the Steam Deck and HTPCs."
@@ -259,7 +265,7 @@ This is most likely due to a broken Decky Loader plugin you have installed and c
 
 !!! info "Support for HDMI 2.1 FRL, VRR, and DSC on AMD Graphics cards are added in Linux Kernel version 7.2. [Update to the newest version of Bazzite](/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide) to use this feature!"
 
-Enable it in **Bazzite Portal → Tweak Systems → Enable VRR on HDMI for AMD Graphics Cards**. 
+Enable it in **Bazzite Portal → Tweak Systems → Enable HDMI 2.1 for AMD Graphics Cards**. 
 
 !!! note "This may cause flickering and instability on some displays."
 
@@ -328,3 +334,5 @@ https://www.youtube.com/watch?v=gE1ff72g2Gk
 - "Enable GPU accelerated rendering in web views (requires restart)" must be enabled in the Steam settings for better performance in the UI.
   - Enabling this option will most likely cause game-breaking graphical artifacts.
 - HDR can cause game-breaking graphical artifacts.
+
+---

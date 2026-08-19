@@ -11,12 +11,12 @@ title: Ayn Handhelds
 ## General Information & Tweaks
 
 - RGB adjustment may be adjusted in Steam Gaming Mode under **Settings → Controller → Calibration & Advanced → LED Settings** or via OpenGamepadUI, if available.
-- Adjust the scaling of the UI in the Display Settings
-- Setting a charge limit can be done in Desktop Mode
+  - Controller emulation may need to be set to DualShock for RGB adjustment to work.
+- Adjust the scaling of the UI in the Display Settings.
+- Setting a charge limit can be done in Desktop Mode.
 
 ## General Issues
 
-- RGB adjustment may not be available on Bazzite 44
 - Games may sometimes default to 800p resolution.
   - You may manually change the resolution per game in the **Steam Settings → Properties → Game Resolution** to either "Native" or other higher resolutions.
 

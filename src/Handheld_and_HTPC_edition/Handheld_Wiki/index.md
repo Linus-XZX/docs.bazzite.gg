@@ -8,7 +8,7 @@ title: Handheld Compatibility
 
 !!! info
 
-    Bazzite uses [OpenGamepadUI](https://github.com/ShadowBlip/OpenGamepadUI) and [InputPlumber](https://github.com/shadowblip/InputPlumber) for proper handheld support. 
+    [Bazzite Deck 44](https://universal-blue.discourse.group/t/bazzites-biggest-update-deck-44-has-launched-happy-birthday-to-universal-blue/12373) uses [OpenGamepadUI](https://github.com/ShadowBlip/OpenGamepadUI) and [InputPlumber](https://github.com/shadowblip/InputPlumber) for proper handheld support. 
     
     In the past, this was done using Handheld Daemon. You may learn more about that [here](https://universal-blue.discourse.group/t/a-brighter-future-for-bazzite/11575).
 
@@ -41,7 +41,7 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 2. Select the controller icon to change the change the Emulated controller type.
 
-!!! note "Gyro functionality **requires** DualSense emulation, though RGB can still be controlled using the Huesync Decky Plugin without DualSense Emulation."
+!!! note "Gyro functionality **requires** DualSense emulation, though RGB can still be controlled using the Huesync Decky Plugin without it."
 
 ---
 
@@ -74,7 +74,7 @@ There are a few options for TDP Controls that work with Bazzite:
   
 === "Decky Plugins"
 
-    You may also use Decky Plugins to configure TDP for your device if both Steam QAM and OGUI do not provide them. However, note that these plugins will interfere and conflict with with other methods of TDP configuration.
+    You may also use Decky Plugins to configure TDP for your device if both Steam QAM and OGUI do not provide them. However, note that these plugins will interfere and conflict if you have multiple plugins turned on. Make sure you only have one means of TDP Control(including OGUI/PowerStation) running!
     
     - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, amongst other settings.
       - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
@@ -90,6 +90,8 @@ There are a few options for TDP Controls that work with Bazzite:
 OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped may depend on your device.
 
 !!! note "OGUI is currently selectively enabled for devices in an allowlist and is not currently intended to be used with HTPC setups. If you have a handheld on which OGUI is not appearing, please open an issue on Github!"
+
+> You may see 
 
 ---
 
@@ -148,6 +150,8 @@ Your mileage may vary with untested hardware. Bazzite does **not** automatically
 !!! note
 
     You may also submit PRs to get your device officially supported on Bazzite if you feel like it is in a good state with Linux support.
+
+> Instructions for enabling OGUI on unsupported Handhelds are available [here](./Other_Handhelds/#enabling-ogui-on-unsupported-devices)
 
 ---
 

@@ -19,6 +19,8 @@ title: Lenovo Handhelds
 
 ### Known Issues
 
+- Gyroscope is temporarily broken in Bazzite Deck 44.
+  - A patch to re-enable it is in development.
 - Performance overlay may report inaccurate power consumption.
 - Adaptive/auto display brightness is currently broken.
   - Manual brightness slider in Steam's UI should still work.
