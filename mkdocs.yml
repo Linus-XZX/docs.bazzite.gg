@@ -74,10 +74,6 @@ plugins:
   - privacy
   - i18n:
       languages:
-        - locale: en
-          default: true
-          name: English
-          build: true
         - locale: fr
           name: French
           build: true
@@ -175,6 +171,10 @@ plugins:
             Community: 社群
             Donate: 捐款
             Download: 下載
+        - locale: en
+          default: true
+          name: English
+          build: true
 
   - search
   - macros:
