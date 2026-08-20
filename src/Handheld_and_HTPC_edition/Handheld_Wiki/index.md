@@ -53,6 +53,8 @@ There are a few options for TDP Controls that work with Bazzite:
 
 !!! info "If you open OpenGamepadUI and see the message **Waiting for PowerStation service...**, this means your device does not use PowerStation for TDP. This is completely normal and is the expected behavior."
 
+!!! tip "If detailed TDP configurations cannot be found, try selecting the **Performance** profile → scroll down and enable TDP and GPU Clocks. This should enable detailed TDP configuration in Watts."
+
 === "Steam Client Quick Access Menu (QAM)"
 
     If your device's TDP can be controlled via SteamOS Manager, the option will be available here. If it does not appear, check OpenGamepadUI or use other means of adjusting the TDP of your device.

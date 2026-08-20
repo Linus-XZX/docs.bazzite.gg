@@ -12,6 +12,12 @@ title: Steam Gaming Mode Quirks and Workarounds
 
 ---
 
+## TDP Controls are Missing
+
+> See [Handheld Wiki](/Handheld_and_HTPC_edition/Handheld_Wiki/#tdp-controls).
+
+---
+
 ## My Gamepad Menu is Missing
 
 !!! info "OpenGamepadUI is disabled by default for the Steam Deck and HTPCs."
@@ -156,11 +162,11 @@ Steam Gaming Mode has no official way to change the physical keyboard layout and
 
 **Scenarios where this is desirable**:
 
--   Keyboard and mouse does not work for a certain game
+- Keyboard and mouse does not work for a certain game
 
--   The game’s launcher for adjusting video settings or adding mods does not launch
+- The game’s launcher for adjusting video settings or adding mods does not launch
 
--   Certain features/graphics options are not available
+- Certain features/graphics options are not available
 
 Open the game's properties on Steam and [**add this launch option**](/Gaming/launch-options-env-variables/#where-to-set-launch-options):
 
@@ -175,7 +181,7 @@ sd0 %command%
 
 Some plugins are built specifically for SteamOS or the Steam Deck, and won’t necessarily work on Bazzite or non-Steam-Deck hardware.
 
--   For example, the [DeckMTP plugin](https://github.com/dafta/DeckMTP) only works on the Steam Deck models and will not work on other hardware.
+- For example, the [DeckMTP plugin](https://github.com/dafta/DeckMTP) only works on the Steam Deck models and will not work on other hardware.
 
 ---
 
@@ -187,8 +193,7 @@ You typically cannot use SteamDeckGyroDSU outside of the Steam Deck, though you 
 
 ## How do I specify which GPU that Steam Gaming Mode should use?
 
-Open a TTY session with an **external physical keyboard** using this **keyboard combination**:
-   <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd>
+Open a TTY session with an **external physical keyboard** using this **keyboard combination**: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd>
 
 !!! info "This feature is superceded by the new [CardWire](https://github.com/OpenGamingCollective/cardwire) GPU Manager in Bazzite-Deck 44."
    
