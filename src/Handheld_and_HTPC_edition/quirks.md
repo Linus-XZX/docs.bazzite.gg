@@ -231,7 +231,7 @@ You may follow the instructions [here](#i-cannot-progress-past-this-screen) to b
 2. Login to your user.
 3. Enter this command:
 ```bash
-steamos-session-select desktop
+steamosctl switch-to-desktop-mode
 ```
 4. Log into Steam in Desktop mode, and reboot the device.
 
@@ -270,6 +270,20 @@ Enable it in **Bazzite Portal → Tweak Systems → Enable HDMI 2.1 for AMD Grap
 !!! note "This may cause flickering and instability on some displays."
 
 > You may read more about it [here](https://www.phoronix.com/news/HDMI-2.1-OSS-Rejected).
+
+---
+
+## Fixing Flickering and Instability in Some Displays
+
+This is due to an issue in how AMD graphics cards change power states.  This issue has been reported upstream to be fixed.
+
+The following workarounds are in place to remediate this issue.
+1. Turn on VRR in Steam Gaming mode at all times.
+2. Set desktop to 60hz and set 'Adaptive Sync' to 'Never' or enable 'Adaptive Sync' to 'Always'
+
+Alternatively, you may use LACT to set your card to max power and save it as your default profile until the issue is resolved.  
+
+> If you'd like to help report this bug you may do so [here](https://gitlab.freedesktop.org/drm/amd/-/work_items/5649)
 
 ---
 

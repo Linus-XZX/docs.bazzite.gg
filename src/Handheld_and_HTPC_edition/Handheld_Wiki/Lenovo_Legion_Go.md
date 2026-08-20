@@ -8,23 +8,26 @@ title: Lenovo Handhelds
 
     This wiki may contain outdated information.
 
-## Lenovo Legion Go
+## Lenovo Legion Go / Lenovo Legion Go 2 / Lenovo Legion Go S
 
 ![legion_go|690x387, 100%](../../img/legion_go.jpeg)
 
 ### Optional Tweaks
 
-- Configure the OpenGamepadUI Overlay by opening it with <kbd>Legion R</kbd>
+- Configure the OpenGamepadUI Overlay by opening it with <kbd>Legion Space + B</kbd>
 - Adjust the scaling of the UI in the Display Settings
 
 ### Known Issues
 
-- Gyroscope is temporarily broken in Bazzite Deck 44.
+- Gyroscope is temporarily broken in Bazzite Deck 44 for the Legion Go 1
   - A patch to re-enable it is in development.
 - Performance overlay may report inaccurate power consumption.
 - Adaptive/auto display brightness is currently broken.
   - Manual brightness slider in Steam's UI should still work.
-- Updating UEFI/BIOS and controller firmware should be done in Windows at your own risk.
+- Updating UEFI/BIOS and can be done by using ```fwupd``` or the "Firmware" flatpak, or in Windows if available at your own risk.
+	- **It is advisable to disable Secure Boot before attempting a firmware update**
+- OGUI (OpenGamepadUI) will not control TDP or CPU Behavior at this time for Legion Go 2 devices, Decky or OGUI plugins may be needed for additional controls
+- As of Deck 44, Charge limits can be set via desktop mode under power settings for you chosen Desktop Environment, the feature is not yet available in OGUI or the Steam QAM
 
 ### BIOS update breaks Secure Boot key
 
