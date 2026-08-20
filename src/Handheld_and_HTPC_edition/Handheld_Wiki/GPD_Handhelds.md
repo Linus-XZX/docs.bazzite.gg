@@ -10,9 +10,7 @@ title: GPD Handhelds
 
 ## General Information & Tweaks
 
-- Adjust RGB with Steam Gaming Mode or via Huesync Decky Plugin
-- Adjust the scaling of the UI in Display Settings
-- Set a charge limit in Desktop Mode
+- Adjust RGB with Steam Gaming Mode or via Huesync Decky Plugin.
 - GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode.
 
 ## General Issues

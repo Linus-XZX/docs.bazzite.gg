@@ -16,7 +16,7 @@ title: Ayaneo Handhelds
 
 #### Bazzite 44 Known Issues
 
-- No RGB Control, please try the Huesync Decky Plugin
+- No RGB Control, please try the Huesync Decky Plugin.
 
 #### Other Known Issues
 

@@ -275,15 +275,16 @@ Enable it in **Bazzite Portal → Tweak Systems → Enable HDMI 2.1 for AMD Grap
 
 ## Fixing Flickering and Instability in Some Displays
 
-This is due to an issue in how AMD graphics cards change power states.  This issue has been reported upstream to be fixed.
+This is due to an issue in how AMD graphics cards change power states. This issue has been reported upstream to be fixed.
 
-The following workarounds are in place to remediate this issue.
-1. Turn on VRR in Steam Gaming mode at all times.
-2. Set desktop to 60hz and set 'Adaptive Sync' to 'Never' or enable 'Adaptive Sync' to 'Always'
+You may use the following workarounds to remediate this issue.
 
-Alternatively, you may use LACT to set your card to max power and save it as your default profile until the issue is resolved.  
+1. Turn on VRR in Steam Gaming Mode at all times.
+2. Set the refresh rate in Desktop Mode to 60hz and set **Adaptive Sync** to **Never** or **Always**.
 
-> If you'd like to help report this bug you may do so [here](https://gitlab.freedesktop.org/drm/amd/-/work_items/5649)
+Alternatively, you may use LACT to set your card to max power and save it as your default profile until the issue is resolved.
+
+> If you'd like to help report this bug, you may do so [here](https://gitlab.freedesktop.org/drm/amd/-/work_items/5649).
 
 ---
 
