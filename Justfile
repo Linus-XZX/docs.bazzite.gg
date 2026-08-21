@@ -10,15 +10,18 @@ _default:
 install_dependencies:
     bash ./utils/install-deps.sh
 
-# Workaround for the cairo libs missing error in macOS when only a Homebrew installed cairo is available.
+# Workaround for the cairo error in macOS when only a Homebrew installed cairo is available.
 # Should no-op for non-macOS environments, and shouldn't hurt if cairo is available otherwise.
 # Both Intel and Apple Silicon default paths for Homebrew are covered.
-# Source: https://t.ly/MfX6u (modified to add Intel search path)
-# TODO: Make this platform-specific, or run proper detection beforehand.
-[env("DYLD_FALLBACK_LIBRARY_PATH", "/opt/homebrew/lib:/usr/local/homebrew/lib")]
+# Due to macOS limitations, this variable MUST be explicitly passed to the direct invocation,
+# thus rendering the env approach impossible.
+# Sources:
+# - https://t.ly/MfX6u (modified to add Intel search path)
+# - https://apple.stackexchange.com/questions/212945/unable-to-set-dyld-fallback-library-path-in-shell-on-osx-10-11-1
+# [env("DYLD_FALLBACK_LIBRARY_PATH", "/opt/homebrew/lib:/usr/local/homebrew/lib")]
 mkdocs +ARGS="":
     rm -rf {{ MKDOCS_DIR }}/.cache/cmdrun
-    uv run mkdocs {{ ARGS }}
+    DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:/usr/local/homebrew/lib uv run mkdocs {{ ARGS }}
 
 mkdocs_clean:
     rm -rf {{ MKDOCS_DIR }}/.cache
@@ -32,3 +35,8 @@ _fmt-headers:
     rg '^#\s' src/ --json \
     | jq -rs '.[] | select(.type=="end") | {file: .data.path.text, number: .data.stats.matches} | select(.number > 1) | .file' \
     | xargs -I{} sed -i -E 's/(^#+) /\1# /' {}
+
+[env("FOO", "bar")]
+uv_test +ARGS="":
+    /usr/bin/true
+    echo $FOO
