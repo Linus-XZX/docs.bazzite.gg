@@ -14,38 +14,35 @@ title: ASUS Handhelds
 
 ### General Notes
 
-- Holding the Armoury Crate button (on the side) allows you to switch to Mouse Mode
-- Enable the Steam Power Button Handler setting in Handheld Daemon
+- Holding the Armoury Crate button (on the side) allows switching to Mouse Mode
 
 ### Optional Tweaks
 
-- Adjust settings in Handheld Daemon.
-- Adjust the scaling of the UI in the Display Settings.
+- Adjust RGB with Steam Gaming Mode with Plugins
+  - Controller emulation may need to be set to DualShock for RGB adjustment to work.
 
 ### Known Issues
+
 - Changing A/C power sometimes leads to a stuck TDP.
   - This happens when removing the charger while in standby.
   - Attaching and removing the charger while not in standby is a workaround.
-- Some users report the mic sounding garbled
-  - Solution to that is to set the mic/input volume to 10%-15% in settings
-  - For Discord you also need to set the input profile in the Discord Settings to voice cancellation.
-- (Xbox Ally Only) Audio swaps from left to right internal speakers as mono.
-  - This is a known problem that is supposed to be fixed on Kernel 6.19
-- Some users report that "Auto UMA" in the bios can cause crashes in some games.
-  - If you encounter this, then try setting the VRAM in bios to **4GB** or **8GB**.
+- Some users report that the mic sounds garbled
+  - Set the mic/input volume to 10%-15% in settings may resolve this issue
+  - The input profile in Discord Settings may also need to be set to **Noice Cancellation**.
+- The "Auto UMA" setting in UEFI/BIOS may cause crashes in some games.
+  - Set the VRAM in bios to **4GB** or **8GB**.
 - LED indicator is on max brightness by default and cannot be changed on any other operating system outside of Windows.
-  - This is tied to the firmware.
-  - This also affects when the ally is charging and sleeping.
-- The Ally does **not support** button holding for the Steam or QAM buttons.
-  - Steam Input's chords do not work by default.
-    - Swapping the Start/Select button(s) is a workaround.
-- Suspend can break if SMT is disabled
-- Fingerprint driver does not work.
-- Storage shows duplicate drives.
+  - This is tied to the firmware unfortunately.
+  - This issue may also be present during charging and sleeping.
+- The Ally does **not** support button holding for the Steam or QAM buttons.
+  - Steam Input's chords may not work by default.
+    - Swapping the Start/Select button(s) can be used as a workaround.
+- Suspend may be broken if SMT is disabled
+- Fingerprint sensor driver may not work.
+- Storage may show duplicate drives.
   - This is a visual bug, do **not** attempt to format this drive!
-- Turning on the wake animation when resuming from sleep causes the device to act erratically.
-  - No controls outside of Steam.
-  - Steam's top and bottom panels missing.
+- Turning on the wake animation when resuming from sleep may cause the device to act erratically.
+  - Steam's top and bottom panels may be missing when this bug triggers.
 
 #### CPU Boost?
 

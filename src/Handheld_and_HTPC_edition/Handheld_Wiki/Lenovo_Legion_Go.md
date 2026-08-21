@@ -8,20 +8,25 @@ title: Lenovo Handhelds
 
     This wiki may contain outdated information.
 
-## Lenovo Legion Go
+## Lenovo Legion Go / Lenovo Legion Go 2 / Lenovo Legion Go S
 
 ![legion_go|690x387, 100%](../../img/legion_go.jpeg)
 
 ### Optional Tweaks
-- Configure the HHD Overlay by opening it with <kbd>Legion R</kbd>
-- Adjust the scaling of the UI in the Display Settings
+
+- Configure the OpenGamepadUI Overlay by opening it with <kbd>Legion Space</kbd>+:material-gamepad-circle-right:
 
 ### Known Issues
 
-- Performance overlay might be reporting inaccurate power consumption.
+- Gyroscope is temporarily broken in Bazzite Deck 44 for the Legion Go 1
+  - A patch to re-enable it is in development.
+- Performance overlay may report inaccurate power consumption.
 - Adaptive/auto display brightness is currently broken.
-  - Manual brightness slider in Steam's UI works without issues.
-- BIOS and controller firmware is **recommended** to update in Windows.
+  - Manual brightness slider in Steam's UI should still work.
+- Updating UEFI/BIOS and can be done by using ```fwupd``` or the "Firmware" flatpak, or in Windows if available, **at your own risk**.
+	- **It is advised to disable Secure Boot before attempting a firmware update**
+- OGUI (OpenGamepadUI) will not control TDP or CPU Behavior at this time for Legion Go 2 devices, Decky or OGUI plugins may be needed for additional controls
+- As of Deck 44, Charge limits can be set via desktop mode under power settings for you chosen Desktop Environment, the feature is not yet available in OGUI or the Steam QAM
 
 ### BIOS update breaks Secure Boot key
 
@@ -31,26 +36,11 @@ Read our [Secure Boot guide](/General/Installation_Guide/secure_boot.md#method-b
 
 !!! info
 
-    As of July 2025, external monitors are working just fine. The external display can be set to its respective native resolution and refresh rate.
+    As of July 2025, external monitors works without issues. The external display can be set to its respective native resolution and refresh rate.
 
-    ![legion-go-ext-display|690x387, 100%](../../img/legion_go_ext_display.jpeg)
+If your screen doesn't display the correct output or looks grainy, noisy, or oddly colorful then you will have to enter a [TTY session](/Handheld_and_HTPC_edition/quirks.md#tty-if-you-cannot-access-desktop-mode) or establish an ssh connection and enter this command:
 
-    Without additional fixes, the internal display only offers its native resolution with the correct aspect ratio. Other resolutions can be chosen, but most of the screen will remain empty.
-
-    ![legion-go-resolutions|690x387, 100%](../../img/legion_go_resolutions.png)
-    ![legion-go-int-display-alternative-resolution|690x387, 100%](../../img/legion_go_int_display_alternative_resolution.jpg)
-
-
-
-If your screen doesn't display the correct output or looks grainy, noisy, or oddly colorful then you will have to **enter a [TTY session](/Handheld_and_HTPC_edition/quirks.md#tty-if-you-cannot-access-desktop-mode) and enter this command**:
-
-```
-rm ~/.config/kwin*
-```
-
-Alternatively, **ssh into it and enter this command**:
-
-```
+```bash
 mv ~/.config/kwinoutputconfig.json ~/.config/kwinoutputconfig.json.old
 ```
 

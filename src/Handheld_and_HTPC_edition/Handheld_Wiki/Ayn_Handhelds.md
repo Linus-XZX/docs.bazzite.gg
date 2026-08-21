@@ -8,40 +8,51 @@ title: Ayn Handhelds
 
     This wiki may contain outdated information.
 
+## General Information & Tweaks
+
+- RGB adjustment may be adjusted in Steam Gaming Mode under **Settings → Controller → Calibration & Advanced → LED Settings** or via OpenGamepadUI, if available.
+  - Controller emulation may need to be set to DualShock for RGB adjustment to work.
+- Adjust the scaling of the UI in the Display Settings.
+- Setting a charge limit can be done in Desktop Mode.
+
+## General Issues
+
+- Games may sometimes default to 800p resolution.
+  - You may manually change the resolution per game in the **Steam Settings → Properties → Game Resolution** to either "Native" or other higher resolutions.
+
+---
+
 ## Ayn Loki Max
 
 ![Loki Max|375x500, 100%](../../img/Loki_Max.jpeg)
 
 ### Optional Tweaks
 
-- Adjust RGB with Steam Gaming Mode under `Settings > Controller >  Calibration & Advanced > LED Settings` or in Handheld Daemon
-- Adjust the scaling of the UI in the Display Settings
-- Set a charge limit in HHD with Handheld Daemon
+> See [General Information & Tweaks](#general-information-tweaks)
 
 ### Known Issues
 
-- Games can sometimes default to 800p resolution.
-  - Manually change the resolution per game in the `Steam Settings > Properties > Game Resolution` to either "Native" or other higher resolutions.
 - Back buttons are hard mapped to L3 and R3.
-  - This is also an issue on Windows.
+  - This is also a known issue on Windows.
+  
+> See [General Issues](#general-issues)
+
+---
 
 ## Ayn Loki Mini Pro
 
 ![loki_mini_pro|666x500, 100%](../../img/loki_mini_pro.jpeg)
 
-
 ### Optional Tweaks
 
-- Adjust RGB with Steam Gaming Mode under `Settings > Controller >  Calibration & Advanced > LED Settings` or in Handheld Daemon
-- Adjust the scaling of the UI in the Display Settings
-- Set a charge limit in HHD with Handheld Daemon
+> See [General Information & Tweaks](#general-information-tweaks)
 
 ### Known Issues
 
-- Games can sometimes default to 800p resolution.
-  - Manually change the resolution per game in the `Steam Settings > Properties > Game Resolution` to either `Native` or other higher resolutions.
 - Audio driver does not currently work.
   - No internal audio in either Gaming Mode or Desktop Mode.
-    - External audio is reported to have low sound quality.
+  - External audio is reported to have low sound quality.
 - Rotation is wrong in Desktop Mode for KDE images.
 - Mouse input may break in Desktop Mode.
+
+> See [General Issues](#general-issues)

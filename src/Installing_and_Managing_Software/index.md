@@ -16,6 +16,7 @@ title: Installing and Managing Applications
 - [**Package Layering (`rpm-ostree`)**](./rpm-ostree.md)
 - [**Waydroid Setup Guide (Android Applications)**](./Waydroid_Setup_Guide.md)
 - [**Updates, Rollbacks, and Rebasing Images**](./Updates_Rollbacks_and_Rebasing/index.md)
+  - [**Bazzite Updater**](./Updates_Rollbacks_and_Rebasing/bazzite_updater.md)
   - [**Updates**](./Updates_Rollbacks_and_Rebasing/updating_guide.md)
   - [**Rolling Back Updates**](./Updates_Rollbacks_and_Rebasing/rolling_back_system_updates.md)
   - [**Rebasing Images**](./Updates_Rollbacks_and_Rebasing/rebase_guide.md)

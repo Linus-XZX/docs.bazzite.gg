@@ -8,58 +8,59 @@ title: GPD Handhelds
 
     This wiki may contain outdated information.
 
+## General Information & Tweaks
+
+- Adjust RGB with Steam Gaming Mode or via Huesync Decky Plugin.
+- GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode.
+
+## General Issues
+
+- Devices using the Ryzen 7 6800U or any of its derivatives requires the fingerprint scanner to be disabled to have working suspend-resume.
+- Devices using the Ryzen 7 7840U, or any of its derivatives (2023-2025) have partially working suspend-resume, where the device is forced into hibernation after a 5% battery drain. This issue is tracked [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154).
+- Back buttons may need to be manually remapped before they are usable.
+  - Manually remap back buttons using the QAM, which is now handled by [OpenGamepadUI.](https://github.com/ShadowBlip/OpenGamepadUI)
+- Games can sometimes default to 800p resolution.
+  - Manually change the resolution per game in the **Steam Settings → Properties → Game Resolution** to either **Native** or other higher resolutions.
+
+---
+
 ## GPD Win 4
 
 ![gpdwin4|690x328, 100%](../../img/gpdwin4.jpeg)
 
+### Optional Tweaks
 
-### General Information & Optional Tweaks
-
-- Adjust RGB with Steam Gaming Mode in Handheld Daemon
-- Adjust the scaling of the UI in the Display Settings
-- Set a charge limit in HHD with Handheld Daemon
-- GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode.
+> See [General Information & Tweaks](#general-information-tweaks)
 
 ### Known Issues
 
-- Suspend-resume fully works on the 6800u Win 4 after disabling the fingerprint scanner, but there are a few user reports of the 7840u and newer models having only partially working suspend-resume.
-  - It seems to be very similar/related to the suspend issue on the GPD WM2 7840u and newer devices, more details [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154)
-- Games can sometimes default to 800p resolution.
-  - Manually change the resolution per game in the `Steam Settings > Properties > Game Resolution` to either `Native` or other higher resolutions.
-- Back buttons may need to be manually remapped before they are usable.
-  - Manually remap back buttons as described in hhd docs [here](https://github.com/hhd-dev/hhd?tab=readme-ov-file#extra-steps-gpd-win-devices)
-    - Watch this [video](https://www.youtube.com/watch?v=lnNfMY9kzjk) if you need a visual guide.
+> See [General Issues](#general-issues)
 
-### External Resource
-
-For more information, check out the [GPD Win Tips and Tricks guide](https://github.com/aarron-lee/gpd-win-tricks) which includes useful scripts for this handheld.
+---
 
 ## GPD Win Max 2
 
 ![placeholder_gpdwinmax2|407x312, 100%](../../img/GPD_Win_Max_2.png)
 
-
 ### Optional Tweaks
-- Steam Gaming Mode **Display** settings that are recommended to be changed:
-  - `Use Native Color Temperature` - Enabled
-- GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode
-- Adjust RGB with Steam Gaming Mode in Handheld Daemon
-- Adjust the scaling of the UI in the Display Settings
-- Set a charge limit in HHD with Handheld Daemon
+
+- Recommended **Display** settings in Steam Gaming Mode:
+  - **Use Native Color Temperature**: Enabled
+
+> See [General Information & Tweaks](#general-information-tweaks)
 
 ### Known Issues
 
-- Suspend-resume works on the WM2 6800u model after disabling the fingerprint scanner, but 7840u and newer models have only partially working suspend-resume.
-  - Read about the issue [here](https://gitlab.freedesktop.org/drm/amd/-/issues/3154) for details on suspend-resume issues for the newer WM2 devices.
-- If you install your OS on an m2 2230 SSD in the secondary drive slot, it can cause suspend issues.
-  - You should install your OS onto the primary internal SSD only.
-- Games can sometimes default to 800p resolution
-  - Manually change the resolution per game in the `Steam Settings > Properties > Game Resolution` to either `Native` or other higher resolutions.
-- Gyro is non-functional.
-- Back buttons may need to be manually remapped before they are usable.
-  - Manually remap back buttons as described in hhd docs [here](https://github.com/hhd-dev/hhd?tab=readme-ov-file#extra-steps-gpd-win-devices)
-    - Watch this [video](https://www.youtube.com/watch?v=lnNfMY9kzjk) if you need a visual guide.
+- If the OS is installed on an m.2 2230 SSD in the secondary drive slot, it can cause suspend issues.
+  - The OS should be only installed onto the primary internal SSD.
+- Gyroscope is non-functional.
+
+> See [General Issues](#general-issues)
+
+---
 
 ### External Resource
 
-For more information, check out the [GPD Win Tips and Tricks guide](https://github.com/aarron-lee/gpd-win-tricks) which includes useful scripts for this handheld.
+For more information, check out the [GPD Win Tips and Tricks guide](https://github.com/aarron-lee/gpd-win-tricks) which includes useful scripts for GPD handhelds.
+
+---

@@ -6,76 +6,138 @@ title: Rollbacks
 
 ## Rolling Back Upgrades
 
-Swap back to a previous system update if there are major issues after updating via the GRUB menu or the `rpm-ostree rollback` command or using the Bazzite Rollback Helper.
+Bazzite provides multiple ways to swap back to a previous system version if there are major issues after updating.
 
-## How do I rollback a system update?
+> If you are encountering issues with rollbacks between Bazzite Deck 43 and Bazzite Deck 44, instructions to resolve it are [here](#issue-with-rollbacks-between-bazzite-deck-43-and-44).
 
-A rollback to the previous system deployment can be done by **entering this command in a host terminal**:
+=== "Using Bazzite Updater"
 
-```command
-rpm-ostree rollback
-```
+    If you have access to a graphical session, you may rollback using the Bazzite Updater.
+    
+    > The rollback menu can be accessed [here](/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/bazzite_updater/#rollback-updates).
+    
+    If your devices boots into a black screen, use the [**Before Booting Bazzite (GRUB)**](#__tabbed_1_3) method.
 
-### Using the Bazzite Rollback Helper (`brh`) Utility
+=== "Using the Command Line"
 
-Rollback to an older Bazzite image from the last 90 days using the **[`brh` command](../Updates_Rollbacks_and_Rebasing/bazzite_rollback_helper.md)**.
+    Use this method if you are in the following situation:
 
-### Before Booting Bazzite (GRUB)
+    - If a new Bazzite update cannot initialize a graphical session
+    
+    If you are stuck in a command line or `tty` and the Desktop Environment(KDE/GNOME) cannot start properly, you may use the following command to set the backup deployment as primary:
 
-![GRUB Menu with two deployments and UEFI Firmware Settings](../../img/GRUB_Menu.png)
+    ```bash
+    rpm-ostree rollback
+    ```
 
-!!! note
+    and then reboot.
 
-    Controls may vary with different handhelds or HTPC setups to navigate the menu and an external physical keyboard may be required to rollback in GRUB.
+    !!! tip "You may also use `bruh moment` as a more memorable alias."
 
-Rollback can also be done in the GRUB menu (which appears before booting into Bazzite) by choosing the previous boot entry before booting to the desktop. It shows your current (`:0`) and your previous (`:1`) deployments. Your personal files will **not** be affected by this, and you can still update to the newest builds after rolling back.
+=== "Before Booting Bazzite (GRUB)"
 
-## How do I save my **current** deployment?
+    Use this method if you are in the following situation:
 
-You can pin your **current** deployment with this **command**:
+    - If a new Bazzite update cannot be booted successfully
 
-```command
-sudo ostree admin pin 0
-```
+    ![GRUB Menu with two deployments and UEFI Firmware Settings](../../img/GRUB_Menu.png)
 
-In a host terminal for a backup save state of your **current** deployment to rollback to if a new system update causes issues.
+    !!! tip "Controls may vary with different handhelds or HTPC setups to navigate the menu and an external physical keyboard may be required to rollback in GRUB."
 
-## How do I save my **previous** deployment?
+    If a new Bazzite update (also known as deployment) fails to boot, the GRUB bootloader menu will need to be used to boot the previous(backup) deployment.
+    
+    Simply select the `ostree:1` backup entry to boot into the previous deployment. 
+    
+    From there, you will need to use **any of the other methods** to set the backup deployment as primary. Otherwise, the system will keep trying to boot the new (and potentially broken) deployment on the next restart.
+    
+    !!! info 
+    
+        Bazzite should automatically show the GRUB bootloader menu if it fails to boot. If it does not show up, you may need to press <kbd>esc</kbd> once and tap <kbd>↓</kbd>.
+        
+        If you have set the GRUB menu timeout to **Skip Menu**, then you will also need to hold <kbd>Shift</kbd> or <kbd>F8</kbd>.
+        
+        Rollback does not affect personal files.
 
-You can pin your **previous** deployment with this **command**:
+---
 
-```command
-sudo ostree admin pin 1
-```
+## Saving a Deployment
 
-In a host terminal for a backup save state of your **previous** deployment to rollback if the current deployment has issues.
+Bazzite automatically cleans up the oldest deployment after an update. By default, the system will have 2 deployments always available.
 
-## How do I unpin a deployment if I saved it?
+To keep a specific version of Bazzite always available, you can **pin** the deployment to prevent it from being cleaned up. You may follow the instructions shown below:
 
-Unpin saved **current** deployment:
+1. Find the index number of the deployment you'd like to pin with this command:
 
-```command
-sudo ostree admin pin --unpin 0
-```
-
-Unpin saved **previous** deployment:
-
-```command
-sudo ostree admin pin --unpin 1
-```
-
-View all deployment index numbers:
-
-```command
+```bash
 rpm-ostree status -v
 ```
 
-Unpin **saved** deployment:
+!!! info "The index number will be shifted after every `rpm-ostree` transaction. If you are unsure, check it again with the aforementioned command."
 
-```command
-sudo ostree admin pin --unpin <index number>
+2. Run the following command, replacing `<id>` with the actual index number:
+
+```bash
+sudo ostree admin pin <id>
 ```
+
+!!! example
+
+    The command to pin the current deployment will be:
+    ```bash
+    sudo ostree admin pin 0
+    ```
+    The command to pin the previous deployment will be:
+    ```bash
+    sudo ostree admin pin 1
+    ```
+
+---
+
+## Unpinning a Saved Deployment
+
+Unpinning a saved deployment follows similar steps to saving it.
+
+1. Find the index number of the deployment you'd like to unpin with this command:
+
+```bash
+rpm-ostree status -v
+```
+
+!!! info "The index number will be shifted after every `rpm-ostree` transaction. If you are unsure, check it again with the aforementioned command."
+
+2. Run the following command, replacing `<id>` with the actual index number:
+
+```bash
+sudo ostree admin pin -u <id>
+```
+
+!!! example
+
+    The command to unpin the current deployment will be:
+    ```bash
+    sudo ostree admin pin -u 0
+    ```
+    The command to pin the previous deployment will be:
+    ```bash
+    sudo ostree admin pin -u 1
+    ```
+
+---
 
 ## Application Update Downgrades
 
-Read about the pre-installed Warehouse application to downgrade applications in the [**Bazaar App Store (Flatpak) documentation**](/Installing_and_Managing_Software/Flatpak.md#warehouse).
+Flatpak applications can be easily managed and downgraded in Warehouse.
+
+> Read about the pre-installed Warehouse application [here](/Installing_and_Managing_Software/Flatpak.md#warehouse).
+
+---
+
+## Issue with Rollbacks Between Bazzite Deck 43 and 44
+
+Autologin will be broken when rolling back from Bazzite Deck 44 to Bazzite Deck 43.
+
+To fix this, simply delete `zz-steamos` and `zz-bazzite` under `/etc/sddm.conf.d/`
+
+> Read more about Bazzite Deck 44 [here](https://universal-blue.discourse.group/t/bazzites-biggest-update-deck-44-has-launched-happy-birthday-to-universal-blue/12373). You may report any relevant regressions under [this Discord support thread](https://discord.com/channels/1072614816579063828/1539396706712555712).
+
+---
