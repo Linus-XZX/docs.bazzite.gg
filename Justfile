@@ -35,8 +35,3 @@ _fmt-headers:
     rg '^#\s' src/ --json \
     | jq -rs '.[] | select(.type=="end") | {file: .data.path.text, number: .data.stats.matches} | select(.number > 1) | .file' \
     | xargs -I{} sed -i -E 's/(^#+) /\1# /' {}
-
-[env("FOO", "bar")]
-uv_test +ARGS="":
-    /usr/bin/true
-    echo $FOO
