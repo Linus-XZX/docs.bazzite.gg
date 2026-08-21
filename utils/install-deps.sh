@@ -11,15 +11,17 @@ brew_installs=(
 )
 
 # Skip brew requirement when all the required programs are available otherwise.
-for i in $brew_installs ; do
-    if ! command -v $i >/dev/null; then
+for pkg in $brew_installs ; do
+    if ! command -v $pkg >/dev/null; then
+        echod "Missing package: $pkg"
         needs_brew=1
     fi
 done
 
 if [[ -n "$needs_brew" ]]; then
     if ! command -v brew >/dev/null; then
-        echod "This script needs 'brew' to run"
+        echod "Some required packages are missing, and brew is not available for a userspace-only installation."
+        echod "If you are on a non-atomic system, installing them via your system package manager works as well."
         exit 1
     else
         brew install "${brew_installs[@]}"
