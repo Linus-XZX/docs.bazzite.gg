@@ -76,9 +76,9 @@ plugins:
   - i18n:
       languages:
         # The theme: language key is required for every locale even if it doesn't require an alias (like zh_CN -> zh).
-        # Having it on one locale but not the latter ones causes it to leak downwards,
-        # Which kills the build for later locales due to template mismatch.
-        # I have zero idea why and I am too afraid to ask.
+        # Having it on one locale but not the latter ones causes it to leak downwards (?),
+        # which kills the build for later locales due to template mismatch.
+        # I have zero idea why and at this point I am too afraid to ask.
         - locale: fr
           name: French
           build: true
