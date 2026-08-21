@@ -16,6 +16,7 @@ mkdocs +ARGS="":
     # Should no-op for non-macOS environments, and shouldn't hurt if cairo is available otherwise.
     # Both Intel and Apple Silicon default paths for Homebrew are covered.
     # Source: https://t.ly/MfX6u (modified to add another search path)
+    # TODO: Make this platform-specific, or run proper detection beforehand.
     DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:/usr/local/homebrew/lib uv run mkdocs {{ ARGS }}
 
 mkdocs_clean:
