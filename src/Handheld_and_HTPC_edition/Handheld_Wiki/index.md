@@ -93,7 +93,7 @@ OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:m
 
 !!! note "OGUI is currently selectively enabled for devices in an allowlist and is not currently intended to be used with HTPC setups. If you have a handheld on which OGUI is not appearing, please open an issue on Github!"
 
-> You may see 
+> Instructions for enabling OGUI on unsupported devices are available [here](./Other_Handhelds/#enabling-ogui-on-unsupported-devices). Enable **at your own risk**.
 
 ---
 
@@ -153,7 +153,7 @@ Your mileage may vary with untested hardware. Bazzite does **not** automatically
 
     You may also submit PRs to get your device officially supported on Bazzite if you feel like it is in a good state with Linux support.
 
-> Instructions for enabling OGUI on unsupported Handhelds are available [here](./Other_Handhelds/#enabling-ogui-on-unsupported-devices)
+> Instructions for enabling OGUI on unsupported Handhelds are available [here](./Other_Handhelds/#enabling-ogui-on-unsupported-devices).
 
 ---
 
