@@ -11,7 +11,7 @@ brew_installs=(
 )
 
 # Skip brew requirement when all the required programs are available otherwise.
-for pkg in $brew_installs ; do
+for pkg in "${brew_installs[@]}" ; do
     if ! command -v $pkg >/dev/null; then
         echod "Missing package: $pkg"
         needs_brew=1
