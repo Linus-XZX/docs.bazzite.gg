@@ -12,7 +12,11 @@ install_dependencies:
 
 mkdocs +ARGS="":
     rm -rf {{ MKDOCS_DIR }}/.cache/cmdrun
-    uv run mkdocs {{ ARGS }}
+    # Workaround for the cairo libs missing error in macOS when only a Homebrew installed cairo is available.
+    # Should no-op for non-macOS environments, and shouldn't hurt if cairo is available otherwise.
+    # Both Intel and Apple Silicon default paths for Homebrew are covered.
+    # Source: https://t.ly/MfX6u (modified to add another search path)
+    DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:/usr/local/homebrew/lib uv run mkdocs {{ ARGS }}
 
 mkdocs_clean:
     rm -rf {{ MKDOCS_DIR }}/.cache
