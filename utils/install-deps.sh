@@ -18,7 +18,7 @@ for pkg in $brew_installs ; do
     fi
 done
 
-if [[ -n "$needs_brew" ]]; then
+if [[ $needs_brew -eq 1 ]]; then
     if ! command -v brew >/dev/null; then
         echod "Some required packages are missing, and brew is not available for a userspace-only installation."
         echod "If you are on a non-atomic system, installing them via your system package manager works as well."
