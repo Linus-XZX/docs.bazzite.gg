@@ -10,14 +10,15 @@ _default:
 install_dependencies:
     bash ./utils/install-deps.sh
 
+# Workaround for the cairo libs missing error in macOS when only a Homebrew installed cairo is available.
+# Should no-op for non-macOS environments, and shouldn't hurt if cairo is available otherwise.
+# Both Intel and Apple Silicon default paths for Homebrew are covered.
+# Source: https://t.ly/MfX6u (modified to add Intel search path)
+# TODO: Make this platform-specific, or run proper detection beforehand.
+[env("DYLD_FALLBACK_LIBRARY_PATH", "/opt/homebrew/lib:/usr/local/homebrew/lib")]
 mkdocs +ARGS="":
     rm -rf {{ MKDOCS_DIR }}/.cache/cmdrun
-    # Workaround for the cairo libs missing error in macOS when only a Homebrew installed cairo is available.
-    # Should no-op for non-macOS environments, and shouldn't hurt if cairo is available otherwise.
-    # Both Intel and Apple Silicon default paths for Homebrew are covered.
-    # Source: https://t.ly/MfX6u (modified to add another search path)
-    # TODO: Make this platform-specific, or run proper detection beforehand.
-    DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:/usr/local/homebrew/lib uv run mkdocs {{ ARGS }}
+    uv run mkdocs {{ ARGS }}
 
 mkdocs_clean:
     rm -rf {{ MKDOCS_DIR }}/.cache
