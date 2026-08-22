@@ -76,28 +76,28 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
 
 #### 如何设置启动选项
 
-1. 在 Steam library 内右键选择一个游戏
-2. 选择**属性**
-3. In the General tab, find **Launch Options** field
+1. 在 Steam 库中右键选择一个游戏
+2. 选择**属性...**
+3. 在**通用**一栏中，找到**启动选项**的输入框
 4. 输入你需要的启动选项
 
-![Launch Options view|833x594, 75%](../img/Steam_Launch_Options.png)
+![启动选项|833x594, 75%](../img/Steam_Launch_Options.png)
 
 ## 帧率限制相关问题
 
-游戏模式（gamescope）支持多种帧率限制的方式，但根据游戏与硬件配置，并非所有方法都稳定有效。
+游戏模式（Gamescope）支持多种帧率限制的方式，但根据游戏与硬件配置，并非所有方法都稳定有效。
 
 帧率限制的效果有时并不稳定，尤其是在桌面模式下。
 
-The tables below show the behavior of different framerate limiting methods.
+以下列出了一些常用的帧率限制方法和对应表现。
 
-=== "Steam Game Mode (Steam Gaming Mode Session)"
+=== "Steam 游戏模式（Gamescope 会话）"
 
     | 方法 | 如何设置 | 是否需要游戏内启用垂直同步？ | 不重启游戏能否生效？ | 对延迟的影响 | 是否推荐 | 备注 |
     |---|---|---|---|---|---|---|
-    | **Gamescope FPS limiter** | Use **Quick Access Menu → Performance → Framerate Limit** | No | Yes | Generally Worse | **Preferred** | Automatically enables v-sync at driver-level whenever the framerate cap is enabled. Additional latency will be introduced. |
-    | **MangoAPP (embedded)** | - | - | - | - | – | N/A - doesn't work at all. |
-    | **MangoHUD (external)** | **Launch Options:** `MANGOHUD=1 %command%` | No | Yes | Generally Worse | – | Set `fps_limit=0,{fps}...` (`0`=no cap) in `MangoHud.conf` or use [MangoJuice](https://flathub.org/en/apps/io.github.radiolamp.mangojuice). |
+    | **Gamescope 自带帧率限制** | Use **Quick Access Menu → Performance → Framerate Limit** | No | Yes | Generally Worse | **Preferred** | Automatically enables v-sync at driver-level whenever the framerate cap is enabled. Additional latency will be introduced. |
+    | **MangoAPP（Gamescope 集成）** | - | - | - | - | – | 默认会话无法添加需要的参数，因此不可用。 |
+    | **MangoHUD（外部安装）** | **游戏启动选项**：`MANGOHUD=1 %command%` | 否 | 是 | 相对较差 | – | 在`MangoHud.conf` 中进行配置（`fps_limit=0,{fps}...`，0对应无限制），或使用 [MangoJuice](https://flathub.org/en/apps/io.github.radiolamp.mangojuice)。 |
     | **DXVK/VKD3D runtime frame limiter** | **DXVK(D3D8/9/10/11):** `DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12):** `VKD3D_FRAME_RATE={fps} %command%` | No | No | Generally Better | – | Applies only to DXVK/VKD3D titles (no effect on native OpenGL or Vulkan games). |
 
 === "桌面模式 （GNOME/KDE Plasma 桌面会话）"

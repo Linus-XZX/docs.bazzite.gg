@@ -4,7 +4,7 @@ title: 将用户添加到组
 
 # 将用户添加到组
 
-## Foreword
+## 前言
 
 [Users and Groups](https://wiki.archlinux.org/title/Users_and_groups) are used on Linux for access control, that is, to control access to the system's files, directories, and peripherals, and is cruicial to how Linux works.
 
@@ -113,7 +113,8 @@ sudo usermod -aG <your_group_name> <username>
 
 ---
 
-## <del>diannaobaozhale</del>/配置出错后的修复 
+## 配置出错后的修复
+<small>_diannaobaozhale_</small>
 
 如果你意外删除了 `/etc/group` 或写入了错误的配置，可能会出现一种意外情况：你可以正常达到图形界面，但以下功能无法使用：
 
