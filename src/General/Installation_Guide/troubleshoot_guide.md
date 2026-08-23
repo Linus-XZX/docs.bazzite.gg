@@ -131,10 +131,13 @@ The setting is usually called either:
 - RST
 - Rapid Storage Tech(nology)
 - Storage mode: AHCI
+!!! warning
 
-Dissolving the RAID will cause any existing Windows installations to break. If you would like to dualboot with Windows, you need to follow these instructions before you turn off RAID https://support.thinkcritical.com/kb/articles/switch-windows-10-from-raid-ide-to-ahci
+    Dissolving the RAID will cause any existing Windows installations to break. If you would like to dualboot with Windows, you need to follow these instructions before you turn off RAID https://support.thinkcritical.com/kb/articles/switch-windows-10-from-raid-ide-to-ahci
 
-Note: in some BIOS implementations, disabling RAID does not remove existing RAID Arrays. In this case, you need to manually remove the leftover RAID Array to successfully install Bazzite. Please consult your manufacturer manual on how to do this.
+!!! note
+
+    In some BIOS implementations, disabling RAID does not remove existing RAID Arrays. In this case, you need to manually remove the leftover RAID Array to successfully install Bazzite. Please consult your manufacturer manual on how to do this.
 
 ---
 
