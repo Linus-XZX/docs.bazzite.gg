@@ -107,7 +107,7 @@ If you are using Steam Gaming Mode (i.e. not booting straight into a desktop env
 
 1. Steam settings -> System -> "Enable Developer Mode"
 2. Steam settings -> Developer -> Uncheck "Enable Wi-Fi Power Management"
-4. Reboot
+3. Reboot
 
 If the above does not work, and/or for users booting straight into a desktop environment like KDE or Gnome, try:
 
