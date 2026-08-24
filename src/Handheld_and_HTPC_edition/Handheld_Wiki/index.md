@@ -121,7 +121,7 @@ For most handheld hardware, besides the Steam Deck, emulation of a DualSense con
 
 !!! warning "Emulating an Xbox controller will cause reduced or missing functions."
 
-!!! note "Gyro functionality **requires** DualSense emulation, though RGB can still be controlled using the Huesync Decky Plugin without it."
+!!! note "If you experience Gyro issues, try setting controller emulation target in OGUI to **deck-uhid**. Device RGB functions can be controlled via the **Huesync Decky Plugin**."
 
 If your device has paddles, you will want to use the DualSense Edge or Steam Deck controller (**excluding the Ayn Loki**). It’s disabled by default because some games do not map it correctly.
 
