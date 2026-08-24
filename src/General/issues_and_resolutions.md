@@ -45,7 +45,7 @@ You may try installing Firefox and KeePassXC via distrobox, though there may be 
 
 ---
 
-## Gamepads and handheld joysticks don't work in Desktop Mode
+## Gamepads and Handheld Joysticks Don't Work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.
 

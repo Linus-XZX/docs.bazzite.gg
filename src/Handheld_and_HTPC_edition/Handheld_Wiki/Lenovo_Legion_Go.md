@@ -12,9 +12,7 @@ title: Lenovo Handhelds
 
 ![legion_go|690x387, 100%](../../img/legion_go.jpeg)
 
-### Optional Tweaks
-
-- Configure the OpenGamepadUI Overlay by opening it with <kbd>Legion Space</kbd>+:material-gamepad-circle-right:
+---
 
 ### Known Issues
 
@@ -24,9 +22,11 @@ title: Lenovo Handhelds
 - Adaptive/auto display brightness is currently broken.
   - Manual brightness slider in Steam's UI should still work.
 - Updating UEFI/BIOS and can be done by using ```fwupd``` or the "Firmware" flatpak, or in Windows if available, **at your own risk**.
-	- **It is advised to disable Secure Boot before attempting a firmware update**
+  - **It is advised to disable Secure Boot before attempting a firmware update!**
 - OGUI (OpenGamepadUI) will not control TDP or CPU Behavior at this time for Legion Go 2 devices, Decky or OGUI plugins may be needed for additional controls
 - As of Deck 44, Charge limits can be set via desktop mode under power settings for you chosen Desktop Environment, the feature is not yet available in OGUI or the Steam QAM
+
+---
 
 ### BIOS update breaks Secure Boot key
 
@@ -43,6 +43,8 @@ If your screen doesn't display the correct output or looks grainy, noisy, or odd
 ```bash
 mv ~/.config/kwinoutputconfig.json ~/.config/kwinoutputconfig.json.old
 ```
+
+---
 
 ## External Resource
 
