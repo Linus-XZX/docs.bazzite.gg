@@ -33,25 +33,13 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 ---
 
-## OGUI Setup
-
-!!! info "[OpenGamepadUI(OGUI)](https://github.com/ShadowBlip/OpenGamepadUI) is intended and enabled by default for handhelds that are **not** the Steam Deck."
-
-1. Double tap :material-microsoft-xbox-controller-menu: or press :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: to access OpenGamepadUI overlay in Steam Gaming Mode.
-
-2. Select the controller icon to change the change the Emulated controller type.
-
-!!! note "Gyro functionality **requires** DualSense emulation, though RGB can still be controlled using the Huesync Decky Plugin without it."
-
----
-
 ## TDP Controls
 
 ![TDP|409x1004, 33%](/img/TDP.png) ![OGUI Power Profiles|1920x1200, 30%](/img/OGUI_Profile.jpg)
 
 There are a few options for TDP Controls that work with Bazzite:
 
-!!! info "If you open OpenGamepadUI and see the message **Waiting for PowerStation service...**, this means your device does not use PowerStation for TDP. This is completely normal and is the expected behavior."
+!!! info "If you open OpenGamepadUI and see the message `Waiting for PowerStation service...`, this means your device does not use PowerStation for TDP. This is completely normal and can be safely ignored."
 
 !!! tip "If detailed TDP configurations cannot be found, try selecting the **Performance** profile → scroll down and enable TDP and GPU Clocks. This should enable detailed TDP configuration in Watts."
 
@@ -59,24 +47,27 @@ There are a few options for TDP Controls that work with Bazzite:
 
     If your device's TDP can be controlled via SteamOS Manager, the option will be available here. If it does not appear, check OpenGamepadUI or use other means of adjusting the TDP of your device.
     
-    - This menu can be accessed anytime using the Quick Access Menu button (varies by handheld) or by pressing :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-down:.
+    !!! info "See how to open QAM [here](#how-do-i-open-the-qam)."
+    
     - Select the **:material-lightning-bolt: Lightning Bolt Icon** and enable **Advanced** options
     - TDP can then be changed by using the dedicated TDP Dropdown.
-    - Custom TDP may be set by selecting "Custom", scrolling down and toggling "Custom TDP", then changing the TDP slider that appears.
+    - Custom TDP may be set by selecting **Custom**, scrolling down and toggling **Custom TDP**, then changing the **TDP slider** that appears.
     
     > [These devices](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/steamos-manager-hardware) will use this method by default.
   
 === "OpenGamepadUI (OGUI)"
 
     This is the 2nd place where you may find TDP controls for your device. In this menu, TDP controls are provided by [PowerStation](https://github.com/ShadowBlip/PowerStation). If your device can be configured via the Steam QAM, performance configurations may or may not be available here. You may use any of the two to configure your device.
-    
-    - OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped will depend on your device.
-    
+
+    !!! info "See how to open OGUI [here](#how-do-i-open-the-ogui-overlay)."
+
     > [These devices](https://github.com/ublue-os/bazzite/blob/main/system_files/desktop/shared/usr/libexec/hwsupport/powerstation-hardware) will use this method by default.
   
 === "Decky Plugins"
 
-    You may also use Decky Plugins to configure TDP for your device if both Steam QAM and OGUI do not provide them. However, note that these plugins will interfere and conflict if you have multiple plugins turned on. Make sure you only have one means of TDP Control(including OGUI/PowerStation) running!
+    You may also use Decky Plugins to configure TDP for your device if both Steam QAM and OGUI do not provide them. However, note that these plugins will interfere and conflict if you have multiple plugins turned on. 
+    
+    !!! tip "Make sure you only have one means of TDP Control(including OGUI/PowerStation) running!"
     
     - [SimpleDeckyTDP](https://github.com/aarron-lee/SimpleDeckyTDP) plugin supports TDP, GPU, Power Governor, amongst other settings.
       - A [graphical application](https://github.com/aarron-lee/SimpleDeckyTDP-Desktop) is available, but needs to be manually installed.
@@ -89,7 +80,15 @@ There are a few options for TDP Controls that work with Bazzite:
 
 ![Overlay|690x431, 75%](/img/OGUI_Overlay.jpg)
 
-OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: or double tapping/long pressing :material-microsoft-xbox-controller-menu:. How this is mapped may depend on your device.
+The button to open OGUI varies on a device-by-device basis. <small>_We tried our best to find similar looking graphics on here..._</small>
+
+| Device | Graphic | Button Name | Action |
+| :-: | :-: | :- | :- |
+| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo:/:material-bookshelf: | Armory Crate Button | Long press |
+| MSI | :simple-wattpad: | Center M Button |  Long press |
+| Ayaneo | **. . .** | RC Button | press |
+| OneXPlayer | :simple-atlasos: | Guide Button | Hold Guide and press QAM |
+| Other Devices | :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: | Guide + B | Single press |
 
 !!! note "OGUI is currently selectively enabled for devices in an allowlist and is not currently intended to be used with HTPC setups. If you have a handheld on which OGUI is not appearing, please open an issue on Github!"
 
@@ -97,15 +96,38 @@ OGUI can be opened with :material-microsoft-xbox:/:material-sony-playstation:/:m
 
 ---
 
+### How do I open the QAM?
+
+ The button to open QAM varies on a device-by-device basis. <small>_We tried our best to find similar looking graphics on here..._</small>
+
+| Device | Graphic | Button Name | Action |
+| :-: | :-: | :- | :- |
+| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo:/:material-bookshelf: | Armory Crate Button | Single press |
+| Legion Go series | :material-tune-variant: | Legion Right Button | Single press |
+| MSI | :simple-wattpad: | Center M Button | Single press |
+| Ayaneo | _**//**_ | = Custom Function Key | Single press |
+| OneXPlayer | `TURBO` | Turbo Button | Single press |
+| GPD | :material-microsoft-xbox-controller-menu:/:octicons-home-24: | Menu Button / Home Button. | Long press :material-microsoft-xbox-controller-menu: if only :material-microsoft-xbox-controller-menu: is present, otherwise single press whichever is on the right side. |
+
+Alternatively, The Quick Access Menu is also accessible from the keyboard with <kbd>Ctrl</kbd> + <kbd>2</kbd>.
+
+---
+
 ## Controller Information
 
-For most handheld hardware, besides the Steam Deck, emulation of a DualSense controller is used for full functionality. Double tap/hold :material-microsoft-xbox-controller-menu: to open the QAM and access settings for controller emulation.
+For most handheld hardware, besides the Steam Deck, emulation of a DualSense controller is used for full functionality. You may open the QAM or OGUI to access settings for controller emulation.
+
+!!! info "See how to open QAM [here](#how-do-i-open-the-qam)."
 
 !!! warning "Emulating an Xbox controller will cause reduced or missing functions."
+
+!!! note "If you experience Gyro issues, try setting controller emulation target in OGUI to **deck-uhid**. Device RGB functions can be controlled via the **Huesync Decky Plugin**."
 
 If your device has paddles, you will want to use the DualSense Edge or Steam Deck controller (**excluding the Ayn Loki**). It’s disabled by default because some games do not map it correctly.
 
 Some games and emulators may need Steam Input to be **disabled** to work correctly with your controls.
+
+---
 
 ### Desktop Controls
 
@@ -113,9 +135,15 @@ Some games and emulators may need Steam Input to be **disabled** to work correct
 
 Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
-The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it needs to be remapped to <kbd>X</kbd> or any key of your preference. 
+The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it will need remapping to any key of your preference, though :material-gamepad-circle-left: is generally recommended. 
+
+!!! tip "You may set up OSK under **Steam → Settings → Controller → Desktop Layout**."
 
 The desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
+
+!!! info "A feature to control the desktop using a controller was added in KDE Plasma 6.7. This feature conflicts with Steam's emulation method, so make sure you disable it, or vice versa should you want to use Plasma's native controller support."
+
+> See [here](/General/issues_and_resolutions/#gamepads-and-handheld-joysticks-dont-work-in-desktop-mode) for more details.
 
 ---
 
@@ -127,9 +155,9 @@ To install [Decky Loader](https://decky.xyz), open a host terminal and enter:
 ujust setup-decky
 ```
 
-You can access Decky Loader by pressing :material-microsoft-xbox-controller-menu: once to open the QAM from within Steam Gaming Mode or Steam Big Picture Mode.
+You can access Decky Loader inside the QAM from within Steam Gaming Mode or Steam Big Picture Mode.
 
-Alternatively, The Quick Access Menu is accessible from the keyboard with Control + 2, or with an external controller by pressing :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-down:
+!!! info "See how to open QAM [here](#how-do-i-open-the-qam)."
 
 ### Decky Plugins
 
