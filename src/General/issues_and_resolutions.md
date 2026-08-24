@@ -103,6 +103,14 @@ Now if you now select the Shutdown option, Windows will shut down completely and
 
 The Wi-Fi power saving feature in Linux may work poorly on some devices. If the problem is not present in Windows, you may try the solution below. 
 
+If you are using Steam Gaming Mode (i.e. not booting straight into a desktop environment like KDE or GNOME), try:
+
+1. Steam settings -> System -> "Enable Developer Mode"
+2. Steam settings -> Developer -> Uncheck "Enable Wi-Fi Power Management"
+3. Reboot
+
+If the above does not work, and/or for users booting straight into a desktop environment like KDE or Gnome, try:
+
 Open the terminal and run `ip link show`, this will list all your network devices and the output should look something like this:
 
 ```
