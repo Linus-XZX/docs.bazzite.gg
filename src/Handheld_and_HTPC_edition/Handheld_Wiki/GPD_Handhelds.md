@@ -11,7 +11,9 @@ title: GPD Handhelds
 ## General Information & Tweaks
 
 - Adjust RGB with Steam Gaming Mode or via Huesync Decky Plugin.
-- GPD devices also have a physical switch you can toggle to enable a separate desktop/mouse mode.
+- GPD devices typically have a physical switch that can be toggled to enable a separate desktop/mouse mode.
+
+---
 
 ## General Issues
 
