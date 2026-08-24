@@ -135,7 +135,9 @@ Some games and emulators may need Steam Input to be **disabled** to work correct
 
 Desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
-The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it will need remapping to :material-gamepad-circle-left: or any key of your preference. 
+The virtual keyboard is provided by Steam's on-screen keyboard, which requires setup in Desktop Mode. There is **no default keybinding for Steam's on-screen keyboard**, so it will need remapping to any key of your preference, though :material-gamepad-circle-left: is generally recommended. 
+
+!!! tip "You may set up OSK under **Steam → Settings → Controller → Desktop Layout**."
 
 The desktop controller layout may not exist by default if Steam doesn't setup your handheld controller properly. This can be fixed in Steam's controller settings.
 
