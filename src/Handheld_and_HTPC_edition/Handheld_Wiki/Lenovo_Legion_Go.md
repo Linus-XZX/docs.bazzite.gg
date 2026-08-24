@@ -24,7 +24,7 @@ title: Lenovo Handhelds
 - Adaptive/auto display brightness is currently broken.
   - Manual brightness slider in Steam's UI should still work.
 - Updating UEFI/BIOS and can be done by using ```fwupd``` or the "Firmware" flatpak, or in Windows if available, **at your own risk**.
-	- **It is advised to disable Secure Boot before attempting a firmware update**
+  - **It is advised to disable Secure Boot before attempting a firmware update**
 - OGUI (OpenGamepadUI) will not control TDP or CPU Behavior at this time for Legion Go 2 devices, Decky or OGUI plugins may be needed for additional controls
 - As of Deck 44, Charge limits can be set via desktop mode under power settings for you chosen Desktop Environment, the feature is not yet available in OGUI or the Steam QAM
 
