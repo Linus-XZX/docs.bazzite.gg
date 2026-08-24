@@ -56,3 +56,5 @@ title: Ayn Handhelds
 - Mouse input may break in Desktop Mode.
 
 > See [General Issues](#general-issues)
+
+---
