@@ -95,7 +95,7 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
 
     | 方法 | 如何设置 | 是否需要游戏内启用垂直同步？ | 不重启游戏能否生效？ | 对延迟的影响 | 是否推荐 | 备注 |
     |---|---|---|---|---|---|---|
-    | **Gamescope 自带帧率限制** | Use **Quick Access Menu → Performance → Framerate Limit** | 否 | 是 | 相对较差 | **Preferred** | Automatically enables v-sync at driver-level whenever the framerate cap is enabled. Additional latency will be introduced. |
+    | **Gamescope 自带帧率限制** | Use **Quick Access Menu → Performance → Framerate Limit** | 否 | 是 | 相对较差 | **推荐** | Automatically enables v-sync at driver-level whenever the framerate cap is enabled. Additional latency will be introduced. |
     | **MangoAPP（Gamescope 集成）** | - | - | - | - | – | 默认会话无法添加需要的参数，因此不可用。 |
     | **MangoHUD（外部安装）** | **游戏启动选项**：`MANGOHUD=1 %command%` | 否 | 是 | 相对较差 | – | 在`MangoHud.conf` 中进行配置（`fps_limit=0,{fps}...`，0对应无限制），或使用 [MangoJuice](https://flathub.org/en/apps/io.github.radiolamp.mangojuice)。 |
     | **DXVK/VKD3D runtime frame limiter** | **DXVK(D3D8/9/10/11):** `DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12):** `VKD3D_FRAME_RATE={fps} %command%` | No | No | Generally Better | – | Applies only to DXVK/VKD3D titles (no effect on native OpenGL or Vulkan games). |
