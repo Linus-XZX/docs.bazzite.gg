@@ -22,7 +22,7 @@ title: 将用户添加到组
 
 ---
 
-#### 1. Backup User Groups 
+#### 1. 备份当前用户组配置 
 
 Before starting, backup your user groups in `/etc/group` by running the following command:
 
