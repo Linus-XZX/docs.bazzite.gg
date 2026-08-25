@@ -45,7 +45,7 @@ You may try installing Firefox and KeePassXC via distrobox, though there may be 
 
 ---
 
-## Gamepads and handheld joysticks don't work in Desktop Mode
+## Gamepads and Handheld Joysticks Don't Work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.
 
@@ -102,6 +102,14 @@ Now if you now select the Shutdown option, Windows will shut down completely and
 ## Wi-Fi is slow / Wi-Fi lag spikes
 
 The Wi-Fi power saving feature in Linux may work poorly on some devices. If the problem is not present in Windows, you may try the solution below. 
+
+If you are using Steam Gaming Mode (i.e. not booting straight into a desktop environment like KDE or GNOME), try:
+
+1. Steam settings -> System -> "Enable Developer Mode"
+2. Steam settings -> Developer -> Uncheck "Enable Wi-Fi Power Management"
+3. Reboot
+
+If the above does not work, and/or for users booting straight into a desktop environment like KDE or Gnome, try:
 
 Open the terminal and run `ip link show`, this will list all your network devices and the output should look something like this:
 

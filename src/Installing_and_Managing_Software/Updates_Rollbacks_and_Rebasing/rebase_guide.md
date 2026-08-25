@@ -146,6 +146,17 @@ The process of rebasing is very similar to updating(or rather the other way arou
     | Beta Candidate | `:unstable` |
     | Main | `:unstable` |
 
+!!! info
+
+    If you encounter the following message:
+    
+    ```console
+    error: Old and new refs are equal: ostree-image-signed:docker://ghcr.io/ublue-os/bazzite:testing
+    Rebase failed. Image may not exist or be accessible.
+    ```
+
+    This means the Image Flavor/Branch you are trying to rebase to is the same as the one you are currently on. Simply [update](/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/updating_guide/) to receive the newest version of your current image.
+
 ---
 
 ## Differences between Update Branches
