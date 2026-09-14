@@ -160,7 +160,6 @@ Enable it in **Bazzite Portal → Tweak Systems → Enable HDMI 2.1 for AMD Grap
 
 - "Enable GPU accelerated rendering in web views (requires restart)" must be enabled in the Steam settings for better performance in the UI.
   - Enabling this option will most likely cause game-breaking graphical artifacts.
-- HDR can cause game-breaking graphical artifacts.
 
 ---
 
