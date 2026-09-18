@@ -44,7 +44,7 @@ title: 安装常见问题
   - **修复方法 3**：如果你**不打算双启动**，可以用 GParted 或类似工具直接删除旧的 EFI 分区。
     - **注意**：该方法进行的更改无法撤销，且会影响到设备上其他能够引导的操作系统，**包括 Windows**。
   - **修复方法 4**：在同一块硬盘上新建一个独立的 EFI 分区。请参考[手动分区指南](./manual_partitioning.md)，并注意创建新 EFI 分区时不要删除旧的。
-    - 注意：有些系统的 BIOS 可能无法处理同一块硬盘上多个 EFI 分区的情况。
+    - **注意**：有些系统的 BIOS 可能无法处理同一块硬盘上多个 EFI 分区的情况。
 - **文件系统不对**：根目录的文件系统配置为 Ext4 可能也会导致这一错误。Bazzite 只支持使用 BTRFS 的根目录。
 - **ISO 文件损坏**：检查校验和以确定下载的 ISO 文件没有问题。
 - **U 盘过热**：改用 USB 3.0 的盘和接口通常会有帮助。
@@ -142,7 +142,7 @@ https://www.youtube.com/watch?v=VTnm9EiBdPA
 
 如果以上方法都无法解决问题或有其他情况导致无法安装，请尝试我们支持的另一种安装方式：
 
-[**从 Fedora Kinoite（KDE Plasma）或 Fedora Silverblue （GNOME）安装切换到 Bazzite**](/General/Installation_Guide/alternate-install-guide.md).
+[**从 Fedora Kinoite（KDE Plasma）或 Fedora Silverblue （GNOME）安装切换到 Bazzite**](/General/Installation_Guide/alternate-install-guide.md)
 
 ---
 
