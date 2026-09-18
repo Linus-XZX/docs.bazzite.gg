@@ -16,7 +16,7 @@ title: 游戏与硬件兼容性
   - 硬盘必须为 **GUID 分区表（GPT）**格式。在主启动记录（MBR）硬盘上安装 Bazzite 会出错。
     - Microsoft 在 Windows 上提供了[将已有的 MBR 硬盘无损转换为 GPT 格式的实用工具](https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt)。
     !!! warning "在进行任何硬盘更改操作之前，请务必备份所有重要的个人文件。"
-  - **外置或其他非系统盘**: 必须使用 **BTRFS**（固态硬盘）或 **Ext4**（机械硬盘）。 _将文件转移后，可以在安装完成之后进行格式化。_
+  - **外置或其他非系统盘**: 必须使用 **Btrfs**（固态硬盘）或 **Ext4**（机械硬盘）。 _将文件转移后，可以在安装完成之后进行格式化。_
   > 更多信息请参考[这一部分](#unsupported-filesystems-for-secondary-drives)。
 - **网络连接**: 稳定的有线或无线连接。 _安装时不需要。_
 
@@ -87,9 +87,9 @@ PROTON_USE_WINED3D=1 %command%
 
 !!! note
 
-    Bazzite 默认自动挂载使用 Ext4 和 BTRFS 文件系统的外接硬盘。
+    Bazzite 默认自动挂载使用 Ext4 和 Btrfs 文件系统的外接硬盘。
 
-**BTRFS 是 Bazzite 默认选择并推荐使用的文件系统**。任何计划在 Bazzite 上使用并存储游戏的分区都应该使用**Ext4 或 BTRFS**文件系统，但**格式化的过程会不可逆清除所有数据**。[**可以使用 GNOME Disks 按需进行格式化**](../Advanced/Auto-Mounting_Secondary_Drives.md)，但请务必注意不要丢失数据。
+**Btrfs 是 Bazzite 默认选择并推荐使用的文件系统**。任何计划在 Bazzite 上使用并存储游戏的分区都应该使用**Ext4 或 Btrfs**文件系统，但**格式化的过程会不可逆清除所有数据**。[**可以使用 GNOME Disks 按需进行格式化**](../Advanced/Auto-Mounting_Secondary_Drives.md)，但请务必注意不要丢失数据。
 
 !!! warning "格式化一个分区会清除上面的所有数据，且无法撤销。"
 
@@ -98,7 +98,7 @@ PROTON_USE_WINED3D=1 %command%
 !!! warning
 
     NTFS 和 exFAT/FAT32 **不受支持**。这些文件系统在 Linux 上长期使用**一定**会导致无法在 Linux 上修复的数据损坏，且无法支持 Proton/WINE 需要的一些文件系统功能。不要将游戏安装在这些文件系统上！
-    WinBTRFS 也并非完美，且由于 Windows 和 Linux 在文件权限管理上的重大差异，无法保证数据的安全性。
+    WinBtrfs 也并非完美，且由于 Windows 和 Linux 在文件权限管理上的重大差异，无法保证数据的安全性。
     
     换句话说，目前并不存在一个足够可靠的，能同时用于 Windows 和 Linux 的文件系统。
 
@@ -119,11 +119,11 @@ PROTON_USE_WINED3D=1 %command%
 
 FAT32 和 exFAT 都**不受支持**。两者都 **不支持符号链接**，因此 Proton Prefix 无法正常工作。不过，有些情况下可能会将一块 MicroSD 卡格式化成 exFAT 用于数据存储。这种做法有其意义，但 Bazzite 不计划提供支持。
 
-除此之外，FAT 体系的文件系统都不是 [日志式](https://en.wikipedia.org/wiki/Journaling_file_system)，因此出现数据损坏时将更难恢复。 Bazzite 不建议将重要数据保存在 FAT 文件系统中。
+除此之外，FAT 体系的文件系统都不是[日志式](https://en.wikipedia.org/wiki/Journaling_file_system)，因此出现数据损坏时将更难恢复。 Bazzite 不建议将重要数据保存在 FAT 文件系统中。
 
 ### 和双启动的 Windows 共用游戏库
 
-非官方的 [WinBtrfs](https://github.com/maharmstone/btrfs) 项目提供了在 Windows 上操作 BTRFS 文件系统的驱动程序，但使用时应注意数据风险。在安装前，请务必阅读项目提供的文档及相关注意事项。
+非官方的 [WinBtrfs](https://github.com/maharmstone/btrfs) 项目提供了在 Windows 上操作 Btrfs 文件系统的驱动程序，但使用时应注意数据风险。在安装前，请务必阅读项目提供的文档及相关注意事项。
 
 #### 视频指南
 

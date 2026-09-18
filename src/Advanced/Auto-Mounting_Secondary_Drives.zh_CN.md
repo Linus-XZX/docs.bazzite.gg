@@ -18,9 +18,9 @@ https://youtu.be/fN9lvkkrExI
 
    ![](../img/automount.1.png)
 
-3. 设置分区名称和文件系统（建议 BTRFS 或 Ext4）。
+3. 设置分区名称和文件系统（建议 Btrfs 或 Ext4）。
 
-!!! warning "Bazzite 只接受 BTRFS 和 Ext4 文件系统自动挂载时出现的问题报告。"
+!!! warning "Bazzite 只接受 Btrfs 和 Ext4 文件系统自动挂载时出现的问题报告。"
 
 ![](../img/automount.2_btrfs.1.png){data-gallery="step-2"}
 ![](../img/automount.2_btrfs.2.png){data-gallery="step-2"}
@@ -48,7 +48,7 @@ https://youtu.be/fN9lvkkrExI
 
 https://www.youtube.com/watch?v=-2wca_0CpXY
 
-### BTRFS 或 ext4 仍无法自动挂载（启动时提示需要密码授权）
+### Btrfs 或 ext4 仍无法自动挂载（启动时提示需要密码授权）
 
 1. 手动挂载目标分区；
 
