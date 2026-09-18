@@ -16,9 +16,9 @@ Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton
 - 在 Bazzite 掌机版上，Steam 会默认自动配置 Valve 官方推荐的 Steam Play 工具。
 - 有些游戏使用特定的 Proton 版本运行可能会比 Linux 原生版性能明显更好或更差，但必须具体游戏具体分析。
 
-如果需要特定的 Proton 版本，可以在游戏的 **Properties** → **Compatibility** 下选中 **Force the use of a specific Steam Play compatibility tool**，并在下拉框中选择你需要的版本。
+如果需要特定的 Proton 版本，可以在游戏的 **属性** → **兼容性** 下选中 **强制使用特定 Steam Play 兼容性工具**，并在下拉框中选择你需要的版本。
 
-!!! warning "Counter Strike 2 **必须**使用 Linux 原生版运行（在 Steam 的游戏配置中禁用**Force the use of a specific Steam Play compatibility tool**）。运行 Proton 版的 CS2 可能会导致账户被 VAC 封禁。"
+!!! warning "Counter Strike 2 **必须**使用 Linux 原生版运行（在 Steam 的游戏配置中禁用**强制使用特定 Steam Play 兼容性工具**）。运行 Proton 版的 CS2 可能会导致账户被 VAC 封禁。"
 
 #### 图例
 
@@ -36,7 +36,7 @@ Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton
 
 ### 设置
 
-通常来讲你只需要在 **Add locally installed game** 选项中选择游戏的 .exe 文件，启动器会自动创建 Proton Prefix 并进行管理。各个启动器一般也提供手动指定 Prefix 路径的选项，可以按需操作。
+通常来讲你只需要在**添加非 Steam 游戏...** 选项中选择游戏的 .exe 文件，启动器会自动创建 Proton Prefix 并进行管理。各个启动器一般也提供手动指定 Prefix 路径的选项，可以按需操作。
 
 !!! note "Lutris 通常提供两种在 Bazzite 上运行 Windows 游戏的选项：社区脚本或手动配置。由于有些社区脚本可能已过时或疏于维护，**一般建议手动配置**。"
 
@@ -46,14 +46,14 @@ Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton
 
     其他启动器对应的操作和以下列出的步骤一般差别不会太大。
 
-![Add Locally Installed Game|632x496, 75%](../img/Lutris_Setup_Add_Local_Game.png)
+![导入本地安装的游戏|632x496, 75%](../img/Lutris_Setup_Add_Local_Game.png)
 
-![Lutris manually adding games example 1|690x213](../img/Lutris_Setup_Add_Local_Game_1.png)
+![Lutris 手动导入游戏|690x213](../img/Lutris_Setup_Add_Local_Game_1.png)
 
 Lutris 默认将每个游戏的 [**Prefix**](/Gaming/Managing_and_modding_games/#what-is-a-proton-or-wine-prefix) 保存在`~/Games`目录下。
 
 ### 添加快捷方式和桌面条目
 
-![Lutris_Right_Click_Menu|421x447, 75%](../img/Lutris_Setup_Shortcut.png)
+![Lutris 的右键菜单|421x447, 75%](../img/Lutris_Setup_Shortcut.png)
 
 通常可以通过启动器的编辑功能或右键点击游戏条目中的对应选项，为一个游戏添加快捷方式。

@@ -61,9 +61,9 @@ Prefix 是 Proton 和 Wine 在运行 Windows 程序时创建的模拟 Windows �
 
 === "通过 Protontricks"
     
-    1. Select your game in Protontricks
-    2. Click **Select the default wineprefix**
-    3. Click **Delete ALL DATA AND APPLICATIONS INSIDE THIS PROTON PREFIX**
+    1. 在 Protontricks 中选择要操作的游戏
+    2. 选择**选择默认的 Wine 容器**
+    3. 选择**Delete ALL DATA AND APPLICATIONS INSIDE THIS PROTON PREFIX**
     
 === "手动删除"
     
