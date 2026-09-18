@@ -10,7 +10,7 @@ title: 系统启动时显示详细日志
 
 ![Plymouth](../img/plymouth.png)
 
-## 1 - 修改 Plymouth 配置
+## 修改 Plymouth 配置
 
 ```command
 sudo plymouth-set-default-theme details
@@ -18,7 +18,7 @@ sudo plymouth-set-default-theme details
 
 或者手动在`/etc/plymouth/plymouthd.conf`中配置对应内容。
 
-## 2 - 重新生成 Initramfs 并重启
+## 重新生成 Initramfs 并重启
 
 ```command
 sudo rpm-ostree initramfs --enable --reboot
