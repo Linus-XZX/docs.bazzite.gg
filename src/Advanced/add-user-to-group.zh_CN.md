@@ -44,7 +44,7 @@ sudo cp /etc/group /etc/group.bak
 grep "<your_group_name>" /usr/lib/group
 ```
 
-!!! example
+!!! example "示例"
 
     对于`dialout`组，得到的结果应该是`dialout:x:18`：
 
@@ -70,7 +70,7 @@ grep "<your_group_name>" /usr/lib/group
 grep "<your_group_name>" /usr/lib/group | sudo tee -a /etc/group
 ```
 
-!!! example
+!!! example "示例"
     
     ```bash
     grep "dialout" /usr/lib/group | sudo tee -a /etc/group
@@ -89,7 +89,7 @@ grep "<your_group_name>" /usr/lib/group | sudo tee -a /etc/group
 ```bash
 sudo usermod -aG <your_group_name> <username>
 ```
-!!! example
+!!! example "示例"
     
     ```bash
     sudo usermod -aG dialout bazzite
@@ -107,7 +107,7 @@ sudo usermod -aG <your_group_name> <username>
 *   `<username>:x:1000`
 *   `<your_group_name>:x:<group_ID>:<username>`
 
-如果你的`/etc/group`文件缺少任意一条，**不要重新启动或关机**，立刻前往 [Bazzite 的官方 Discord](/community/#discord-no-discord-account)上求助。
+如果你的`/etc/group`文件缺少任意一条，**不要重新启动或关机**。如果无法从备份还原，立刻前往 [Bazzite 的官方 Discord](/community/#discord-no-discord-account)上求助。
 
 如果一切正常，重新启动后修改就能生效。
 
@@ -132,7 +132,7 @@ sudo usermod -aG <your_group_name> <username>
 
 重新启动设备，并在开机过程中按<kbd>Esc</kbd>键以进入 GRUB 菜单。对于双系统或没有隐藏 GRUB 菜单的配置，也可以在菜单出现时按<kbd>↓</kbd>以打断自动的倒计时。
 
-!!! tip
+!!! tip "提示"
 
     *   如果按<kbd>Esc</kbd>的次数太多，你可能会看到一个`grub>`的 Shell 界面；
     *   此时应输入`exit`并按<kbd>Enter</kbd>，以回到 GRUB 的主要菜单。
@@ -166,7 +166,7 @@ sudo usermod -aG <your_group_name> <username>
 *   `wheel:x:10:<username>`
 *   `<username>:x:1000`
 
-!!! example 
+!!! example "示例"
     
     ```console
     bash-5.2# cat /etc/group

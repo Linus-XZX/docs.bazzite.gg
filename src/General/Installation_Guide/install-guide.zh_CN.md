@@ -1,12 +1,12 @@
 ---
-title: 使用旧版 ISO 安装 Bazzite
+title: Bazzite 安装指南
 ---
 
-# 使用旧版 ISO 安装 Bazzite
+# Bazzite 安装指南
 
-## 旧版 ISO
+## 视频指南
 
-该指南针对的是旧版的基于 Anaconda 的安装镜像，目前由于新的安装器暂时不支持手动分区等一些问题所以保留支持。
+https://www.youtube.com/watch?v=lBqbk6Z8HrQ
 
 ## 系统要求
 
@@ -14,7 +14,7 @@ title: 使用旧版 ISO 安装 Bazzite
 - 绝大多数较新的硬件都支持安全启动和 TPM，但安全启动支持需要[**手动导入 Bazzite 的密钥**](#secure-boot)；
 - [**支持和 Windows 双启动的配置**](#dual-booting-windows)。
 
-### 安装需求
+### 安装要求
 
 - 下载 Bazzite ISO
   - 如果浏览器下载大文件遇到困难，可以考虑 [**Motrix**](https://motrix.app/) 一类的下载管理器。
@@ -24,8 +24,9 @@ title: 使用旧版 ISO 安装 Bazzite
   - **Fedora Media Writer（推荐）** （[Windows/macOS](https://github.com/FedoraQt/MediaWriter/releases), [Linux](https://flathub.org/en/apps/org.fedoraproject.MediaWriter)）
   - **Rufus** （[Windows](https://rufus.ie/)）
   - **Ventoy** （[Windows, Linux](https://www.ventoy.net/)）（[**安全启动需要额外配置**](https://www.ventoy.net/en/doc_secure.html)）
-- 推荐有线键盘连接设备（如果设备没有触屏则必要）
-  - 如果需要自定义初始**用户名**和**密码**则必要。
+- 推荐有线键盘连接设备
+  - 最新的镜像支持屏幕键盘，因此如果有触屏或有线鼠标连接，可以作为替代
+  - 安装器通常需要鼠标或触屏来进行操作
 
 ### 桌面环境
 
@@ -77,11 +78,13 @@ Bazzite 文档的[**常见问题**部分](../../General/FAQ.md)进一步解释�
 
     {% endblock %}
 
-## 0. 备份数据
+## 备份数据
 
 将安装 Bazzite 的硬盘上的个人数据应提前备份到其他存储设备上。
 
-## 1. 下载并烧录镜像
+## 下载镜像
+
+![download|1871x856, 60%](../../img/live-installer-download.png)
 
 - 在 [Bazzite 官网](https://download.bazzite.gg) 上选择所需的镜像版本并下载；
 - 将安装镜像烧录到另一个存储设备上；
@@ -93,7 +96,14 @@ Bazzite 文档的[**常见问题**部分](../../General/FAQ.md)进一步解释�
 
 https://www.youtube.com/watch?v=wUDbMJtR1sM
 
-## 2. 启动安装器
+## 烧录镜像
+
+![flash|771x623, 70%](../../img/live-installer-fedora-media-writer-1.png)
+![flash|771x723, 70%](../../img/live-installer-fedora-media-writer-2.png)
+
+用 Fedora Media Writer 或其他 ISO 烧录软件将镜像烧录到 U 盘上，完成之后弹出 ISO。
+
+## 启动安装器
 
 - 将烧录了安装镜像的存储插入设备并开机；
 - 将存储作为第一启动设备以进入安装器；
@@ -106,40 +116,54 @@ https://www.youtube.com/watch?v=wUDbMJtR1sM
 
 长按**音量下**键（<kbd>-</kbd>）的同时点按电源键，并在听到开机提示音时松开两个键，就可以进入启动管理器。在启动管理器内选择安装镜像所在的设备，即可进入安装器。
 
-## 3. 安装器
+## Live 环境
 
-!!! note "备注"
+![Bazzite 的 Live 安装器的 GRUB 菜单|800x600, 70%](../../img/live-installer-grub.png)
 
-    如果你没有连接有线键盘，**不要点击**"_创建用户_"。Bazzite 默认的用户名/密码配置在点击后会自动失效，如果没有连接键盘，安装将无法继续。
+![Live 环境|1431x897, 60%](../../img/live-installer-opening.png)
 
-    **默认用户名**: `bazzite`
-    **默认密码**: `bazzite`
+Bazzite 的 Live 安装环境提供了和实际安装相近的桌面配置，以展示用户界面相关内容。
 
-![Automatic drive configuration|690x497, 75%](../../img/anaconda_drive_configuration.png)
+我们不建议在 Live 环境内尝试进行游戏，因为安装器环境的性能通常与实际安装后有明显差别。
+另外，安装环境打包的内核版本与实际安装不同，因此不一定包含 Bazzite 的所有硬件支持，比如 Steam Deck 上的声卡等。
 
-![User setup example|690x359, 75%](../../img/anaconda_user_setup.png)
+### 在 Live 环境下配置网络
 
-- 选择语言、地区、键盘布局和时区；
-- 选择安装 Bazzite 的硬盘；
-  - 除非你计划用这块硬盘双启动，否则建议删除硬盘上的所有分区；
-  - 除非你计划用这块硬盘双启动，否则建议选择自动配置。
-- 如果需要，设置系统盘加密的密码；
-  - **如果你丢失了这个密码，所有数据将无法恢复**；
-  - 该密码在启动时**必须用有线连接的键盘输入**！
-- 设置用户；
-  - 该用户必须有管理员权限，并设置密码。
-- 开始安装；
-- 安装完成后，重新启动系统。
+![网络设置|495x593, 100%](../../img/live-installer-network.png)
 
-## 双启动
+Bazzite 的安装过程不需要联网，但在测试功能的时候往往会有用。准备好之后，选择桌面上的 **Install to Hard Drive** 选项以开始安装。
+
+## 选择语言、地区和键盘布局
+
+![欢迎页|1295x1054, 62%](../../img/live-installer-language.png)
+
+![日期和时间页|1295x1054, 62%](../../img/live-installer-time-date.png)
+
+选择语言、地区、时区和键盘布局。键盘布局会影响之后的输入操作，因此需要确定配置正确。
+
+## 分区配置
+
+![安装方案页，单系统安装|1273x1038, 63%](../../img/live-installer-drive.png)
+
+!!! warning "警告"
+
+    为了防止数据丢失，在选择安装目标时只选择直接需要的硬盘，并且尽量在启动安装之前先暂时移除其他硬盘。
+
+选择你计划安装 Bazzite 的硬盘。目前安装器暂不支持手动分区，因此会删除该硬盘上现有的所有内容。
+
+## 和 Windows 双启动
+
+![安装方案页，双系统安装|1773x1247, 52%](../../img/live-installer-dualboot.png)
 
 !!! note "备注"
 
     如果你不打算和 Windows 双启动，可以跳过这个部分。
 
-### 和 Windows 双启动
+!!! warning "警告"
 
-**多块硬盘**双启动时，GRUB 可能难以检测到其他硬盘上的安装的 Windows，因此也建议通过系统的 BIOS 菜单配置引导顺序。
+     双启动相关选项下会提示将会格式化 EFI 分区，但实际上安装器只是将 Bazzite 的启动组件安装到相同 EFI 分区，原有的 Windows 的启动组件不会受影响。这是安装器上游项目里就有的一个显示问题，不会影响功能。
+
+基于 Live 环境的新版 ISO 在双启动配置下只支持自动分区。自动分区进行的配置应该适合绝大多数情况，但如果你需要自定义分区方案，则必须下载**旧版的安装镜像**，并参考[对应的安装指南](./legacy-install.md)。**多块硬盘**双启动时，GRUB 可能难以检测到其他硬盘上的安装的 Windows，因此也建议通过系统的 BIOS 菜单配置引导顺序。
 
 ### 视频指南
 
@@ -157,15 +181,6 @@ https://www.youtube.com/watch?v=KAt49B6rSFI
     3. 启动 Bazzite 的安装镜像，并按自动分区的流程操作；
     4. 安装完成后，在 Bazzite 上运行`ujust regenerate-grub`，以将 Windows 的启动选项加入 GRUB 菜单。
 
-=== "共用硬盘，手动分区（仅限旧版安装镜像）"
-
-    1. 使用 Windows 的磁盘管理工具压缩 Windows 的分区，为 Bazzite 腾出空间；
-    一般压缩之后的配置应该类似于：
-    ![](/img/dualbooting_partitions_windows.png)
-    <i><small>来源：[diskpart.com](https://www.diskpart.com/windows-10/windows-10-disk-management-0528.html)</small></i>
-    2. 启动 Bazzite 的安装镜像，并按[手动分区](#manual-partitioning-instructions)的流程操作；
-    3. 安装完成后，在 Bazzite 上运行`ujust regenerate-grub`，以将 Windows 的启动选项加入 GRUB 菜单。
-
 === "多块硬盘"
 
     **除非完全没有多余硬盘可用，否则我们推荐这样配置。**
@@ -180,63 +195,6 @@ https://www.youtube.com/watch?v=KAt49B6rSFI
 
     如果没有可用的内置硬盘，也可以借助 [Rufus](https://rufus.ie/en/) 等工具和 Windows To Go 以进行双启动。
 
-如果 Windows 在 Bazzite 之后安装，可能需要 Live ISO 提供的 **Bootloader Restoring Tool** 来修复 Bazzite 的引导组件。
-
-### 手动分区指南
-
-!!! warning "一般推荐自动分区，除非需要在同一块硬盘上安装双系统。"
-
-!!! attention "Bazzite 只支持 BTRFS 文件系统的根目录（`/`）。"
-
-可以参考[这一指南（9:10 处开始，链接自带时间戳）](https://www.youtube.com/watch?v=JxPsKhJGTrs&t=550s).
-
-1.  选择安装目标位置
-2.  在**存储配置**栏下，选择`高级自定义 (Blivet-GUI)`；
-![选择手动分区](../../img/select_manual_partitioning.png)
-3.  创建以下这些分区：
-  - **/boot/efi**
-    ![EFI 分区](../../img/efi_partition.png)
-    ```
-    挂载点：/boot/efi
-    文件系统：EFI 系统分区（EFI system partition）
-    大小：300MiB
-    ```
-  - **/boot**
-    ![启动分区](../../img/boot_partition.png)
-    ```
-    挂载点：/boot
-    文件系统：ext4
-    大小：2GiB
-    ```
-  - **系统分区（BTRFS 容器）**
-    ![BTRFS 分区](../../img/btrfs_partition.png)
-    ```
-    挂载点：（不设置）
-    文件系统: btrfs
-    大小：（所有剩余空间）
-    ```
-  - **/**
-    ![/ 子卷](../../img/root_subvolume.png)
-    ```
-    挂载点：/
-    设备类型：Btrfs 子卷
-    ```
-  - **/var**
-    ![/var 子卷](../../img/var_subvolume.png)
-    ```
-    挂载点：/var
-    设备类型：Btrfs 子卷
-    ```
-  - **/var/home**
-    ![/var/home 子卷](../../img/var_home_subvolume.png)
-    ```
-    挂载点：/var/home
-    设备类型：Btrfs 子卷
-    ```
-4.  选择**完成**；
-5.  选择**接受更改**；
-6.  完成接下来的安装步骤。
-
 ### 和其他 Linux 系统双启动
 
 !!! note "备注"
@@ -245,7 +203,39 @@ https://www.youtube.com/watch?v=KAt49B6rSFI
 
 如果是同一块硬盘上多个 Fedora Atomic 系统（比如 [Bluefin](https://projectbluefin.io/)）的双启动，由于目前它们基本上都共用 Fedora 的引导路径，因此必须为每个系统设置单独的 EFI 分区，并通过系统的 BIOS 菜单配置引导顺序。
 
-多块硬盘双启动时，GRUB 可能难以检测到其他硬盘上的系统，因此也建议通过系统的 BIOS 菜单配置引导顺序。
+## 硬盘加密
+
+![存储配置页|1284x1045, 62%](../../img/live-installer-storage-encryption.png)
+
+!!! warning "警告"
+
+    硬盘加密的密码和用户的密码相互独立，如果你忘记了前者，所有数据将无法恢复！
+
+Bazzite 安装时支持启用基于 [LUKS](https://docs.fedoraproject.org/en-US/quick-docs/encrypting-drives-using-LUKS/) 的硬盘加密，但**输入该密码需要有线键盘连接**。如果你不需要该功能，则不要勾选“加密我的数据”。绝大多数情况下硬盘加密不属于必要的安全措施，但如果你认为有硬盘被其他物理手段访问的风险，可以考虑启用。
+
+## 用户设置
+
+![创建账户页|1288x1050, 62%](../../img/live-installer-user-setup.png)
+
+!!! warning "警告"
+
+    不建议启用 Root 账户。
+
+配置登录 Bazzite 使用的用户名和密码。之后需要管理员批准的操作也会使用该密码，因此请务必记住。
+
+## 开始安装
+
+![检查并安装页|1283x1042, 62%](../../img/live-installer-partitions.png)
+
+![进行安装|1282x1036, 63%](../../img/live-installer-installing.png)
+
+再次检查安装器列出的所有将要进行的系统改动，如果没有问题，选择“删除数据内容并安装”。进行安装可能需要一段时间。
+
+## 重新启动
+
+![安装完成|1288x1040, 62%](../../img/live-installer-installed.png)
+
+安装完成后，重新启动设备。此时可以移除安装使用的 U 盘。
 
 ## 安全启动
 

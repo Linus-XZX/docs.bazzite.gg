@@ -12,9 +12,7 @@ Fedora 的`systemd`配置通常保证了系统出现问题时能够回退到应�
 Cannot open access to console, the root account is locked.
 ```
 
-??? note "_Universal Blue_ 系列发行版最近抄到了上游 _Fedora CoreOS_ 的作业"
-
-    现在启动到[应急模式](#booting-to-emergency-mode)和[急救模式](#booting-to-rescue-mode)时，即使 Root 用户没有设置过密码（锁定状态），应该也会给出提示：
+不过 _Universal Blue_ 系列发行版最近抄到了上游 _Fedora CoreOS_ 的作业，所以现在启动到[应急模式](#booting-to-emergency-mode)和[急救模式](#booting-to-rescue-mode)时，即使 Root 用户没有设置过密码（锁定状态），应该也会给出提示：
 
 ```
 Press Enter for maintenance
@@ -67,4 +65,4 @@ Press Enter for maintenance
 
 ## 重置用户密码
 
-忘记了用户的登录密码吗？参考[Fedora Atomic 上游的文档](https://docs.fedoraproject.org/en-US/fedora-silverblue/troubleshooting/#_resetting_passwords_in_rescue_mode)进行重置。对于 Bazzite，如果你安装时没有进行设置，可以尝试默认密码`bazzite`。
+忘记了用户的登录密码吗？参考 [Fedora Atomic 上游的文档](https://docs.fedoraproject.org/en-US/fedora-silverblue/troubleshooting/#_resetting_passwords_in_rescue_mode)进行重置。对于 Bazzite，如果你安装时没有进行设置，可以尝试默认密码`bazzite`。
