@@ -36,7 +36,7 @@ Steam 游戏的启动选项通常都符合 `ENVIRONMENT_VARIABLES command_or_scr
 PROTON_LOG=1 %command%                    # 启用 Proton 的日志
 STEAMDECK=0 %command%                     # 禁用 Steam Deck 相关调整
 PROTON_ENABLE_NGX_UPDATER=1 %command%     # 允许 Proton 覆盖 DLSS 组件以升级
-%command% --in-process-gpu                # 在一些 Unity 游戏中修复启动时白屏的问题，%command% 可以省略
+%command% --in-process-gpu                # 在一些 Unity 游戏中修复启动时白屏的问题，`%command%`可以省略
 scb %command%                             # 用 ScopeBuddy （Gamescope 的辅助程序）启动游戏
 ```
 
@@ -70,7 +70,7 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
   - 本质为`PROTON_ENABLE_NGX_UPDATER=1 DXVK_NVAPI_DRS_SETTINGS=NGX_DLSS_SR_OVERRIDE=on,NGX_DLSS_RR_OVERRIDE=on,NGX_DLSS_FG_OVERRIDE=on,NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION=render_preset_latest,NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION=render_preset_latest %command%`的简写
 - **`dlss-swapper-dll %command%`** - 同上，但跳过 NGX Updater
 
-!!! info
+!!! info "信息"
 
     DLSS 并非一刀切的越新越好，因此 Bazzite 有意保留了这套配置，而非完全依赖较新的 `PROTON_DLSS_UPGRADE=1`（此功能在 Bazzite Portal 上亦有记载）。
 
@@ -95,10 +95,10 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
 
     | 方法 | 如何设置 | 是否需要游戏内启用垂直同步？ | 不重启游戏能否生效？ | 对延迟的影响 | 是否推荐 | 备注 |
     |---|---|---|---|---|---|---|
-    | **Gamescope 自带帧率限制** | Use **Quick Access Menu → Performance → Framerate Limit** | 否 | 是 | 相对较差 | **推荐** | Automatically enables v-sync at driver-level whenever the framerate cap is enabled. Additional latency will be introduced. |
-    | **MangoAPP（Gamescope 集成）** | - | - | - | - | – | 默认会话无法添加需要的参数，因此不可用。 |
+    | **Gamescope 自带帧率限制** | **快速访问菜单 → 性能 → 帧率限制** | 否 | 是 | 相对较差 | **推荐** | 帧率限制启动时会强制开启垂直同步，可能导致延迟提高。 |
+    | **MangoAPP（Gamescope 集成）** | - | - | - | - | – | 游戏模式的启动环境无法添加需要的参数，因此不可用。 |
     | **MangoHUD（外部安装）** | **游戏启动选项**：`MANGOHUD=1 %command%` | 否 | 是 | 相对较差 | – | 在`MangoHud.conf` 中进行配置（`fps_limit=0,{fps}...`，0对应无限制），或使用 [MangoJuice](https://flathub.org/en/apps/io.github.radiolamp.mangojuice)。 |
-    | **DXVK/VKD3D runtime frame limiter** | **DXVK(D3D8/9/10/11):** `DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12):** `VKD3D_FRAME_RATE={fps} %command%` | No | No | Generally Better | – | Applies only to DXVK/VKD3D titles (no effect on native OpenGL or Vulkan games). |
+    | **DXVK/VKD3D 自带帧率限制** | **DXVK(D3D8/9/10/11)**：`DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12)**：`VKD3D_FRAME_RATE={fps} %command%` | 否 | 否 | 相对较好 | – | 只适用于通过 DXVK 或 VKD3D 运行的游戏，在原生 OpenGL 或 Vulkan 的游戏中不会生效。 |
 
 === "桌面模式 （GNOME/KDE Plasma 桌面会话）"
 
@@ -107,14 +107,14 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
     | **Gamescope 自带帧率限制** | **游戏启动选项**：`gamescope -r {fps} -- %command%`或`--framerate-limit {fps}` | 是 | 是* | 相对较差 | – | *`gamescopectl debug_set_fps_limit {fps}`可以不重启游戏应用新的限制值。 |
     | **MangoAPP（Gamescope 集成）** | **游戏启动选项**：`gamescope --mangoapp -- %command%` | 是 | 是 | 相对较差 | – | 限制有时无法生效。配置方式参考 MangoHUD。 |
     | **MangoHUD（外部安装）** | **游戏启动选项**：`MANGOHUD=1 %command%` | 否 | 是 | 相对较好 | **推荐** | 限制通常稳定生效。在`MangoHud.conf` 中进行配置（`fps_limit=0,{fps}...`，0对应无限制），或使用 [MangoJuice](https://flathub.org/en/apps/io.github.radiolamp.mangojuice)。 |
-    | **DXVK/VKD3D 自带帧率限制** | **DXVK(D3D8/9/10/11):** `DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12):** `VKD3D_FRAME_RATE={fps} %command%` | 否 | 否 | 相对较好 | – | 只适用于需要转译的 DirectX 游戏，对本身是 OpenGL 或 Vulkan 的游戏无效。 |
+    | **DXVK/VKD3D 自带帧率限制** | **DXVK(D3D8/9/10/11):** `DXVK_FRAME_RATE={fps} %command%`<br>**VKD3D(D3D12):** `VKD3D_FRAME_RATE={fps} %command%` | 否 | 否 | 相对较好 | – | 只适用于通过 DXVK 或 VKD3D 运行的游戏，在原生 OpenGL 或 Vulkan 的游戏中不会生效。 |
 
 如果限制配置没有生效，以下两步可能会有帮助：
 
 - 禁用帧率自适应同步（Adaptive sync）和可变刷新率（VRR）；如果你的 Gamescope 启动参数中有`--adaptive-sync`，尝试移除。
 - 在游戏内启动垂直同步（Vsync）。
 
-!!! Note
+!!! Note "备注"
 
     游戏内的延迟往往是个很复杂的问题，不同配置的情况可能天差地别。几乎不可能有一套解决一切问题的“完美”参数，而是需要用户根据自己的实际需求不断进行打磨与测试。
     
@@ -124,4 +124,4 @@ Bazzite 针对一些常用的启动选项提供了一些捷径。
 
 ## 使用 ScopeBuddy 进一步调整启动选项
 
-[**ScopeBuddy** 的文档](../Advanced/scopebuddy.md) 将会介绍在 Gamescope 上更进一步的启动选项管理。
+[**ScopeBuddy** 的文档](../Advanced/scopebuddy.md)将会介绍在 Gamescope 上更进一步的启动选项管理。

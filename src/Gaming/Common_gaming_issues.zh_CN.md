@@ -8,9 +8,9 @@ title: 游戏常见问题
 
 有些游戏的 Linux 原生版可能会少一些功能或在性能上弱于通过 Proton 运行 Windows 版，但也有些游戏可能只能使用原生版，需要具体游戏具体分析。
 
-如果一个游戏提供了 Linux 原生版但它无法正常启动，可以尝试强制使用 **Legacy Runtime** 兼容性工具。在 Steam 的**游戏属性**下的**兼容性**菜单勾选 **Force the use of a specific Steam Play compatibility tool** 即可选择它。
+如果一个游戏提供了 Linux 原生版但它无法正常启动，可以尝试强制使用 **Legacy Runtime** 兼容性工具。在 Steam 的**游戏属性**下的**兼容性**菜单勾选**强制使用特定 Steam Play 兼容性工具**即可选择它。
 
-!!! warning "Counter Strike 2 **必须**使用 Linux 原生版运行（在 Steam 的游戏配置中禁用**Force the use of a specific Steam Play compatibility tool**）。运行 Proton 版的 CS2 可能会导致账户被 VAC 封禁。"
+!!! warning "Counter Strike 2 **必须**使用 Linux 原生版运行（在 Steam 的游戏配置中取消勾选**强制使用特定 Steam Play 兼容性工具**）。运行 Proton 版的 CS2 可能会导致账户被 VAC 封禁。"
 
 ## Denuvo 防篡改保护的游戏
 
@@ -20,11 +20,11 @@ Denuvo 会将 Proton 版本的切换视为在新硬件上激活游戏，因此�
 
 ## Source 1 引擎的音频或自定义内容
 
-!!! note
+!!! note "备注"
 
-    本章节只针对基于 [Source 引擎](https://www.pcgamingwiki.com/wiki/Engine:Source) 的游戏的相关问题。
+    本章节只针对基于 [Source 引擎](https://www.pcgamingwiki.com/wiki/Engine:Source)的游戏的相关问题。
 
-!!! attention
+!!! attention "备注"
 
     除非你确实碰到了这些音频或 _Left 4 Dead 2_ 相关的问题，否则不需要，也不应该执行这些步骤。
 
@@ -34,7 +34,7 @@ Denuvo 会将 Proton 版本的切换视为在新硬件上激活游戏，因此�
 
 ### 音频或自定义内容的修复
 
-!!! 警告
+!!! warning "警告"
 
     SELinux 配置仅适合进阶用户操作。作为安全相关的内核底层组件，错误的配置可能会影响系统其他功能的正常运行，并降低系统安全性。
 
@@ -73,7 +73,7 @@ Steam 游戏无法启动也有很多种情况。以下列出一些可能导致�
 
 ### `gamemoderun`
 
-!!! note
+!!! note "备注"
 
       这里讨论的不是 Bazzite 掌机版（bazzite-deck）提供的**游戏模式**。 而是向操作系统申请各种优化以提升游戏性能的工具 (Feral) GameMode。
 
@@ -93,7 +93,7 @@ ProtonDB 上经常有用户建议将启动选项设定为`gamemoderun %command%`
 
 ### 多用户环境下使用 Wine
 
-!!! note
+!!! note "备注"
 
     Bazzite 掌机版（bazzite-deck）不支持多个 Linux 用户的配置，因此本章节只适用于桌面版。
 

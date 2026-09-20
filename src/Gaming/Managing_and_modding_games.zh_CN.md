@@ -8,7 +8,7 @@ title: 游戏和模组管理
 
 ![Proton Plus|1797x1412, 43%](../img/proton-plus.png)
 
-Windows 游戏在 Bazzite 上运行时都需要借助**兼容性工具**。Steam 提供的 Proton 是其中之一，但通过 ProtonPlus 等工具也可以配置[GE-Proton](https://github.com/GloriousEggroll/proton-ge-custom) 和 [Luxtorpeda](https://codeberg.org/luxtorpeda/luxtorpeda)一类的其他工具。
+Windows 游戏在 Bazzite 上运行时都需要借助**兼容性工具**。Steam 提供的 Proton 是其中之一，但通过 ProtonPlus 等工具也可以配置[GE-Proton](https://github.com/GloriousEggroll/proton-ge-custom) 和 [Luxtorpeda](https://codeberg.org/luxtorpeda/luxtorpeda) 一类的其他工具。
 
 ## Protontricks
 
@@ -18,7 +18,7 @@ Windows 游戏在 Bazzite 上运行时都需要借助**兼容性工具**。Steam
 
 ## 文件管理器中的隐藏文件
 
-!!! note
+!!! note "备注"
 
     Windows 程序通过 Wine 运行时，文件管理视图的隐藏文件显示开关由 Prefix 下的 winecfg 控制。
 
@@ -33,7 +33,7 @@ Windows 游戏在 Bazzite 上运行时都需要借助**兼容性工具**。Steam
 
 Prefix 是 Proton 和 Wine 在运行 Windows 程序时创建的模拟 Windows 环境的骨架。游戏在其安装目录之外创建文件时，纯 Windows 的路径会自动转换成 Prefix 下的路径。
 
-!!! important
+!!! important "备注"
 
     **Steam 上的游戏**一般都安装在`~/.steam/root/steamapps/common/<游戏名>`文件夹下。
 
@@ -43,19 +43,19 @@ Prefix 是 Proton 和 Wine 在运行 Windows 程序时创建的模拟 Windows �
 
 对于 Steam 上的游戏，Prefix 的默认路径是`~/.steam/root/steamapps/compatdata/`下**游戏的 AppID 的文件夹**：
 
-!!! tip
+!!! tip "提示"
     
     在 ProtonPlus 的 **Games** 中选择特定游戏并 **Open prefix directory** 即可在文件管理器中快速打开 Prefix。
     ![用 ProtonPlus 快捷访问 Prefix|1777x853, 25%](../img/protonplus_open_prefix.png)
 
-- 在游戏 Steam 属性的 **更新** → **App ID** 一栏也能看到游戏的 ID。
+- 在游戏 Steam 属性的**更新** → **App ID** 一栏也能看到游戏的 ID。
 - 该文件夹下的`pfx/drive_c/`目录即为游戏所看到的 “C 盘”。
 
 非 Steam 游戏的 Prefix 位置则完全不受限制，比如 Lutris 一般会选择保存在`~/Games`目录下。
 
 #### Proton Prefix 出问题了？
 
-!!! warning
+!!! warning "警告"
 
     删除 Proton Prefix **_可能_** 会导致存档或配置数据丢失！
 
@@ -88,7 +88,7 @@ Prefix 是 Proton 和 Wine 在运行 Windows 程序时创建的模拟 Windows �
 === "Protontricks（需要通过 Steam/Proton 运行的游戏）"
 
     1. 在 Protontricks 中选择游戏
-    2. 选择**选择默认的 Wine 容器**
+    2. 选择**选择默认的 Wine 容器**/**选择默认的 wineprefix**（不同版本翻译略有差别）
     3. 选择**运行 Wine 配置程序**
     4. 在**函数库**部分，添加你需要的 DLL 名称
     

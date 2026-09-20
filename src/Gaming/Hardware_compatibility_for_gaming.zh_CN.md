@@ -20,7 +20,7 @@ title: 游戏与硬件兼容性
   > 更多信息请参考[这一部分](#unsupported-filesystems-for-secondary-drives)。
 - **网络连接**: 稳定的有线或无线连接。 _安装时不需要。_
 
-!!! note
+!!! note "备注"
 
     有些外设硬件与 Linux 不兼容，因此无法和 Bazzite 配合使用，具体的兼容情况通常取决于厂商。对于 USB 连接的无线网卡，可以参考[这篇确认兼容的硬件列表](https://github.com/morrownr/USB-WiFi/blob/main/home/USB_WiFi_Adapters_that_are_supported_with_Linux_in-kernel_drivers.md)。
 
@@ -28,7 +28,7 @@ title: 游戏与硬件兼容性
 
 ### Steam 游戏模式的系统要求
 
-!!! note
+!!! note "备注"
 
     这些要求只适用于 [Bazzite 掌机版](/Handheld_and_HTPC_edition/Steam_Gaming_Mode.md)（bazzite-deck），和 [SteamOS](https://store.steampowered.com/steamos/) 的要求基本一致。
 
@@ -49,7 +49,7 @@ title: 游戏与硬件兼容性
 
 ## 支持 Vulkan 的显卡
 
-!!! attention
+!!! attention "备注"
 
     Linux 端运行游戏很大程度上依赖显卡对 [Vulkan](/General/terms/#software) 的支持。
 
@@ -85,7 +85,7 @@ PROTON_USE_WINED3D=1 %command%
 
 ## 文件系统
 
-!!! note
+!!! note "备注"
 
     Bazzite 默认自动挂载使用 Ext4 和 Btrfs 文件系统的外接硬盘。
 
@@ -95,7 +95,7 @@ PROTON_USE_WINED3D=1 %command%
 
 ### 外接硬盘上不支持的文件系统
 
-!!! warning
+!!! warning "警告"
 
     NTFS 和 exFAT/FAT32 **不受支持**。这些文件系统在 Linux 上长期使用**一定**会导致无法在 Linux 上修复的数据损坏，且无法支持 Proton/WINE 需要的一些文件系统功能。不要将游戏安装在这些文件系统上！
     WinBtrfs 也并非完美，且由于 Windows 和 Linux 在文件权限管理上的重大差异，无法保证数据的安全性。
@@ -104,7 +104,7 @@ PROTON_USE_WINED3D=1 %command%
 
 !!! warning "格式化一个分区会清除上面的所有数据，且无法撤销。"
     
-!!! info
+!!! info "信息"
     
     使用`ujust _disable-ntfs-service`命令隐藏 NTFS 挂载时的警告。**这并不能阻止数据损坏，只是隐藏提示信息。**
 

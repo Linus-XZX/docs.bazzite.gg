@@ -42,7 +42,7 @@ Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton
 
 ### 在 Lutris 里手动添加 Windows 游戏
 
-!!! 备注
+!!! note "备注"
 
     其他启动器对应的操作和以下列出的步骤一般差别不会太大。
 
