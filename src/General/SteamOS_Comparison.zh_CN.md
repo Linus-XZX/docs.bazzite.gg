@@ -17,21 +17,21 @@ Bazzite 是一款社区维护的，游戏优先的 Linux 操作系统，自带�
 ### 和 SteamOS 相比，Bazzite 提供的优化点
 
 -   支持和 **Windows** 系统共存的**双启动**环境；
--   兼容**更多的** x86 掌机：Lenovo Legion Go/S、ASUS ROG Ally/X、OneXPlayer F1/G1/X1 及变种、GPD Win 4/Mini/Max、Ayn Loki、MSI Claw 1st Gen AI7+/8+、Zotac Zone、Ayaneo Air/Geek/Next、Steam Deck LCD/OLED；
+-   兼容**更多的** x86 掌机：Lenovo Legion Go/S、ASUS ROG Ally/X、OneXPlayer F1/G1/X1 及变种、GPD Win 4/Mini/Max、Ayn Loki、MSI Claw 1<span></span>st Gen AI7+/8+、Zotac Zone、Ayaneo Air/Geek/Next、Steam Deck LCD/OLED；
 -   支持桌面级显卡和风扇的调节；
 -   **超 雄 更 新**
   -   **每次更新前的版本**都可以通过 GRUB 直接回滚；
   -   掌机版下，如果连续三次启动失败，会自动执行回滚；
   -   **最近 90 天内发布的所有版本都在线上保留**，一条命令即可在线回滚到特定版本；
--   **Linux 内核**、**显卡驱动**和 [**Gamescope**](https://github.com/ValveSoftware/gamescope) 合成器等软件都有活跃更新；
+-   **Linux 内核**、**显卡驱动**和 [**Gamescope**](https://github.com/ValveSoftware/gamescope) 合成器等软件更新更加频繁；
 -   更及时更新的 **KDE Plasma** 和 **GNOME** 桌面环境；
--   自带**游戏相关的实用软件**, 包括**Lutris、ScopeBuddy GUI、ProtonUp-QT/ProtonPlus、Protontricks**等；
+-   自带**游戏相关的实用软件**, 包括 **Lutris、ScopeBuddy GUI、ProtonUp-QT/ProtonPlus、Protontricks** 等；
 -   **GNOME** 桌面环境作为 KDE Plasma 的替代；
 -   通过 Flatpak 支持的**虚拟化**和 **GPU 穿透**；
 -   通过 [Waydroid](/Installing_and_Managing_Software/Waydroid_Setup_Guide.md) 安装 **Android 程序**；
 -   多种方式配置 [**Sunshine**](/Advanced/sunshine/) 的脚本，让游戏串流更方便；
 -   **[Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal.md)** 和 [`ujust`](/Installing_and_Managing_Software/ujust.md) 快捷脚本提供方便的系统设置或常用软件的配置；
--   默认使用 **BTRFS** 文件系统，支持自动**去重**和**压缩**（SteamOS 使用的是 **Ext4**），并支持**内部存储**和 **SD 卡**的**自动挂载**。
+-   默认使用 **Btrfs** 文件系统，支持自动**去重**和**压缩**（SteamOS 使用的是 **Ext4**），并支持**内部存储**和 **SD 卡**的**自动挂载**。
 
 ### 日常使用
 
@@ -43,7 +43,7 @@ Bazzite 是一款社区维护的，游戏优先的 Linux 操作系统，自带�
 
 -   通过 [Distrobox](https://distrobox.it) 使用其他发行版的包管理器和软件仓库；
 -   预安装了 [Homebrew](https://brew.sh/) 用于管理用户级的命令行程序；
--   通过 [Layering](/Installing_and_Managing_Software/rpm-ostree.md) 将 Fedora 软件包加入系统树，在系统更新中也能保留；
+-   Fedora 软件包支持[加入系统树](/Installing_and_Managing_Software/rpm-ostree.md)，在系统更新中也能保留；
 -   更多信息请参考 [Bazzite DX 官网](https://dev.bazzite.gg)。
 
 ### 安全性提升

@@ -186,7 +186,7 @@ https://www.youtube.com/watch?v=KAt49B6rSFI
 
 !!! warning "一般推荐自动分区，除非需要在同一块硬盘上安装双系统。"
 
-!!! attention "Bazzite 只支持 BTRFS 文件系统的根目录（`/`）。"
+!!! attention "Bazzite 只支持 Btrfs 文件系统的根目录（`/`）。"
 
 可以参考[这一指南（9:10 处开始，链接自带时间戳）](https://www.youtube.com/watch?v=JxPsKhJGTrs&t=550s).
 
@@ -208,8 +208,8 @@ https://www.youtube.com/watch?v=KAt49B6rSFI
     文件系统：ext4
     大小：2GiB
     ```
-  - **系统分区（BTRFS 容器）**
-    ![BTRFS 分区](../../img/btrfs_partition.png)
+  - **系统分区（Btrfs 容器）**
+    ![Btrfs 分区](../../img/btrfs_partition.png)
     ```
     挂载点：（不设置）
     文件系统: btrfs
