@@ -6,7 +6,8 @@ title: "VPN Setup"
 
 ## Using functional VPN Flatpaks
 
-VPN clients are usually not offered on the Bazaar app store as the Flatpak sandbox is too strict for most VPN clients to work as is which means they are not available in Bazaar to install. However examples of good VPN clients that are available in Bazaar:
+Using functional VPN Flatpaks¶
+VPN clients are not generally offered on the Bazaar app store, as the Flatpak sandbox restricts features permitting their use. However there are a small selection that will function, to some degree:
 
 - [Mozilla VPN](https://flathub.org/apps/org.mozilla.vpn)
 - [ProtonVPN](https://flathub.org/apps/com.protonvpn.www) <small>Note: unofficial package built from official app.</small>
